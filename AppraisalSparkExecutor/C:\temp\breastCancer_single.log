@@ -1,0 +1,515 @@
+2019-11-20 11:56:42 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 11:56:40
+2019-11-20 11:56:42 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 11:56:48 ERROR ImputationPlanAdaboostExec$:102 â Data count: 150
+2019-11-20 11:56:49 ERROR ImputationPlanAdaboostExec$:205 â java.lang.NumberFormatException: For input string: "?"
+2019-11-20 11:59:18 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 11:59:17
+2019-11-20 11:59:18 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 11:59:23 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature uniformity_of_cell_shape
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature normal_nucleoli
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 11:59:29 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 11:59:29 ERROR Crowner:83 â Executed plans: 2 / 9 : 23%.
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature clump_thickness
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 11:59:29 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 11:59:29 ERROR Crowner:83 â Executed plans: 3 / 9 : 34%.
+2019-11-20 12:01:16 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 12:01:14
+2019-11-20 12:01:16 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 12:01:21 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 12:01:45 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 12:01:45 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 12:01:45 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature uniformity_of_cell_shape
+2019-11-20 12:01:45 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 12:01:45 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 12:01:45 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 12:01:45 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 12:01:45 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 12:02:01 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 12:01:59
+2019-11-20 12:02:01 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 12:02:06 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 12:02:25 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 12:02:23
+2019-11-20 12:02:25 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 12:02:30 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 12:45:16 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 12:45:15
+2019-11-20 12:45:16 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 12:45:21 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 15:03:38 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 15:03:37
+2019-11-20 15:03:38 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 15:03:47 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 15:08:38 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 15:08:35
+2019-11-20 15:08:38 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 15:08:45 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature normal_nucleoli
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â Total plan execution time: 4 seconds, 0 minutes, 0 hours.
+2019-11-20 15:08:56 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bare_nuclei
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:08:56 ERROR ImputationPlan:331 â Total plan execution time: 4 seconds, 0 minutes, 0 hours.
+2019-11-20 15:08:56 ERROR Crowner:83 â Executed plans: 2 / 9 : 23%.
+2019-11-20 15:11:36 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 15:11:34
+2019-11-20 15:11:36 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 15:11:44 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 15:11:55 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 15:11:53
+2019-11-20 15:11:55 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 15:12:04 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature marginal_adhesion
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature clump_thickness
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â Total plan execution time: 5 seconds, 0 minutes, 0 hours.
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:12:16 ERROR ImputationPlan:331 â Total plan execution time: 5 seconds, 0 minutes, 0 hours.
+2019-11-20 15:12:16 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 15:12:16 ERROR Crowner:83 â Executed plans: 2 / 9 : 23%.
+2019-11-20 15:13:35 ERROR ImputationPlan:312 â -------------------------------------
+2019-11-20 15:13:35 ERROR ImputationPlan:312 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:13:35 ERROR ImputationPlan:312 â Missing rate at 10.0% in feature bare_nuclei
+2019-11-20 15:13:35 ERROR ImputationPlan:312 â Batch for imputation before imputation strategy: 1
+2019-11-20 15:13:35 ERROR ImputationPlan:312 â Running Imputation[KnnBoosted] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> bare_nuclei, kLimit -> 146, varianceComplete -> 12.235738412460126, calcFeatures -> [Ljava.lang.String;@58eebf3f, T -> 3)
+2019-11-20 15:13:35 ERROR ImputationPlan:313 â Error executing imputation plan: Imputation[KnnBoosted]
+java.lang.ArrayIndexOutOfBoundsException: 13
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.get(rows.scala:174)
+	at org.apache.spark.sql.Row$class.isNullAt(Row.scala:191)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.isNullAt(rows.scala:166)
+	at org.apache.spark.sql.Row$class.getAnyValAs(Row.scala:472)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.KnnBoosted$$anonfun$20.apply(KnnBoosted.scala:187)
+	at appraisal.spark.algorithm.KnnBoosted$$anonfun$20.apply(KnnBoosted.scala:183)
+	at scala.collection.parallel.AugmentedIterableIterator$class.map2combiner(RemainsIterator.scala:115)
+	at scala.collection.parallel.immutable.ParVector$ParVectorIterator.map2combiner(ParVector.scala:62)
+	at scala.collection.parallel.ParIterableLike$Map.leaf(ParIterableLike.scala:1054)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:49)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:51)
+	at scala.collection.parallel.ParIterableLike$Map.tryLeaf(ParIterableLike.scala:1051)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.internal(Tasks.scala:159)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.internal(Tasks.scala:443)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:149)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:443)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:378)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:443)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:426)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:56)
+	at scala.collection.parallel.ExecutionContextTasks$class.executeAndWaitResult(Tasks.scala:558)
+	at scala.collection.parallel.ExecutionContextTaskSupport.executeAndWaitResult(TaskSupport.scala:80)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.leaf(ParIterableLike.scala:958)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:49)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:51)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.tryLeaf(ParIterableLike.scala:953)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:152)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:443)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:378)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:443)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:426)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:56)
+	at scala.collection.parallel.ExecutionContextTasks$class.executeAndWaitResult(Tasks.scala:558)
+	at scala.collection.parallel.ExecutionContextTaskSupport.executeAndWaitResult(TaskSupport.scala:80)
+	at scala.collection.parallel.ParIterableLike$class.map(ParIterableLike.scala:499)
+	at scala.collection.parallel.immutable.ParVector.map(ParVector.scala:38)
+	at appraisal.spark.algorithm.KnnBoosted.runKnn(KnnBoosted.scala:183)
+	at appraisal.spark.algorithm.KnnBoosted$$anonfun$run$1.apply(KnnBoosted.scala:68)
+	at appraisal.spark.algorithm.KnnBoosted$$anonfun$run$1.apply(KnnBoosted.scala:66)
+	at scala.collection.immutable.Range.foreach(Range.scala:160)
+	at appraisal.spark.algorithm.KnnBoosted.run(KnnBoosted.scala:66)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$7.apply(ImputationPlan.scala:243)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$7.apply(ImputationPlan.scala:241)
+	at scala.collection.parallel.AugmentedIterableIterator$class.map2combiner(RemainsIterator.scala:115)
+	at scala.collection.parallel.immutable.ParVector$ParVectorIterator.map2combiner(ParVector.scala:62)
+	at scala.collection.parallel.ParIterableLike$Map.leaf(ParIterableLike.scala:1054)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:49)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:51)
+	at scala.collection.parallel.ParIterableLike$Map.tryLeaf(ParIterableLike.scala:1051)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:152)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:443)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:378)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:443)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:426)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:56)
+	at scala.collection.parallel.ExecutionContextTasks$class.executeAndWaitResult(Tasks.scala:558)
+	at scala.collection.parallel.ExecutionContextTaskSupport.executeAndWaitResult(TaskSupport.scala:80)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.leaf(ParIterableLike.scala:958)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:49)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:51)
+	at scala.collection.parallel.ParIterableLike$ResultMapping.tryLeaf(ParIterableLike.scala:953)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:152)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:443)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:378)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:443)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:426)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:56)
+	at scala.collection.parallel.ExecutionContextTasks$class.executeAndWaitResult(Tasks.scala:558)
+	at scala.collection.parallel.ExecutionContextTaskSupport.executeAndWaitResult(TaskSupport.scala:80)
+	at scala.collection.parallel.ParIterableLike$class.map(ParIterableLike.scala:499)
+	at scala.collection.parallel.immutable.ParVector.map(ParVector.scala:38)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:241)
+	at appraisal.spark.algorithm.Adaboost$$anonfun$run$2.apply(Adaboost.scala:90)
+	at appraisal.spark.algorithm.Adaboost$$anonfun$run$2.apply(Adaboost.scala:88)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at scala.collection.parallel.ParIterableLike$Foreach.leaf(ParIterableLike.scala:972)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:49)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:51)
+	at scala.collection.parallel.ParIterableLike$Foreach.tryLeaf(ParIterableLike.scala:969)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:152)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:443)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinTask.doJoin(ForkJoinTask.java:341)
+	at scala.concurrent.forkjoin.ForkJoinTask.join(ForkJoinTask.java:673)
+	at scala.collection.parallel.ForkJoinTasks$WrappedTask$class.sync(Tasks.scala:378)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.sync(Tasks.scala:443)
+	at scala.collection.parallel.ForkJoinTasks$class.executeAndWaitResult(Tasks.scala:426)
+	at scala.collection.parallel.ForkJoinTaskSupport.executeAndWaitResult(TaskSupport.scala:56)
+	at scala.collection.parallel.ExecutionContextTasks$class.executeAndWaitResult(Tasks.scala:558)
+	at scala.collection.parallel.ExecutionContextTaskSupport.executeAndWaitResult(TaskSupport.scala:80)
+	at scala.collection.parallel.ParIterableLike$class.foreach(ParIterableLike.scala:463)
+	at scala.collection.parallel.immutable.ParVector.foreach(ParVector.scala:38)
+	at appraisal.spark.algorithm.Adaboost.run(Adaboost.scala:88)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:337)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$1.apply(Crowner.scala:71)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$1.apply(Crowner.scala:69)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at scala.collection.parallel.ParIterableLike$Foreach.leaf(ParIterableLike.scala:972)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply$mcV$sp(Tasks.scala:49)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$$anonfun$tryLeaf$1.apply(Tasks.scala:48)
+	at scala.collection.parallel.Task$class.tryLeaf(Tasks.scala:51)
+	at scala.collection.parallel.ParIterableLike$Foreach.tryLeaf(ParIterableLike.scala:969)
+	at scala.collection.parallel.AdaptiveWorkStealingTasks$WrappedTask$class.compute(Tasks.scala:152)
+	at scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$WrappedTask.compute(Tasks.scala:443)
+	at scala.concurrent.forkjoin.RecursiveAction.exec(RecursiveAction.java:160)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-11-20 15:13:35 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:13:35 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:13:35 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bare_nuclei
+2019-11-20 15:13:35 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 1
+2019-11-20 15:13:35 ERROR ImputationPlan:331 â Running Imputation[KnnBoosted] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> bare_nuclei, kLimit -> 146, varianceComplete -> 12.235738412460126, calcFeatures -> [Ljava.lang.String;@58eebf3f, T -> 3)
+2019-11-20 15:13:35 ERROR ImputationPlan:331 â Total plan execution time: 85 seconds, 1 minutes, 0 hours.
+2019-11-20 15:13:35 ERROR Crowner:83 â Executed plans: 3 / 9 : 34%.
+2019-11-20 15:14:32 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 15:14:30
+2019-11-20 15:14:32 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 15:14:38 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bare_nuclei
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Total plan execution time: 4 seconds, 0 minutes, 0 hours.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bland_chromatin
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Total plan execution time: 4 seconds, 0 minutes, 0 hours.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:14:47 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:14:47 ERROR Crowner:83 â Executed plans: 2 / 9 : 23%.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature clump_thickness
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Total plan execution time: 4 seconds, 0 minutes, 0 hours.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:14:47 ERROR Crowner:83 â Executed plans: 3 / 9 : 34%.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:14:47 ERROR ImputationPlan:331 â Total plan execution time: 4 seconds, 0 minutes, 0 hours.
+2019-11-20 15:14:47 ERROR Crowner:83 â Executed plans: 4 / 9 : 45%.
+2019-11-20 15:38:24 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 15:38:21
+2019-11-20 15:38:24 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 15:38:30 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bare_nuclei
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Total plan execution time: 3 seconds, 0 minutes, 0 hours.
+2019-11-20 15:38:39 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature clump_thickness
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Total plan execution time: 3 seconds, 0 minutes, 0 hours.
+2019-11-20 15:38:39 ERROR Crowner:83 â Executed plans: 2 / 9 : 23%.
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 15:38:39 ERROR ImputationPlan:331 â Total plan execution time: 3 seconds, 0 minutes, 0 hours.
+2019-11-20 15:38:39 ERROR Crowner:83 â Executed plans: 3 / 9 : 34%.
+2019-11-20 15:55:59 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 15:55:57
+2019-11-20 15:55:59 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 15:56:03 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 16:00:50 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 16:00:48
+2019-11-20 16:00:50 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 16:00:56 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature normal_nucleoli
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â Total plan execution time: 3 seconds, 0 minutes, 0 hours.
+2019-11-20 16:01:03 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature marginal_adhesion
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 16:01:03 ERROR ImputationPlan:331 â Total plan execution time: 3 seconds, 0 minutes, 0 hours.
+2019-11-20 16:01:03 ERROR Crowner:83 â Executed plans: 2 / 9 : 23%.
+2019-11-20 17:08:08 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 17:08:07
+2019-11-20 17:08:08 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 17:08:11 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 17:08:09
+2019-11-20 17:08:11 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 17:08:18 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 17:08:20 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 17:08:31 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:08:31 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:08:31 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bare_nuclei
+2019-11-20 17:08:31 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 17:08:31 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 17:08:31 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:08:31 ERROR ImputationPlan:331 â Total plan execution time: 5 seconds, 0 minutes, 0 hours.
+2019-11-20 17:08:31 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 17:09:00 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:09:00 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:09:00 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature clump_thickness
+2019-11-20 17:09:00 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 17:09:00 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 17:09:00 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:09:00 ERROR ImputationPlan:331 â Total plan execution time: 29 seconds, 0 minutes, 0 hours.
+2019-11-20 17:09:00 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 17:09:42 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 17:09:41
+2019-11-20 17:09:42 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 17:09:48 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 17:28:34 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 17:28:32
+2019-11-20 17:28:34 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 17:28:39 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 1
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â Running Imputation[KnnBoosted] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> single_epithelial_cell_size, kLimit -> 146, varianceComplete -> 7.14374179020453, calcFeatures -> [Ljava.lang.String;@8cec7bb, T -> 3)
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â ImputationResult: ImputationResult(MapPartitionsRDD[1607] at map at Statistic.scala:16,0,0.42888888888888893,11.580000000000002,29.932716049382723,7.14374179020453,null,Map(learningRate -> 0.1, k -> 2, imputationFeature -> single_epithelial_cell_size, kLimit -> 146, varianceComplete -> 7.14374179020453, calcFeatures -> [Ljava.lang.String;@8cec7bb, T -> 3))
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â best k: 0
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â totalError: 11.580000000000002
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â avgError: 0.42888888888888893
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â avgPercentError: 29.932716049382723
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â varianceCompleteError: 7.14374179020453
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:29:01 ERROR ImputationPlan:331 â Total plan execution time: 18 seconds, 0 minutes, 0 hours.
+2019-11-20 17:30:49 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 17:36:18 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 17:36:16
+2019-11-20 17:36:18 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 17:36:24 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 1
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â Running Imputation[KnnBoosted] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> single_epithelial_cell_size, kLimit -> 146, varianceComplete -> 7.14374179020453, calcFeatures -> [Ljava.lang.String;@af29aa5, T -> 3)
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â ImputationResult: ImputationResult(MapPartitionsRDD[2285] at map at Statistic.scala:16,0,0.6285185185185185,16.97,8.328747795414463,7.14374179020453,null,Map(learningRate -> 0.1, k -> 2, imputationFeature -> single_epithelial_cell_size, kLimit -> 146, varianceComplete -> 7.14374179020453, calcFeatures -> [Ljava.lang.String;@af29aa5, T -> 3))
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â best k: 0
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â totalError: 16.97
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â avgError: 0.6285185185185185
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â avgPercentError: 8.328747795414463
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â varianceCompleteError: 7.14374179020453
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:36:54 ERROR ImputationPlan:331 â Total plan execution time: 26 seconds, 0 minutes, 0 hours.
+2019-11-20 17:38:20 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 17:38:18
+2019-11-20 17:38:20 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 17:38:25 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 17:38:31 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:38:31 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:38:31 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bland_chromatin
+2019-11-20 17:38:31 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 17:38:31 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 17:38:31 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:38:31 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 17:38:38 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 1
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â Running Imputation[KnnBoosted] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> single_epithelial_cell_size, kLimit -> 146, varianceComplete -> 7.14374179020453, calcFeatures -> [Ljava.lang.String;@798afcb5, T -> 3)
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â ImputationResult: ImputationResult(MapPartitionsRDD[2361] at map at Statistic.scala:16,0,0.06142857142857141,1.7199999999999995,6.047619047619048,7.14374179020453,Map(2 -> List(0.007552232181909485, 7.467604567174689, 2.0), 1 -> List(0.008666480290746435, 7.459924981234764, 2.0), 3 -> List(0.007067253905019613, 7.460258660557304, 2.0)),Map(learningRate -> 0.1, k -> 2, imputationFeature -> single_epithelial_cell_size, kLimit -> 146, varianceComplete -> 7.14374179020453, calcFeatures -> [Ljava.lang.String;@798afcb5, T -> 3))
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â best k: 0
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â totalError: 1.7199999999999995
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â avgError: 0.06142857142857141
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â avgPercentError: 6.047619047619048
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â varianceCompleteError: 7.14374179020453
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:39:29 ERROR ImputationPlan:331 â Total plan execution time: 60 seconds, 1 minutes, 0 hours.
+2019-11-20 17:40:35 ERROR Crowner:83 â Executed plans: 2 / 9 : 23%.
+2019-11-20 17:51:04 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 17:51:03
+2019-11-20 17:51:04 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 17:51:09 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature clump_thickness
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature uniformity_of_cell_size
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bland_chromatin
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature marginal_adhesion
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:15 ERROR ImputationPlan:331 â Total plan execution time: 2 seconds, 0 minutes, 0 hours.
+2019-11-20 17:51:30 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature mitoses
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 1
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â Running Imputation[KnnBoosted] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> mitoses, kLimit -> 146, varianceComplete -> 4.283965096641024, calcFeatures -> [Ljava.lang.String;@3fce1045, T -> 3)
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â ImputationResult: ImputationResult(MapPartitionsRDD[1632] at map at Statistic.scala:16,0,0.5159259259259259,13.929999999999998,14.225925925925926,4.283965096641024,Map(2 -> List(0.007250128344388901, 4.10688172959184, 3.375), 1 -> List(0.011608375947146428, 3.9566090683054997, 25.642857142857142), 3 -> List(0.006878656680981868, 4.150624455218714, 2.2)),Map(learningRate -> 0.1, k -> 2, imputationFeature -> mitoses, kLimit -> 146, varianceComplete -> 4.283965096641024, calcFeatures -> [Ljava.lang.String;@3fce1045, T -> 3))
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â best k: 0
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â totalError: 13.929999999999998
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â avgError: 0.5159259259259259
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â avgPercentError: 14.225925925925926
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â BoostedStats: Map(2 -> List(0.007250128344388901, 4.10688172959184, 3.375), 1 -> List(0.011608375947146428, 3.9566090683054997, 25.642857142857142), 3 -> List(0.006878656680981868, 4.150624455218714, 2.2))
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â varianceCompleteError: 4.283965096641024
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:51:36 ERROR ImputationPlan:331 â Total plan execution time: 5 seconds, 0 minutes, 0 hours.
+2019-11-20 17:59:33 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 17:59:32
+2019-11-20 17:59:33 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 17:59:39 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 17:59:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:59:47 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 17:59:47 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bare_nuclei
+2019-11-20 17:59:47 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 17:59:47 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 17:59:47 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 17:59:47 ERROR ImputationPlan:331 â Total plan execution time: 3 seconds, 0 minutes, 0 hours.
+2019-11-20 17:59:52 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature clump_thickness
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 1
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â Running Imputation[KnnBoosted] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> clump_thickness, kLimit -> 146, varianceComplete -> 8.8339744792644, calcFeatures -> [Ljava.lang.String;@3258fc6f, T -> 3)
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â ImputationResult: ImputationResult(MapPartitionsRDD[2271] at map at Statistic.scala:16,0,1.1537931034482756,33.459999999999994,15.090229885057472,8.8339744792644,ArrayBuffer((1,List(0.01660015100852119, 8.388084950272098, 45.92857142857143)), (2,List(0.010068656856945019, 8.503778220411453, 43.44444444444444)), (3,List(0.007434538100670601, 8.499239550514597, 63.333333333333336))),Map(learningRate -> 0.1, k -> 2, imputationFeature -> clump_thickness, kLimit -> 146, varianceComplete -> 8.8339744792644, calcFeatures -> [Ljava.lang.String;@3258fc6f, T -> 3))
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â best k: 0
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â totalError: 33.459999999999994
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â avgError: 1.1537931034482756
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â avgPercentError: 15.090229885057472
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â BoostedStats: ()
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â varianceCompleteError: 8.8339744792644
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 18:00:05 ERROR ImputationPlan:331 â Total plan execution time: 21 seconds, 0 minutes, 0 hours.
+2019-11-20 18:02:56 ERROR ImputationPlanAdaboostExec$:56 â Appraisal Spark - Wall start time: 20/11/2019 18:02:55
+2019-11-20 18:02:56 ERROR ImputationPlanAdaboostExec$:57 â Parallel execution: true
+2019-11-20 18:03:02 ERROR ImputationPlanAdaboostExec$:102 â Data count: 146
+2019-11-20 18:03:10 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 18:03:10 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 18:03:10 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature bare_nuclei
+2019-11-20 18:03:10 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 0
+2019-11-20 18:03:10 ERROR ImputationPlan:331 â ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan.
+2019-11-20 18:03:10 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 18:03:10 ERROR ImputationPlan:331 â Total plan execution time: 3 seconds, 0 minutes, 0 hours.
+2019-11-20 18:03:13 ERROR Crowner:83 â Executed plans: 1 / 9 : 12%.
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â Running imputation plan: Imputation[KnnBoosted]
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â Missing rate at 10.0% in feature clump_thickness
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â Batch for imputation before imputation strategy: 1
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â Running Imputation[KnnBoosted] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> clump_thickness, kLimit -> 146, varianceComplete -> 8.8339744792644, calcFeatures -> [Ljava.lang.String;@448ce525, T -> 3)
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â ImputationResult: ImputationResult(MapPartitionsRDD[2145] at map at Statistic.scala:16,0,0.05214285714285711,1.459999999999999,1.456349206349206,8.8339744792644,ArrayBuffer((1,List(0.018533440773569696, 8.394975511352968, 4.428571428571429)), (2,List(0.007659803136705159, 8.231326210955181, 5.444444444444445)), (3,List(0.006443257802056127, 8.350041280835423, 8.2))),Map(learningRate -> 0.1, k -> 2, imputationFeature -> clump_thickness, kLimit -> 146, varianceComplete -> 8.8339744792644, calcFeatures -> [Ljava.lang.String;@448ce525, T -> 3))
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â best k: 0
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â totalError: 1.459999999999999
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â avgError: 0.05214285714285711
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â avgPercentError: 1.456349206349206
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â BoostedStats: ArrayBuffer(T: 1 List(0.018533440773569696, 8.394975511352968, 4.428571428571429), T: 2 List(0.007659803136705159, 8.231326210955181, 5.444444444444445), T: 3 List(0.006443257802056127, 8.350041280835423, 8.2))
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â varianceCompleteError: 8.8339744792644
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â -------------------------------------
+2019-11-20 18:03:21 ERROR ImputationPlan:331 â Total plan execution time: 15 seconds, 0 minutes, 0 hours.
