@@ -55,12 +55,12 @@ object Util {
   def loadBreastCancer(spark:SparkSession): DataFrame = {
     
     //spark.read.option("header", true).csv("C:\\data\\breast-cancer-wisconsin.csv")
-    spark.read.option("header", true).csv("file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/databreast-cancer-wisconsin.reduced.csv")    
+    spark.read.option("header", true).csv("file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/breast-cancer-wisconsin.reduced.csv")    
   }
   
   def loadAidsOccurenceAndDeath(spark:SparkSession): DataFrame = {
     
-    spark.read.option("header", true).csv("C:\\data\\AIDS Occurrence and Death and Queries.csv")
+    spark.read.option("header", true).csv("file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/AIDS Occurrence and Death and Queries.csv")
     
   }
   
