@@ -8,8 +8,8 @@ import org.apache.spark.broadcast._
 
 class ClusteringStrategy(var params: HashMap[String, Any] = null, var clusteringAlgorithm: ClusteringAlgorithm) extends AppraisalStrategy {
   
-  def run(idf: DataFrame): Entities.ClusteringResult = {
-    clusteringAlgorithm.run(idf, params)
+  def run(idf: DataFrame, cdf:DataFrame = null): Entities.ClusteringResult = {
+    clusteringAlgorithm.run(idf, cdf, params)
   }
   
   def algName(): String = {

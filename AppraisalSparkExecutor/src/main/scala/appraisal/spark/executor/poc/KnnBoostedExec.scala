@@ -82,7 +82,7 @@ object KnnBoostedExec {
         "calcFeatures" -> calcCol,
         "varianceComplete" -> varianceBefore)
 
-      val imputationResult = new KnnBoosted().run(_vnidf, params)
+      val imputationResult = new KnnBoosted().run(_vnidf, null, params)
 
       imputationResult.result.foreach(Logger.getLogger("appraisal").error(_))
 

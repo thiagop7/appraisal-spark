@@ -11,7 +11,7 @@ import appraisal.spark.interfaces.EnsembleAlgorithm
 
 class Bagging extends EnsembleAlgorithm {
    
-   def run(idf: DataFrame, params: HashMap[String, Any] = null) :Entities.ImputationResult = {
+   def run(idf: DataFrame, cdf:DataFrame = null, params: HashMap[String, Any] = null) :Entities.ImputationResult = {
      
      val plan: ImputationPlan = params("imputationPlan").asInstanceOf[ImputationPlan]
      val T: Int = params("T").asInstanceOf[Int]

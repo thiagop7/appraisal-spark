@@ -24,33 +24,6 @@ class RandomForest extends ImputationAlgorithm {
 
   val toDouble = udf[Double, String](_.toDouble)
 
-  // Let's create a UDF to take array of embeddings and output Vectors
-  val convertToVectorUDF = udf((matrix: Seq[Double]) => {
-    Vectors.dense(matrix.toArray)
-  })
-
-  def transformToMLlib(df: DataFrame, attribute: String, sqlContext: SQLContext, context: SparkSession): DataFrame = {
-
-    val indexedFeatures = df.select(attribute,"lineId").withColumn("label", col(attribute)).withColumn("id", monotonically_increasing_id())
-    val df2 = sqlContext.createDataFrame(indexedFeatures.rdd, indexedFeatures.schema)
-
-    import context.implicits._
-
-    val dfFeatures = df.rdd.map(x =>
-      {
-        val seq = x.toSeq
-        seq.map(x =>
-          {
-            Util.extractDouble(x)
-          })
-
-      }).toDF("features")
-      .withColumn("features", convertToVectorUDF($"features"))
-      .withColumn("id", monotonically_increasing_id())
-
-    dfFeatures.join(df2, "id").drop("id")
-  }
-
   def run(idf: DataFrame, cdf: DataFrame, params: HashMap[String, Any] = null): Entities.ImputationResult = {
 
     val attribute: String = params("imputationFeature").asInstanceOf[String]
@@ -90,8 +63,8 @@ class RandomForest extends ImputationAlgorithm {
     val originalValues = nvDf.join(fidf, "lineId").select("originalValue", "lineId")
     originalValues.show()
 
-    val df3 = transformToMLlib(calcDf, attribute, sqlContext, context)
-    var df4 = transformToMLlib(impDf, attribute, sqlContext, context)
+    val df3 = Util.transformToMLlib(calcDf, attribute, sqlContext, context)
+    var df4 = Util.transformToMLlib(impDf, attribute, sqlContext, context)
               .drop(attribute, "label")
               .join(originalValues, "lineId")
               .select("features", "lineId","originalValue")
@@ -128,7 +101,7 @@ class RandomForest extends ImputationAlgorithm {
     predictions.printSchema()
 
     // Select example rows to display.
-    predictions.select("prediction", attribute, "features").show(5)
+    predictions.select("prediction", attribute, "features", "lineId").show(5)
 
     // Select (prediction, true label) and compute test error.
     val evaluator = new RegressionEvaluator()
@@ -141,7 +114,11 @@ class RandomForest extends ImputationAlgorithm {
     val rfModel = model.stages(1).asInstanceOf[RandomForestRegressionModel]
     println(s"Learned regression forest model:\n ${rfModel.toDebugString}")
 
-    return null
+
+    val stats =  predictions.select("prediction", attribute, "lineId").collect().toSeq
+        
+    Statistic.statisticInfo(Entities.ImputationResult(context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("prediction"), r.getAs(attribute), r.getAs("lineId"))).toList), 
+                                                                              0, 0, 0, 0, varianceDfCompl, null, params.toString()))
   }
 
   def name(): String = { "RandomForest" }

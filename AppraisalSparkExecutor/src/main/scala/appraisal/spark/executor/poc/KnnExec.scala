@@ -79,7 +79,7 @@ object KnnExec {
           "imputationFeature" -> feature,
           "calcFeatures" -> calcCol)
       
-      val imputationResult = new Knn().run(_vnidf, params)
+      val imputationResult = new Knn().run(_vnidf, null, params)
       
       imputationResult.result.foreach(Logger.getLogger("appraisal").error(_))
       

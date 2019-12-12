@@ -6,7 +6,7 @@ import appraisal.spark.interfaces.StrategyResult
 
 trait AppraisalStrategy extends Serializable {
   
-  def run(idf: DataFrame): StrategyResult
+  def run(idf: DataFrame, cdf: DataFrame): StrategyResult
   
   def algName(): String
   

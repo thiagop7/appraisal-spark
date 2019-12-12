@@ -8,8 +8,8 @@ import org.apache.spark.broadcast._
 
 class ImputationStrategy(var params: HashMap[String, Any] = null, var imputationAlgorithm: ImputationAlgorithm) extends AppraisalStrategy {
   
-  def run(idf: DataFrame): Entities.ImputationResult = {
-    imputationAlgorithm.run(idf, params)
+  def run(idf: DataFrame, cdf: DataFrame = null): Entities.ImputationResult = {
+    imputationAlgorithm.run(idf, cdf, params)
   }
   
   def algName(): String = {

@@ -63,7 +63,7 @@ object KMeansExec {
           "kLimit" -> 100,
           "calcFeatures" -> calcCol)
       
-      val clusteringResult = new KMeansPlus().run(_vnidf, params)
+      val clusteringResult = new KMeansPlus().run(_vnidf,null, params)
       
       clusteringResult.result.foreach(Logger.getLogger("appraisal").error(_))
       Logger.getLogger("appraisal").error("Best k: " + clusteringResult.k)

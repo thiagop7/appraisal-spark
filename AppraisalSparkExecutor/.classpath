@@ -231,5 +231,6 @@
 	<classpathentry kind="lib" path="/usr/local/spark-2.4.4-bin-hadoop2.7/jars/zjsonpatch-0.3.0.jar"/>
 	<classpathentry kind="lib" path="/usr/local/spark-2.4.4-bin-hadoop2.7/jars/zookeeper-3.4.6.jar"/>
 	<classpathentry kind="lib" path="/usr/local/spark-2.4.4-bin-hadoop2.7/jars/zstd-jni-1.3.2-2.jar"/>
+	<classpathentry kind="lib" path="/home/oem/.ivy2/local/com.github.pierrenodet/spark-ensemble_2.11/0.7.1+0-213e6ffb+20191211-1126-SNAPSHOT/jars/spark-ensemble_2.11.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -5,6 +5,10 @@ import org.apache.spark.sql._
 import org.apache.spark.rdd._
 import org.apache.spark.broadcast._
 import appraisal.spark.entities._
+import org.apache.spark.ml.linalg.{ Vector, Vectors }
+import scala.math.log
+import scala.collection.parallel.immutable._
+
 
 object Util {
 
@@ -113,14 +117,16 @@ object Util {
     mean(xs).flatMap(m => mean(xs.map(x => Math.pow(x - m, 2))))
 
   }
-
   def extractDouble: (Any) => Double = {
-      case i: Int    => i
-      case f: Float  => f
-      case d: Double => d
-    }
+    case i: Int    => i.toDouble
+    case f: Float  => f.toDouble
+    case d: Double => d.toDouble
+    case l: Long   => l.toDouble
+    case s: String => s.toDouble
+  }
   
-  
+  // Métodos utilizados para cálculo dos pesos e realização do weighted bootstrap sample
+
   // a very simple weighted sampling function
   def weightedSample(dist: Array[(Long, Double)], numSamples: Int): Array[Long] = {
 
@@ -141,5 +147,94 @@ object Util {
     }
   }
 
+  // Let's create a UDF to take array of embeddings and output Vectors
+  val convertToVectorUDF = udf((matrix: Seq[Double]) => {
+    Vectors.dense(matrix.toArray)
+  })
+
+  def transformToMLlib(df: DataFrame, attribute: String, sqlContext: SQLContext, context: SparkSession): DataFrame = {
+
+    val indexedFeatures = df.select(attribute, "lineId").withColumn("label", col(attribute)).withColumn("id", monotonically_increasing_id())
+    val df2 = sqlContext.createDataFrame(indexedFeatures.rdd, indexedFeatures.schema)
+
+    import context.implicits._
+
+    val dfFeatures = df.rdd.map(x =>
+      {
+        val seq = x.toSeq
+        seq.map(x =>
+          {
+            extractDouble(x)
+          })
+
+      }).toDF("features")
+      .withColumn("features", convertToVectorUDF($"features"))
+      .withColumn("id", monotonically_increasing_id())
+
+    dfFeatures.join(df2, "id").drop("id")
+  }
+
+  def calculateBeta(estimator_error: Double): Double = {
+
+    //Low β means high confidence in theprediction.
+    return estimator_error / (1 - estimator_error)
+  }
+
+  def calculateEstimatorWeight(beta: Double, learningRate: Double): Double = {
+    val logBeta = log(1 / beta)
+
+    return learningRate * logBeta
+  }
+
+  def calcExtError(rdf: ParSeq[(Long, Double, Double, Int, Double, Double, Double)]) = { // Calculo de normalização do erro para realizar a atualização dos pesos
+
+    val maxErr = rdf.map(_._5).max
+
+    val nrdf = rdf.map(r =>
+      {
+
+        var erroNorm = r._5
+        var estimatorError = 0.0
+        if (maxErr != 0) {
+          erroNorm = erroNorm / maxErr
+          estimatorError = r._7 * erroNorm
+        }
+
+        (
+          r._1,
+          r._2,
+          r._3,
+          r._4,
+          r._5,
+          erroNorm,
+          estimatorError,
+          r._7)
+      })
+    nrdf
+  }
+  
+  def resampleByWheitedSample(weightedLines: Array[Long], origImpDf: ParSeq[Row], columns: Array[String], linesWeight: Array[(Long, Double)]): ParSeq[Row] = {
+
+    val lineIdIndex = columns.indexOf("lineId")
+    val originalValue = columns.indexOf("originalValue")
+    val indexWeight = columns.indexOf("weight")
+
+    //Removo a coluna de peso para atualizar com o novo peso
+    val allColumns = columns.dropRight(1)
+
+    val lines = origImpDf.filter(row => weightedLines.toList.contains(row.getLong(lineIdIndex)))
+
+    val newLines = lines.map(x =>
+      {
+
+        val newWeight = linesWeight.filter(p => p._1 == x.getLong(lineIdIndex)).last._2
+
+        (Row.fromSeq(Seq(newWeight).++:(x.toSeq)))
+
+      })
+
+    return newLines
+
+  }
 
 }

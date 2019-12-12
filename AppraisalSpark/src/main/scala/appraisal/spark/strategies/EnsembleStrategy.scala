@@ -7,8 +7,8 @@ import org.apache.spark.sql._
 
 class EnsembleStrategy(var params: HashMap[String, Any] = null, var ensembleAlgorithm: EnsembleAlgorithm) extends AppraisalStrategy {
   
-  def run(idf: DataFrame): Entities.ImputationResult = {
-    ensembleAlgorithm.run(idf, params)
+  def run(idf: DataFrame, cdf:DataFrame = null): Entities.ImputationResult = {
+    ensembleAlgorithm.run(idf, cdf, params)
   }
   
   def algName(): String = {

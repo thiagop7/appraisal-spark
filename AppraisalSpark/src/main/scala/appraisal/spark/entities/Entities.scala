@@ -24,5 +24,7 @@ object Entities {
   final case class EResult(imputationPlan: ImputationPlan, imputationResult: ImputationResult, voting: Long)
 
   final case class EnsembleResult(result: RDD[EResult])
+  
+  final case class Features(features: Seq[Any])
 
 }

@@ -11,7 +11,7 @@ import org.apache.spark.broadcast._
 
 class KMeans extends ClusteringAlgorithm {
   
-  def run(idf: DataFrame, params: HashMap[String, Any] = null): Entities.ClusteringResult = {
+  def run(idf: DataFrame, cdf:DataFrame = null, params: HashMap[String, Any] = null): Entities.ClusteringResult = {
     
     val k: Int =  params("k").asInstanceOf[Int]
     val maxIter: Int = params("maxIter").asInstanceOf[Int]

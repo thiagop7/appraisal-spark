@@ -1,0 +1,749 @@
+2019-12-01 11:20:59 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:20:59
+2019-12-01 11:21:25 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Detected implicit cartesian product for INNER join between logical plans
+Project [value#435 AS features#437]
++- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#435]
+   +- ExternalRDD [obj#434]
+and
+Project [UDF(uniformity_of_cell_size#12) AS uniformity_of_cell_size#236]
++- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+   +- Project [clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+      +- Relation[code_number#10,clump_thickness#11,uniformity_of_cell_size#12,uniformity_of_cell_shape#13,marginal_adhesion#14,single_epithelial_cell_size#15,bare_nuclei#16,bland_chromatin#17,normal_nucleoli#18,mitoses#19,class#20] csv
+Join condition is missing or trivial.
+Either: use the CROSS JOIN syntax to allow cartesian products between these
+relations, or: enable implicit cartesian products by setting the configuration
+variable spark.sql.crossJoin.enabled=true;
+2019-12-01 11:23:09 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:23:09
+2019-12-01 11:23:21 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: cannot resolve '`teste.features`' given input columns: [features.features, indexedFeatures.uniformity_of_cell_size];;
+'Project ['teste.features, 'indexedFeatures.indexedFeatures]
++- Join Inner
+   :- SubqueryAlias `features`
+   :  +- Project [value#435 AS features#437]
+   :     +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#435]
+   :        +- ExternalRDD [obj#434]
+   +- SubqueryAlias `indexedFeatures`
+      +- Project [uniformity_of_cell_size#236]
+         +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, bland_chromatin#286, normal_nucleoli#296, UDF(mitoses#19) AS mitoses#306]
+            +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, bland_chromatin#286, UDF(normal_nucleoli#18) AS normal_nucleoli#296, mitoses#19]
+               +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, UDF(bland_chromatin#17) AS bland_chromatin#286, normal_nucleoli#18, mitoses#19]
+                  +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, UDF(bare_nuclei#16) AS bare_nuclei#276, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                     +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, UDF(single_epithelial_cell_size#15) AS single_epithelial_cell_size#266, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                        +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, UDF(marginal_adhesion#14) AS marginal_adhesion#256, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                           +- Project [clump_thickness#226, uniformity_of_cell_size#236, UDF(uniformity_of_cell_shape#13) AS uniformity_of_cell_shape#246, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                              +- Project [clump_thickness#226, UDF(uniformity_of_cell_size#12) AS uniformity_of_cell_size#236, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                 +- Project [UDF(clump_thickness#11) AS clump_thickness#226, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                    +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                       +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                          +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                             +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                   +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                      +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                         +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                            +- Project [clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                                               +- Project [code_number#10, clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19, class#20, monotonically_increasing_id() AS lineId#32L]
+                                                                  +- Relation[code_number#10,clump_thickness#11,uniformity_of_cell_size#12,uniformity_of_cell_shape#13,marginal_adhesion#14,single_epithelial_cell_size#15,bare_nuclei#16,bland_chromatin#17,normal_nucleoli#18,mitoses#19,class#20] csv
+
+2019-12-01 11:24:13 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:24:13
+2019-12-01 11:24:25 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: cannot resolve '`indexedFeatures.indexedFeatures`' given input columns: [features.features, indexedFeatures.uniformity_of_cell_size];;
+'Project [features#437, 'indexedFeatures.indexedFeatures]
++- Join Inner
+   :- SubqueryAlias `features`
+   :  +- Project [value#435 AS features#437]
+   :     +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#435]
+   :        +- ExternalRDD [obj#434]
+   +- SubqueryAlias `indexedFeatures`
+      +- Project [uniformity_of_cell_size#236]
+         +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, bland_chromatin#286, normal_nucleoli#296, UDF(mitoses#19) AS mitoses#306]
+            +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, bland_chromatin#286, UDF(normal_nucleoli#18) AS normal_nucleoli#296, mitoses#19]
+               +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, UDF(bland_chromatin#17) AS bland_chromatin#286, normal_nucleoli#18, mitoses#19]
+                  +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, UDF(bare_nuclei#16) AS bare_nuclei#276, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                     +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, UDF(single_epithelial_cell_size#15) AS single_epithelial_cell_size#266, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                        +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, UDF(marginal_adhesion#14) AS marginal_adhesion#256, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                           +- Project [clump_thickness#226, uniformity_of_cell_size#236, UDF(uniformity_of_cell_shape#13) AS uniformity_of_cell_shape#246, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                              +- Project [clump_thickness#226, UDF(uniformity_of_cell_size#12) AS uniformity_of_cell_size#236, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                 +- Project [UDF(clump_thickness#11) AS clump_thickness#226, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                    +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                       +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                          +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                             +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                   +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                      +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                         +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                            +- Project [clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                                               +- Project [code_number#10, clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19, class#20, monotonically_increasing_id() AS lineId#32L]
+                                                                  +- Relation[code_number#10,clump_thickness#11,uniformity_of_cell_size#12,uniformity_of_cell_shape#13,marginal_adhesion#14,single_epithelial_cell_size#15,bare_nuclei#16,bland_chromatin#17,normal_nucleoli#18,mitoses#19,class#20] csv
+
+2019-12-01 11:25:38 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:25:38
+2019-12-01 11:25:51 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Detected implicit cartesian product for INNER join between logical plans
+Project [value#435 AS features#437]
++- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#435]
+   +- ExternalRDD [obj#434]
+and
+Project [UDF(uniformity_of_cell_size#12) AS uniformity_of_cell_size#236]
++- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+   +- Project [clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+      +- Relation[code_number#10,clump_thickness#11,uniformity_of_cell_size#12,uniformity_of_cell_shape#13,marginal_adhesion#14,single_epithelial_cell_size#15,bare_nuclei#16,bland_chromatin#17,normal_nucleoli#18,mitoses#19,class#20] csv
+Join condition is missing or trivial.
+Either: use the CROSS JOIN syntax to allow cartesian products between these
+relations, or: enable implicit cartesian products by setting the configuration
+variable spark.sql.crossJoin.enabled=true;
+2019-12-01 11:28:26 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:28:26
+2019-12-01 11:28:27 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:28:27
+2019-12-01 11:28:42 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#236 missing from features#437 in operator !Project [features#437, uniformity_of_cell_size#236 AS uniformity_of_cell_size#439].;;
+!Project [features#437, uniformity_of_cell_size#236 AS uniformity_of_cell_size#439]
++- Project [value#435 AS features#437]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#435]
+      +- ExternalRDD [obj#434]
+
+2019-12-01 11:28:43 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#236 missing from features#437 in operator !Project [features#437, uniformity_of_cell_size#236 AS uniformity_of_cell_size#439].;;
+!Project [features#437, uniformity_of_cell_size#236 AS uniformity_of_cell_size#439]
++- Project [value#435 AS features#437]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#435]
+      +- ExternalRDD [obj#434]
+
+2019-12-01 11:29:28 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:29:28
+2019-12-01 11:29:36 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#236 missing from features#436 in operator !Project [features#436, uniformity_of_cell_size#236 AS uniformity_of_cell_size#438].;;
+!Project [features#436, uniformity_of_cell_size#236 AS uniformity_of_cell_size#438]
++- Project [value#434 AS features#436]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#434]
+      +- ExternalRDD [obj#433]
+
+2019-12-01 11:34:19 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:34:19
+2019-12-01 11:35:11 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#236 missing from features#437 in operator !Project [features#437, uniformity_of_cell_size#236 AS uniformity_of_cell_size#439].;;
+!Project [features#437, uniformity_of_cell_size#236 AS uniformity_of_cell_size#439]
++- Project [value#435 AS features#437]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#435]
+      +- ExternalRDD [obj#434]
+
+2019-12-01 11:35:59 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:35:59
+2019-12-01 11:36:15 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#236 missing from features#437 in operator !Project [features#437, uniformity_of_cell_size#236 AS uniformity_of_cell_size#439].;;
+!Project [features#437, uniformity_of_cell_size#236 AS uniformity_of_cell_size#439]
++- Project [value#435 AS features#437]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#435]
+      +- ExternalRDD [obj#434]
+
+2019-12-01 11:43:16 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:43:16
+2019-12-01 11:44:54 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:44:54
+2019-12-01 11:44:55 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:44:55
+2019-12-01 11:45:11 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#434 missing from features#450 in operator !Project [features#450, uniformity_of_cell_size#434 AS uniformity_of_cell_size#452].;;
+!Project [features#450, uniformity_of_cell_size#434 AS uniformity_of_cell_size#452]
++- Project [value#448 AS features#450]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#448]
+      +- ExternalRDD [obj#447]
+
+2019-12-01 11:45:45 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:45:45
+2019-12-01 11:46:03 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Detected implicit cartesian product for INNER join between logical plans
+Project [value#448 AS features#450]
++- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#448]
+   +- ExternalRDD [obj#447]
+and
+LogicalRDD [uniformity_of_cell_size#434], false
+Join condition is missing or trivial.
+Either: use the CROSS JOIN syntax to allow cartesian products between these
+relations, or: enable implicit cartesian products by setting the configuration
+variable spark.sql.crossJoin.enabled=true;
+2019-12-01 11:48:19 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:48:19
+2019-12-01 11:50:51 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:50:51
+2019-12-01 11:51:14 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#236 missing from features#450 in operator !Project [features#450, uniformity_of_cell_size#236 AS uniformity_of_cell_size#452].;;
+!Project [features#450, uniformity_of_cell_size#236 AS uniformity_of_cell_size#452]
++- Project [value#448 AS features#450]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#448]
+      +- ExternalRDD [obj#447]
+
+2019-12-01 11:52:20 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:52:20
+2019-12-01 11:52:42 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#434 missing from features#450 in operator !Project [features#450, uniformity_of_cell_size#434 AS uniformity_of_cell_size#452].;;
+!Project [features#450, uniformity_of_cell_size#434 AS uniformity_of_cell_size#452]
++- Project [value#448 AS features#450]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#448]
+      +- ExternalRDD [obj#447]
+
+2019-12-01 11:54:06 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 11:54:06
+2019-12-01 11:54:21 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Resolved attribute(s) uniformity_of_cell_size#438 missing from features#454 in operator !Project [features#454, uniformity_of_cell_size#438 AS uniformity_of_cell_size#456].;;
+!Project [features#454, uniformity_of_cell_size#438 AS uniformity_of_cell_size#456]
++- Project [value#452 AS features#454]
+   +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#452]
+      +- ExternalRDD [obj#451]
+
+2019-12-01 12:33:25 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 12:33:25
+2019-12-01 12:33:36 ERROR appraisal:54 â java.lang.ClassNotFoundException: scala.Any
+2019-12-01 12:35:40 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 12:35:40
+2019-12-01 12:35:48 ERROR appraisal:54 â java.lang.ClassNotFoundException: scala.Any
+2019-12-01 12:44:53 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 12:44:53
+2019-12-01 12:54:38 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 12:54:38
+2019-12-01 12:55:08 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 12:55:08
+2019-12-01 12:55:17 ERROR appraisal:54 â java.lang.ClassNotFoundException: scala.Any
+2019-12-01 13:03:53 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:03:53
+2019-12-01 13:04:57 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:04:57
+2019-12-01 13:07:27 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:07:27
+2019-12-01 13:08:41 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:08:41
+2019-12-01 13:09:51 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:09:51
+2019-12-01 13:17:20 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:17:20
+2019-12-01 13:17:28 ERROR appraisal:54 â java.lang.NumberFormatException: For input string: "[1.0]"
+2019-12-01 13:17:58 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:17:58
+2019-12-01 13:29:13 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:29:13
+2019-12-01 13:29:25 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Union can only be performed on tables with the compatible column types. double <> array<double> at the first column of the second table;;
+'Union
+:- Project [value#452 AS features#454]
+:  +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#452]
+:     +- ExternalRDD [obj#451]
++- Project [label#423]
+   +- Project [uniformity_of_cell_size#236, uniformity_of_cell_size#236 AS label#423]
+      +- Project [uniformity_of_cell_size#236]
+         +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, bland_chromatin#286, normal_nucleoli#296, UDF(mitoses#19) AS mitoses#306]
+            +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, bland_chromatin#286, UDF(normal_nucleoli#18) AS normal_nucleoli#296, mitoses#19]
+               +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, UDF(bland_chromatin#17) AS bland_chromatin#286, normal_nucleoli#18, mitoses#19]
+                  +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, UDF(bare_nuclei#16) AS bare_nuclei#276, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                     +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, UDF(single_epithelial_cell_size#15) AS single_epithelial_cell_size#266, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                        +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, UDF(marginal_adhesion#14) AS marginal_adhesion#256, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                           +- Project [clump_thickness#226, uniformity_of_cell_size#236, UDF(uniformity_of_cell_shape#13) AS uniformity_of_cell_shape#246, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                              +- Project [clump_thickness#226, UDF(uniformity_of_cell_size#12) AS uniformity_of_cell_size#236, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                 +- Project [UDF(clump_thickness#11) AS clump_thickness#226, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                    +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                       +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                          +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                             +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                   +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                      +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                         +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                            +- Project [clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                                               +- Project [code_number#10, clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19, class#20, monotonically_increasing_id() AS lineId#32L]
+                                                                  +- Relation[code_number#10,clump_thickness#11,uniformity_of_cell_size#12,uniformity_of_cell_shape#13,marginal_adhesion#14,single_epithelial_cell_size#15,bare_nuclei#16,bland_chromatin#17,normal_nucleoli#18,mitoses#19,class#20] csv
+
+2019-12-01 13:33:04 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:33:04
+2019-12-01 13:33:15 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Union can only be performed on tables with the compatible column types. double <> array<double> at the first column of the second table;;
+'Union
+:- Project [value#456 AS features#458]
+:  +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#456]
+:     +- ExternalRDD [obj#455]
++- Project [label#423]
+   +- Project [uniformity_of_cell_size#236, uniformity_of_cell_size#236 AS label#423]
+      +- Project [uniformity_of_cell_size#236]
+         +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, bland_chromatin#286, normal_nucleoli#296, UDF(mitoses#19) AS mitoses#306]
+            +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, bland_chromatin#286, UDF(normal_nucleoli#18) AS normal_nucleoli#296, mitoses#19]
+               +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, bare_nuclei#276, UDF(bland_chromatin#17) AS bland_chromatin#286, normal_nucleoli#18, mitoses#19]
+                  +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, single_epithelial_cell_size#266, UDF(bare_nuclei#16) AS bare_nuclei#276, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                     +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, marginal_adhesion#256, UDF(single_epithelial_cell_size#15) AS single_epithelial_cell_size#266, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                        +- Project [clump_thickness#226, uniformity_of_cell_size#236, uniformity_of_cell_shape#246, UDF(marginal_adhesion#14) AS marginal_adhesion#256, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                           +- Project [clump_thickness#226, uniformity_of_cell_size#236, UDF(uniformity_of_cell_shape#13) AS uniformity_of_cell_shape#246, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                              +- Project [clump_thickness#226, UDF(uniformity_of_cell_size#12) AS uniformity_of_cell_size#236, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                 +- Project [UDF(clump_thickness#11) AS clump_thickness#226, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                    +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                       +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                          +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                             +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                   +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                      +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                         +- TypedFilter <function1>, interface org.apache.spark.sql.Row, [StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true)], createexternalrow(clump_thickness#11.toString, uniformity_of_cell_size#12.toString, uniformity_of_cell_shape#13.toString, marginal_adhesion#14.toString, single_epithelial_cell_size#15.toString, bare_nuclei#16.toString, bland_chromatin#17.toString, normal_nucleoli#18.toString, mitoses#19.toString, StructField(clump_thickness,StringType,true), StructField(uniformity_of_cell_size,StringType,true), StructField(uniformity_of_cell_shape,StringType,true), StructField(marginal_adhesion,StringType,true), StructField(single_epithelial_cell_size,StringType,true), StructField(bare_nuclei,StringType,true), StructField(bland_chromatin,StringType,true), StructField(normal_nucleoli,StringType,true), StructField(mitoses,StringType,true))
+                                                            +- Project [clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19]
+                                                               +- Project [code_number#10, clump_thickness#11, uniformity_of_cell_size#12, uniformity_of_cell_shape#13, marginal_adhesion#14, single_epithelial_cell_size#15, bare_nuclei#16, bland_chromatin#17, normal_nucleoli#18, mitoses#19, class#20, monotonically_increasing_id() AS lineId#32L]
+                                                                  +- Relation[code_number#10,clump_thickness#11,uniformity_of_cell_size#12,uniformity_of_cell_shape#13,marginal_adhesion#14,single_epithelial_cell_size#15,bare_nuclei#16,bland_chromatin#17,normal_nucleoli#18,mitoses#19,class#20] csv
+
+2019-12-01 13:34:01 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:34:01
+2019-12-01 13:34:11 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Union can only be performed on tables with the compatible column types. double <> array<double> at the first column of the second table;;
+'Union
+:- Project [value#456 AS features#458]
+:  +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#456]
+:     +- ExternalRDD [obj#455]
++- LogicalRDD [label#438], false
+
+2019-12-01 13:38:57 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:38:57
+2019-12-01 13:39:43 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:39:43
+2019-12-01 13:40:53 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:40:53
+2019-12-01 13:44:33 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:44:33
+2019-12-01 13:44:42 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: Detected implicit cartesian product for INNER join between logical plans
+Project [value#458 AS features#460]
++- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#458]
+   +- ExternalRDD [obj#457]
+and
+Project [label#442]
++- LogicalRDD [label#442, id#443L], false
+Join condition is missing or trivial.
+Either: use the CROSS JOIN syntax to allow cartesian products between these
+relations, or: enable implicit cartesian products by setting the configuration
+variable spark.sql.crossJoin.enabled=true;
+2019-12-01 13:45:43 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:45:43
+2019-12-01 13:45:44 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:45:44
+2019-12-01 13:51:32 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:51:32
+2019-12-01 13:55:06 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:55:06
+2019-12-01 13:55:14 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 13:57:50 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:57:50
+2019-12-01 13:57:59 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 13:58:10 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:58:10
+2019-12-01 13:58:20 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 13:58:48 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:58:48
+2019-12-01 13:58:58 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 13:59:22 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 13:59:22
+2019-12-01 14:00:05 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:00:05
+2019-12-01 14:00:32 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 14:00:43 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:00:43
+2019-12-01 14:00:54 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 14:15:04 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:15:04
+2019-12-01 14:16:45 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:16:45
+2019-12-01 14:16:56 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 14:20:33 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:20:33
+2019-12-01 14:21:00 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 14:23:18 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:23:18
+2019-12-01 14:23:25 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: The number of columns doesn't match.
+Old column names (1): value
+New column names (2): features, indices
+2019-12-01 14:24:22 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:24:22
+2019-12-01 14:24:50 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 14:29:05 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:29:05
+2019-12-01 14:29:24 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually struct<type:tinyint,size:int,indices:array<int>,values:array<double>>.
+2019-12-01 14:36:18 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:36:18
+2019-12-01 14:36:18 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:36:18
+2019-12-01 14:36:30 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: The number of columns doesn't match.
+Old column names (2): _1, _2
+New column names (1): features
+2019-12-01 14:36:30 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: The number of columns doesn't match.
+Old column names (2): _1, _2
+New column names (1): features
+2019-12-01 14:42:13 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:42:13
+2019-12-01 14:42:21 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 14:49:45 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:49:45
+2019-12-01 14:50:01 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 14:51:07 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:51:07
+2019-12-01 14:51:15 ERROR Executor:91 â Exception in task 0.0 in stage 18.0 (TID 18)
+org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:28)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+2019-12-01 14:51:15 ERROR TaskSetManager:70 â Task 0 in stage 18.0 failed 1 times; aborting job
+2019-12-01 14:51:15 ERROR appraisal:54 â org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 18.0 failed 1 times, most recent failure: Lost task 0.0 in stage 18.0 (TID 18, localhost, executor driver): org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:28)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+
+Driver stacktrace:
+2019-12-01 14:59:33 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:59:33
+2019-12-01 14:59:35 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 14:59:35
+2019-12-01 15:00:48 ERROR Executor:91 â Exception in task 0.0 in stage 18.0 (TID 18)
+org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+2019-12-01 15:00:48 ERROR TaskSetManager:70 â Task 0 in stage 18.0 failed 1 times; aborting job
+2019-12-01 15:00:48 ERROR appraisal:54 â org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 18.0 failed 1 times, most recent failure: Lost task 0.0 in stage 18.0 (TID 18, localhost, executor driver): org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+
+Driver stacktrace:
+2019-12-01 15:01:40 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 15:01:40
+2019-12-01 15:02:02 ERROR Executor:91 â Exception in task 0.0 in stage 18.0 (TID 18)
+org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+2019-12-01 15:02:02 ERROR TaskSetManager:70 â Task 0 in stage 18.0 failed 1 times; aborting job
+2019-12-01 15:02:02 ERROR appraisal:54 â org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 18.0 failed 1 times, most recent failure: Lost task 0.0 in stage 18.0 (TID 18, localhost, executor driver): org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+
+Driver stacktrace:
+2019-12-01 15:03:33 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 15:03:33
+2019-12-01 15:03:50 ERROR Executor:91 â Exception in task 0.0 in stage 18.0 (TID 18)
+org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+2019-12-01 15:03:50 ERROR TaskSetManager:70 â Task 0 in stage 18.0 failed 1 times; aborting job
+2019-12-01 15:03:50 ERROR appraisal:54 â org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 18.0 failed 1 times, most recent failure: Lost task 0.0 in stage 18.0 (TID 18, localhost, executor driver): org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at org.apache.spark.sql.Row$class.getDouble(Row.scala:248)
+	at org.apache.spark.sql.catalyst.expressions.GenericRow.getDouble(rows.scala:166)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+
+Driver stacktrace:
+2019-12-01 15:07:36 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 15:07:36
+2019-12-01 15:07:57 ERROR Executor:91 â Exception in task 0.0 in stage 18.0 (TID 18)
+org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NumberFormatException: For input string: "WrappedArray(5.0, 1.0, 1.0, 1.0, 2.0, 1.0, 2.0, 1.0, 1.0)"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at scala.collection.immutable.StringLike$class.toDouble(StringLike.scala:285)
+	at scala.collection.immutable.StringOps.toDouble(StringOps.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2$$anonfun$3.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2$$anonfun$3.apply(RandomForest.scala:29)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+2019-12-01 15:07:57 ERROR TaskSetManager:70 â Task 0 in stage 18.0 failed 1 times; aborting job
+2019-12-01 15:07:57 ERROR appraisal:54 â org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 18.0 failed 1 times, most recent failure: Lost task 0.0 in stage 18.0 (TID 18, localhost, executor driver): org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NumberFormatException: For input string: "WrappedArray(5.0, 1.0, 1.0, 1.0, 2.0, 1.0, 2.0, 1.0, 1.0)"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at scala.collection.immutable.StringLike$class.toDouble(StringLike.scala:285)
+	at scala.collection.immutable.StringOps.toDouble(StringOps.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2$$anonfun$3.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2$$anonfun$3.apply(RandomForest.scala:29)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+
+Driver stacktrace:
+2019-12-01 15:10:11 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 15:10:11
+2019-12-01 15:10:11 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 15:10:11
+2019-12-01 15:10:51 ERROR Executor:91 â Exception in task 0.0 in stage 18.0 (TID 18)
+org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2$$anonfun$apply$1.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2$$anonfun$apply$1.apply(RandomForest.scala:29)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+2019-12-01 15:10:51 ERROR TaskSetManager:70 â Task 0 in stage 18.0 failed 1 times; aborting job
+2019-12-01 15:10:51 ERROR appraisal:54 â org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 18.0 failed 1 times, most recent failure: Lost task 0.0 in stage 18.0 (TID 18, localhost, executor driver): org.apache.spark.SparkException: Failed to execute user defined function($anonfun$2: (struct<features:array<double>>) => struct<type:tinyint,size:int,indices:array<int>,values:array<double>>)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage5.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$15$$anon$2.hasNext(WholeStageCodegenExec.scala:655)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:255)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$2.apply(SparkPlan.scala:247)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsInternal$1$$anonfun$apply$24.apply(RDD.scala:836)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:324)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:288)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: scala.collection.mutable.WrappedArray$ofRef cannot be cast to java.lang.Double
+	at scala.runtime.BoxesRunTime.unboxToDouble(BoxesRunTime.java:114)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2$$anonfun$apply$1.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2$$anonfun$apply$1.apply(RandomForest.scala:29)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:29)
+	at appraisal.spark.algorithm.RandomForest$$anonfun$2.apply(RandomForest.scala:27)
+	... 21 more
+
+Driver stacktrace:
+2019-12-01 16:00:02 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 16:00:02
+2019-12-01 16:00:38 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 16:00:38
+2019-12-01 16:10:45 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 16:10:45
+2019-12-01 16:11:11 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 16:38:53 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 16:38:53
+2019-12-01 16:40:06 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 16:40:06
+2019-12-01 16:49:16 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 16:49:16
+2019-12-01 16:49:26 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 16:49:55 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 16:49:55
+2019-12-01 16:50:09 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column features must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually array<double>.
+2019-12-01 16:57:54 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 16:57:54
+2019-12-01 16:58:07 ERROR appraisal:54 â org.apache.spark.sql.AnalysisException: cannot resolve 'UDF(features)' due to data type mismatch: argument 1 requires array<double> type, however, '`features`' is of double type.;;
+'Project [UDF(features#469) AS features#471]
++- Project [features#469]
+   +- Generate explode(features#463), false, [features#469]
+      +- Project [features#463, monotonically_increasing_id() AS id#465L]
+         +- Project [value#461 AS features#463]
+            +- SerializeFromObject [staticinvoke(class org.apache.spark.sql.catalyst.expressions.UnsafeArrayData, ArrayType(DoubleType,false), fromPrimitiveArray, input[0, [D, true], true, false) AS value#461]
+               +- ExternalRDD [obj#460]
+
+2019-12-01 17:02:05 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 17:02:05
+2019-12-01 17:03:03 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 17:03:03
+2019-12-01 17:04:17 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 17:04:17
+2019-12-01 17:06:31 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 17:06:31
+2019-12-01 17:06:50 ERROR appraisal:54 â java.lang.IllegalArgumentException: requirement failed: Column indexedFeatures already exists.
+2019-12-01 17:07:38 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 17:07:38
+2019-12-01 17:07:38 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 17:07:38
+2019-12-01 17:12:27 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 01/12/2019 17:12:27
+2019-12-01 17:13:06 ERROR appraisal:54 â java.lang.IllegalArgumentException: Field "features" does not exist.
+Available fields: clump_thickness, uniformity_of_cell_size, uniformity_of_cell_shape, marginal_adhesion, single_epithelial_cell_size, bare_nuclei, bland_chromatin, normal_nucleoli, mitoses

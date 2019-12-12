@@ -6,6 +6,6 @@ import scala.collection.mutable.HashMap
 
 trait EnsembleAlgorithm extends AppraisalAlgorithm {
   
-  def run(idf: DataFrame, params: HashMap[String, Any] = null): Entities.ImputationResult
+  def run(idf: DataFrame, cdf:DataFrame = null, params: HashMap[String, Any] = null): Entities.ImputationResult
   
 }

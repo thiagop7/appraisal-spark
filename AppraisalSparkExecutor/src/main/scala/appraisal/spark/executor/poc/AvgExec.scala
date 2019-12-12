@@ -52,7 +52,7 @@ object AvgExec {
       val params: HashMap[String, Any] = HashMap(
           "imputationFeature" -> feature)
       
-      val imputationResult = new Avg().run(idf, params)
+      val imputationResult = new Avg().run(idf, null, params)
       
       imputationResult.result.foreach(Logger.getLogger("appraisal").error(_))
       

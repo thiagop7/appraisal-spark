@@ -50,7 +50,7 @@ object PcaExec {
           //"percentReduction" -> percentReduction._1)
           "percentReduction" -> 0d)
       
-      val res = new Pca().run(_vnidf, params)
+      val res = new Pca().run(_vnidf, null, params)
       
       res.result.sortBy(_.index).collect().foreach(Logger.getLogger("appraisal").error(_))
       

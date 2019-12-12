@@ -12,7 +12,7 @@ import org.apache.spark.broadcast._
 
 class Pca extends SelectionAlgorithm {
   
-  def run(odf: DataFrame, params: HashMap[String, Any] = null): Entities.SelectionResult = {
+  def run(odf: DataFrame, cdf:DataFrame = null, params: HashMap[String, Any] = null): Entities.SelectionResult = {
     
     val attribute: String = params("imputationFeature").asInstanceOf[String] 
     val percentReduction: Double = params("percentReduction").asInstanceOf[Double] 

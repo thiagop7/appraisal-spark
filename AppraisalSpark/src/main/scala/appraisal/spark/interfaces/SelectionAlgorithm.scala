@@ -7,6 +7,6 @@ import org.apache.spark.broadcast._
 
 trait SelectionAlgorithm extends AppraisalAlgorithm {
   
-  def run(idf: DataFrame, params: HashMap[String, Any] = null): Entities.SelectionResult
+  def run(idf: DataFrame, cdf:DataFrame = null, params: HashMap[String, Any] = null): Entities.SelectionResult
   
 }

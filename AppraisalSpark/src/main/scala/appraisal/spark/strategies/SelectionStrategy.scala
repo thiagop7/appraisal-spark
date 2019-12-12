@@ -8,8 +8,8 @@ import org.apache.spark.broadcast._
 
 class SelectionStrategy(var params: HashMap[String, Any] = null, var selectionAlgorithm: SelectionAlgorithm) extends AppraisalStrategy {
   
-  def run(idf: DataFrame): Entities.SelectionResult = {
-    selectionAlgorithm.run(idf, params)
+  def run(idf: DataFrame, cdf: DataFrame = null): Entities.SelectionResult = {
+    selectionAlgorithm.run(idf, cdf, params)
   }
   
   def algName(): String = {

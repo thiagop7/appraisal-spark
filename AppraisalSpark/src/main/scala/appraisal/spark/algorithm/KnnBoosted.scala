@@ -12,12 +12,11 @@ import scala.collection.mutable.HashMap
 import appraisal.spark.interfaces.ImputationAlgorithm
 import org.apache.spark.broadcast._
 import appraisal.spark.statistic.Statistic
-import scala.math.log
 import scala.collection.parallel.immutable._
 
 class KnnBoosted extends ImputationAlgorithm {
 
-  def run(idf: DataFrame, params: HashMap[String, Any] = null): Entities.ImputationResult = {
+  def run(idf: DataFrame, cdf:DataFrame = null,params: HashMap[String, Any] = null): Entities.ImputationResult = {
 
     val attribute: String = params("imputationFeature").asInstanceOf[String]
     val calcCol: Array[String] = params("calcFeatures").asInstanceOf[Array[String]]
@@ -76,7 +75,7 @@ class KnnBoosted extends ImputationAlgorithm {
       val kavg = rdf.map(_._4).reduce((x, y) => x + y).doubleValue() / count
 
       // Calculo de normalização do erro para realizar a atualização dos pesos
-      val nrdf = calcExtError(rdf)
+      val nrdf = Util.calcExtError(rdf)
 
       //Tive que fazer isso para forçar precisão de duas casas decimais
       val arrImputated = rdf.map(x => x._3 - (x._3 % 0.01)).toArray
@@ -84,8 +83,8 @@ class KnnBoosted extends ImputationAlgorithm {
 
       //cálculo da estimativa de erro por T
       val estimator_error = nrdf.map(_._7).sum
-      val beta = calculateBeta(estimator_error)
-      val estimator_weight = calculateEstimatorWeight(beta, learningRate)
+      val beta = Util.calculateBeta(estimator_error)
+      val estimator_weight = Util.calculateEstimatorWeight(beta, learningRate)
       val varianceImputated = Util.variance(arrComplete).get
 
       listStats = listStats :+ estimator_error
@@ -116,7 +115,7 @@ class KnnBoosted extends ImputationAlgorithm {
 
       val weightedLines = Util.weightedSample(weightUpdatedProb, weightUpdated.length)
 
-      impDf = resampleByWheitedSample(weightedLines, impDf, columns, weightUpdated)
+      impDf = Util.resampleByWheitedSample(weightedLines, impDf, columns, weightUpdated)
 
       boostStats = boostStats ++: HashMap(i -> listStats)
     }
@@ -130,57 +129,6 @@ class KnnBoosted extends ImputationAlgorithm {
       varianceDfCompl,
       boostStats.toSeq.sortBy(_._1),
       params.toString()))
-  }
-
-  def resampleByWheitedSample(weightedLines: Array[Long], origImpDf: ParSeq[Row], columns: Array[String], linesWeight: Array[(Long, Double)]): ParSeq[Row] = {
-
-    val lineIdIndex = columns.indexOf("lineId")
-    val originalValue = columns.indexOf("originalValue")
-    val indexWeight = columns.indexOf("weight")
-
-    //Removo a coluna de peso para atualizar com o novo peso
-    val allColumns = columns.dropRight(1)
-
-    val lines = origImpDf.filter(row => weightedLines.toList.contains(row.getLong(lineIdIndex)))
-
-    val newLines = lines.map(x =>
-      {
-
-        val newWeight = linesWeight.filter(p => p._1 == x.getLong(lineIdIndex)).last._2
-
-        (Row.fromSeq(Seq(newWeight).++:(x.toSeq)))
-
-      })
-
-    return newLines
-
-  }
-
-  def calcExtError(rdf: ParSeq[(Long, Double, Double, Int, Double, Double, Double)]) = { // Calculo de normalização do erro para realizar a atualização dos pesos
-
-    val maxErr = rdf.map(_._5).max
-
-    val nrdf = rdf.map(r =>
-      {
-
-        var erroNorm = r._5
-        var estimatorError = 0.0
-        if (maxErr != 0) {
-          erroNorm = erroNorm / maxErr
-          estimatorError = r._7 * erroNorm
-        }
-
-        (
-          r._1,
-          r._2,
-          r._3,
-          r._4,
-          r._5,
-          erroNorm,
-          estimatorError,
-          r._7)
-      })
-    nrdf
   }
 
   def runKnn(impDf: ParSeq[Row], columns: Array[String], calcCol: Array[String], calcDf: scala.collection.parallel.immutable.ParSeq[org.apache.spark.sql.Row], ks: org.apache.spark.rdd.RDD[Int], t: Int) = {
@@ -235,18 +183,6 @@ class KnnBoosted extends ImputationAlgorithm {
     })
 
     rdf
-  }
-
-  def calculateBeta(estimator_error: Double): Double = {
-
-    //Low β means high confidence in theprediction.
-    return estimator_error / (1 - estimator_error)
-  }
-
-  def calculateEstimatorWeight(beta: Double, learningRate: Double): Double = {
-    val logBeta = log(1 / beta)
-
-    return learningRate * logBeta
   }
 
   def name(): String = { "KnnBoosted" }

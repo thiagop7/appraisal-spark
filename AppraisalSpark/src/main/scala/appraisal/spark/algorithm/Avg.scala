@@ -11,7 +11,7 @@ import appraisal.spark.statistic.Statistic
 
 class Avg extends ImputationAlgorithm {
   
-  def run(idf: DataFrame, params: HashMap[String, Any] = null): Entities.ImputationResult = {
+  def run(idf: DataFrame, cdf:DataFrame = null, params: HashMap[String, Any] = null): Entities.ImputationResult = {
     
     val attribute: String = params("imputationFeature").asInstanceOf[String] 
     
