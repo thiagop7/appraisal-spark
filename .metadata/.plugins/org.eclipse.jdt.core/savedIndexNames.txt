@@ -156,6 +156,7 @@ INDEX VERSION 1.130+/home/oem/Workspace/mestrado/appraisalAdaboost-spark/.metada
 3872486178.index
 3311256212.index
 2802738263.index
+1199965764.index
 373019204.index
 4289936530.index
 330025248.index
@@ -189,7 +190,6 @@ INDEX VERSION 1.130+/home/oem/Workspace/mestrado/appraisalAdaboost-spark/.metada
 3248160737.index
 502732891.index
 3939765810.index
-615253153.index
 3765911814.index
 3075519150.index
 407324975.index
@@ -228,7 +228,6 @@ INDEX VERSION 1.130+/home/oem/Workspace/mestrado/appraisalAdaboost-spark/.metada
 781906164.index
 112714010.index
 544817234.index
-3341023083.index
 3589234278.index
 747797709.index
 1154900962.index

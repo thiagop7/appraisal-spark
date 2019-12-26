@@ -23,13 +23,14 @@ object Statistic {
     }))
     
     val count = impResult.result.count()
-    val totalError = impResult.result.map(_.error).reduce(_ + _)
-    val avgError = (totalError / count).doubleValue()
-    val avgPercentualError = (impResult.result.map(_.percentualError).reduce(_ + _) / count).doubleValue()
-    val varianceImputedError = 0//impres.varianceImputedError
+    val totalError = impres.totalError//impResult.result.map(_.error).reduce(_ + _)
+    val avgError = impres.avgError //(totalError / count).doubleValue()
+    val avgPercentualError = impres.avgPercentError //(impResult.result.map(_.percentualError).reduce(_ + _) / count).doubleValue()
+    val varianceImputedError = impres.varianceImputedError
     val varianteCompletedError = impres.varianceCompleteError
+    val weights = impres.params
     
-    Entities.ImputationResult(impResult.result, impres.k, avgError, totalError, avgPercentualError, varianteCompletedError, impres.boostedparams, impres.params)
+    Entities.ImputationResult(impResult.result, impres.k, avgError, totalError, avgPercentualError, varianteCompletedError, varianceImputedError, impres.boostedparams, impres.params)
     
   }
   
@@ -49,10 +50,10 @@ object Statistic {
     val totalError = impResult.result.map(_.error).reduce(_ + _)
     val avgError = (totalError / count).doubleValue()
     val avgPercentualError = (impResult.result.map(_.percentualError).reduce(_ + _) / count).doubleValue()
-    val varianceImputedError = 0//impres.varianceImputedError
+    val varianceImputedError = impres.varianceImputedError
     val varianteCompletedError = impres.varianceCompleteError
     
-    Entities.ImputationResult(impResult.result, impres.k, avgError, totalError, avgPercentualError, varianteCompletedError, impres.boostedparams, impres.params)
+    Entities.ImputationResult(impResult.result, impres.k, avgError, totalError, avgPercentualError, varianteCompletedError, varianceImputedError, impres.boostedparams, impres.params)
   }
   
 }

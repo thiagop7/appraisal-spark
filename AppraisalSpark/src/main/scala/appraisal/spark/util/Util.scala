@@ -98,10 +98,10 @@ object Util {
     val totalError = r.map(_.totalError.asInstanceOf[Double]).reduce((x, y) => x + y) / count
     val avgError = r.map(_.avgError.asInstanceOf[Double]).reduce((x, y) => x + y) / count
     val avgPercentualError = r.map(_.avgPercentError.asInstanceOf[Double]).reduce((x, y) => x + y) / count
-    val varianceImputedError = 0 //r.map(_.varianceImputedError.asInstanceOf[Double]).reduce((x, y) => x + y) / count
+    val varianceImputedError = r.map(_.varianceImputedError.asInstanceOf[Double]).reduce((x, y) => x + y) / count
     val varianceCompleteError = r.map(_.varianceCompleteError.asInstanceOf[Double]).reduce((x, y) => x + y) / count
 
-    Entities.ImputationResult(null, k.intValue(), avgError, totalError, avgPercentualError, varianceCompleteError, null, null)
+    Entities.ImputationResult(null, k.intValue(), avgError, totalError, avgPercentualError, varianceCompleteError, varianceImputedError, null, null)
 
   }
 
@@ -122,7 +122,7 @@ object Util {
     case f: Float  => f.toDouble
     case d: Double => d.toDouble
     case l: Long   => l.toDouble
-    case s: String => s.toDouble
+    case s: String => s.toDouble    
   }
   
   // Métodos utilizados para cálculo dos pesos e realização do weighted bootstrap sample

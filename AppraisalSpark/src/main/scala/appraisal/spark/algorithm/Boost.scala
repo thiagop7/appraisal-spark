@@ -28,11 +28,10 @@ class Boost extends EnsembleAlgorithm {
     //Inicializando os pesos
     var weight = 1.toDouble / idf.count().toDouble
     var order = 0
-    var weightArray = scala.collection.mutable.IndexedSeq[Double](0.0)
+ 
+    //val widf = idf.withColumn("weight", lit(weight))
 
-    val widf = idf.withColumn("weight", lit(weight))
-
-    var nplan = new ImputationPlan(widf, odf, plan.getMissingRate, plan.getImputationFeature, plan.getFeatures.clone(), plan.getParallel)
+    var nplan = new ImputationPlan(idf, odf, plan.getMissingRate, plan.getImputationFeature, plan.getFeatures.clone(), plan.getParallel)
 
     plan.strategies.foreach(strat => {
 

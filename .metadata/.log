@@ -6854,3 +6854,614 @@ Binding(CTRL+F4,
 
 !ENTRY org.scala-ide.sdt.core 1 0 2019-12-11 21:49:48.188
 !MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala at: offset: 4010, length: 0
+!SESSION 2019-12-12 10:43:47.742 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-12 10:43:56.807
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-12 10:44:02.339
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-12 10:44:02.339
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68ec3bf6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6ea4e560,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2019-12-12 16:33:33.998 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2019-12-12 16:33:50.222
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-12 16:33:50.222
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@651fd589,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@187f698d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2019-12-12 16:37:28.964
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala at: offset: 1052, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2019-12-12 16:58:26.044
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/org/apache/spark/ml/boosting/BoostingParams.scala at: offset: 3518, length: 0
+!SESSION 2019-12-13 09:56:30.235 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-13 09:56:58.536
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-13 09:57:03.061
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-13 09:57:03.061
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@23dda1b9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b78464c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.search 4 0 2019-12-13 12:37:39.981
+!MESSAGE Text Search
+!SUBENTRY 1 org.eclipse.search 4 0 2019-12-13 12:37:39.981
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2019-12-13 12:37:39.981
+!MESSAGE File 'AppraisalSparkExecutor/C:\temp\breastCancer_single.log' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:845)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:277)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:268)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:275)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:261)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.processFile(TextSearchVisitor.java:237)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 3 org.eclipse.core.resources 4 274 2019-12-13 12:37:39.983
+!MESSAGE Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+
+!ENTRY org.eclipse.search 4 0 2019-12-13 12:37:39.983
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 0 2019-12-13 12:37:39.983
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2019-12-13 12:37:39.983
+!MESSAGE File 'AppraisalSparkExecutor/C:\temp\breastCancer_single.log' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:845)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:277)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:268)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:275)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:261)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.processFile(TextSearchVisitor.java:237)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 3 org.eclipse.core.resources 4 274 2019-12-13 12:37:39.983
+!MESSAGE Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+!SESSION 2019-12-13 12:57:05.419 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-13 12:57:13.246
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-13 12:57:18.136
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-13 12:57:18.136
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@201a714e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4325d0cb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2019-12-13 17:09:22.564 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2019-12-13 17:09:33.505
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-13 17:09:33.505
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6261a3b8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2b70cb85,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2019-12-13 17:22:52.509 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2019-12-13 17:23:05.410
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-13 17:23:05.410
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10904249,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@48b27b8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2019-12-13 17:50:15.465
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/StackedGeneralization.scala at: offset: 1284, length: 0
+
+!ENTRY org.scala-ide.sdt.core 4 0 2019-12-13 18:04:07.104
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/Adaboost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2019-12-13 18:04:07.292
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/StackedGeneralization.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+!SESSION 2019-12-16 10:26:46.609 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-16 10:26:52.630
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-16 10:26:58.578
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-16 10:26:58.578
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@38cbbd5c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c7d95a2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2019-12-16 12:43:46.578
+!MESSAGE Throwable during asyncExec
+!STACK 0
+scala.reflect.internal.Types$TypeError: Internal error: no synthetic tree found for bean accessor value result
+	at scala.tools.nsc.typechecker.Namers$Namer$AccessorTypeCompleter.completeImpl(Namers.scala:962)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:1948)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:1946)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:1941)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1531)
+	at scala.reflect.internal.Symbols$Symbol.initialize(Symbols.scala:1679)
+	at scala.reflect.internal.Definitions$DefinitionsClass.neverHasTypeParameters(Definitions.scala:965)
+	at scala.tools.nsc.transform.SpecializeTypes.specializedTypeVarsBuffer(SpecializeTypes.scala:484)
+	at scala.tools.nsc.transform.SpecializeTypes.specializedTypeVars(SpecializeTypes.scala:467)
+	at scala.tools.nsc.transform.SpecializeTypes.specializeMember(SpecializeTypes.scala:987)
+	at scala.tools.nsc.transform.SpecializeTypes.$anonfun$specializeClass$31(SpecializeTypes.scala:843)
+	at scala.tools.nsc.transform.SpecializeTypes.$anonfun$specializeClass$30(SpecializeTypes.scala:842)
+	at scala.tools.nsc.transform.SpecializeTypes.specializeClass(SpecializeTypes.scala:840)
+	at scala.tools.nsc.transform.SpecializeTypes.transformInfo(SpecializeTypes.scala:1266)
+	at scala.tools.nsc.transform.InfoTransform$Phase$$anon$1.transform(InfoTransform.scala:38)
+	at scala.reflect.internal.Symbols$Symbol.rawInfo(Symbols.scala:1624)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1541)
+	at scala.reflect.internal.Symbols$Symbol.isDerivedValueClass(Symbols.scala:826)
+	at scala.reflect.internal.transform.Erasure$ErasureMap.apply(Erasure.scala:131)
+	at scala.reflect.internal.transform.Erasure$ErasureMap.apply(Erasure.scala:144)
+	at scala.tools.nsc.transform.Erasure.needs$1(Erasure.scala:78)
+	at scala.tools.nsc.transform.Erasure.needsJavaSig(Erasure.scala:79)
+	at scala.tools.nsc.transform.Erasure.$anonfun$javaSig$1(Erasure.scala:386)
+	at scala.tools.nsc.transform.Erasure.javaSig(Erasure.scala:221)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.$anonfun$sig$1(JavaSig.scala:66)
+	at scala.tools.nsc.interactive.CompilerControl.askForResponse(CompilerControl.scala:253)
+	at scala.tools.nsc.interactive.CompilerControl.askForResponse$(CompilerControl.scala:250)
+	at scala.tools.nsc.interactive.Global.askForResponse(Global.scala:105)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.asyncExec(ScalaPresentationCompiler.scala:223)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.sig$lzycompute(JavaSig.scala:58)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.sig(JavaSig.scala:56)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.isDefined(JavaSig.scala:72)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$DefOwner.addDef(ScalaStructureBuilder.scala:678)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$DefOwner.addDef$(ScalaStructureBuilder.scala:666)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$Builder.addDef(ScalaStructureBuilder.scala:881)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$DefOwner.addDef(ScalaStructureBuilder.scala:664)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$DefOwner.addDef$(ScalaStructureBuilder.scala:664)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$Builder.addDef(ScalaStructureBuilder.scala:881)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.traverse(ScalaStructureBuilder.scala:952)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2$adapted(ScalaStructureBuilder.scala:959)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.traverse(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2$adapted(ScalaStructureBuilder.scala:959)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.traverse(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2$adapted(ScalaStructureBuilder.scala:959)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.traverse(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser.traverse(ScalaStructureBuilder.scala:909)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.$anonfun$buildStructure$5(ScalaCompilationUnit.scala:125)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:444)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2019-12-16 12:43:46.593
+!MESSAGE Throwable during asyncExec
+!STACK 0
+scala.reflect.internal.Types$TypeError: Internal error: no synthetic tree found for bean accessor value result
+	at scala.tools.nsc.typechecker.Namers$Namer$AccessorTypeCompleter.completeImpl(Namers.scala:962)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:1948)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:1946)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:1941)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1531)
+	at scala.reflect.internal.Symbols$Symbol.initialize(Symbols.scala:1679)
+	at scala.reflect.internal.Definitions$DefinitionsClass.neverHasTypeParameters(Definitions.scala:965)
+	at scala.tools.nsc.transform.SpecializeTypes.specializedTypeVarsBuffer(SpecializeTypes.scala:484)
+	at scala.tools.nsc.transform.SpecializeTypes.specializedTypeVars(SpecializeTypes.scala:467)
+	at scala.tools.nsc.transform.SpecializeTypes.specializeMember(SpecializeTypes.scala:987)
+	at scala.tools.nsc.transform.SpecializeTypes.$anonfun$specializeClass$31(SpecializeTypes.scala:843)
+	at scala.tools.nsc.transform.SpecializeTypes.$anonfun$specializeClass$30(SpecializeTypes.scala:842)
+	at scala.tools.nsc.transform.SpecializeTypes.specializeClass(SpecializeTypes.scala:840)
+	at scala.tools.nsc.transform.SpecializeTypes.transformInfo(SpecializeTypes.scala:1266)
+	at scala.tools.nsc.transform.InfoTransform$Phase$$anon$1.transform(InfoTransform.scala:38)
+	at scala.reflect.internal.Symbols$Symbol.rawInfo(Symbols.scala:1624)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1541)
+	at scala.reflect.internal.Symbols$Symbol.isDerivedValueClass(Symbols.scala:826)
+	at scala.reflect.internal.transform.Erasure$ErasureMap.apply(Erasure.scala:131)
+	at scala.reflect.internal.transform.Erasure$ErasureMap.apply(Erasure.scala:144)
+	at scala.tools.nsc.transform.Erasure.needs$1(Erasure.scala:78)
+	at scala.tools.nsc.transform.Erasure.needsJavaSig(Erasure.scala:79)
+	at scala.tools.nsc.transform.Erasure.$anonfun$javaSig$1(Erasure.scala:386)
+	at scala.tools.nsc.transform.Erasure.javaSig(Erasure.scala:221)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.$anonfun$sig$1(JavaSig.scala:66)
+	at scala.tools.nsc.interactive.CompilerControl.askForResponse(CompilerControl.scala:253)
+	at scala.tools.nsc.interactive.CompilerControl.askForResponse$(CompilerControl.scala:250)
+	at scala.tools.nsc.interactive.Global.askForResponse(Global.scala:105)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.asyncExec(ScalaPresentationCompiler.scala:223)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.sig$lzycompute(JavaSig.scala:58)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.sig(JavaSig.scala:56)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.typeParamsSig(JavaSig.scala:87)
+	at org.scalaide.core.internal.compiler.JavaSig$JavaSignature.typeVars(JavaSig.scala:84)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$Owner.acceptTypeParameters(ScalaStructureBuilder.scala:289)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$Owner.acceptTypeParameters$(ScalaStructureBuilder.scala:260)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$Builder.acceptTypeParameters(ScalaStructureBuilder.scala:881)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$DefOwner.addDef(ScalaStructureBuilder.scala:760)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$DefOwner.addDef$(ScalaStructureBuilder.scala:666)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$Builder.addDef(ScalaStructureBuilder.scala:881)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$DefOwner.addDef(ScalaStructureBuilder.scala:664)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$DefOwner.addDef$(ScalaStructureBuilder.scala:664)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$Builder.addDef(ScalaStructureBuilder.scala:881)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.traverse(ScalaStructureBuilder.scala:952)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2$adapted(ScalaStructureBuilder.scala:959)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.traverse(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2$adapted(ScalaStructureBuilder.scala:959)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.traverse(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.$anonfun$traverse$2$adapted(ScalaStructureBuilder.scala:959)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser$TreeTraverser.traverse(ScalaStructureBuilder.scala:959)
+	at org.scalaide.core.internal.jdt.model.ScalaStructureBuilder$StructureBuilderTraverser.traverse(ScalaStructureBuilder.scala:909)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.$anonfun$buildStructure$5(ScalaCompilationUnit.scala:125)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:444)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+!SESSION 2019-12-22 15:38:59.860 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2019-12-22 15:39:54.549
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-22 15:39:54.549
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@749a0457,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e5ec824,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2019-12-22 17:53:37.874
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/Adaboost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2019-12-22 17:53:38.455
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.eclipse.search 4 0 2019-12-22 18:34:26.472
+!MESSAGE Text Search
+!SUBENTRY 1 org.eclipse.search 4 0 2019-12-22 18:34:26.472
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2019-12-22 18:34:26.472
+!MESSAGE File 'AppraisalSparkExecutor/C:\temp\breastCancer_single.log' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:845)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:277)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:268)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:275)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:261)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.processFile(TextSearchVisitor.java:237)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 3 org.eclipse.core.resources 4 274 2019-12-22 18:34:26.475
+!MESSAGE Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+
+!ENTRY org.eclipse.search 4 0 2019-12-22 18:34:26.476
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 0 2019-12-22 18:34:26.476
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2019-12-22 18:34:26.476
+!MESSAGE File 'AppraisalSparkExecutor/C:\temp\breastCancer_single.log' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:845)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:277)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:268)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:275)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:261)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.processFile(TextSearchVisitor.java:237)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 3 org.eclipse.core.resources 4 274 2019-12-22 18:34:26.476
+!MESSAGE Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+!SESSION 2019-12-22 18:46:36.087 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-22 18:46:41.788
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-22 18:46:46.984
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-22 18:46:46.984
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34857d1d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@201a714e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.search 4 0 2019-12-22 19:15:50.466
+!MESSAGE Text Search
+!SUBENTRY 1 org.eclipse.search 4 0 2019-12-22 19:15:50.466
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2019-12-22 19:15:50.466
+!MESSAGE File 'AppraisalSparkExecutor/C:\temp\breastCancer_single.log' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:845)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:277)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:268)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:275)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:261)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.processFile(TextSearchVisitor.java:237)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 3 org.eclipse.core.resources 4 274 2019-12-22 19:15:50.467
+!MESSAGE Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+
+!ENTRY org.eclipse.search 4 0 2019-12-22 19:15:50.468
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 0 2019-12-22 19:15:50.468
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 2 org.eclipse.search 4 4 2019-12-22 19:15:50.468
+!MESSAGE File 'AppraisalSparkExecutor/C:\temp\breastCancer_single.log' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:845)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:277)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:268)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:275)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:261)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.processFile(TextSearchVisitor.java:237)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor$TextSearchJob.run(TextSearchVisitor.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 3 org.eclipse.core.resources 4 274 2019-12-22 19:15:50.468
+!MESSAGE Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.

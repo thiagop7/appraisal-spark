@@ -103,7 +103,7 @@ class Knn extends ImputationAlgorithm {
     val varianceImputated = Util.variance(arrComplete).get
     
     Statistic.statisticInfo(Entities.ImputationResult(context.parallelize(rdf.map(r => Entities.Result(r._1, r._2, r._3)).toList), 
-                                                                              kavg.intValue(), 0, 0, 0, varianceDfCompl, null, params.toString()))
+                                                                              kavg.intValue(), 0, 0, 0, varianceDfCompl, varianceImputated, null, params.toString()))
     
   }
   

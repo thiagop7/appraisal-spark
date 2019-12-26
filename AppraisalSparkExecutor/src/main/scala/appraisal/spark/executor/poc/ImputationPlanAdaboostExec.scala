@@ -130,6 +130,53 @@ object ImputationPlanAdaboostExec extends Serializable {
 
           selectionReduction.foreach(sr => {
 
+            
+            // clustering -> regression
+            
+            //impPlanAvg = new ImputationPlan(idf, odf, mr, feature, features, parallelExecution)
+            //impPlanKnn = new ImputationPlan(idf, odf, mr, feature, features, parallelExecution)
+            
+            //clusteringParamsAvg = HashMap(
+            //"k" -> 2, 
+            //"maxIter" -> 1000, 
+            //"kLimit" -> kn)
+            
+            //clusteringParamsKnn = HashMap(
+            //"k" -> 2, 
+            //"maxIter" -> 1000, 
+            //"kLimit" -> kn)
+            
+            //impPlanAvg.addStrategy(new ClusteringStrategy(clusteringParamsAvg, new KMeansPlus()))
+            //impPlanKnn.addStrategy(new ClusteringStrategy(clusteringParamsKnn, new KMeansPlus()))
+            
+            //imputationParamsAvg = HashMap()
+            
+            //impPlanAvg.addStrategy(new ImputationStrategy(imputationParamsAvg, new Avg()))
+            
+            //baggingParamsAvg = HashMap(
+            //"imputationPlan" -> impPlanAvg,
+            //"T" -> T)
+            
+            //impPlanAvg.addEnsembleStrategy(new EnsembleStrategy(baggingParamsAvg, new Bagging()))
+            
+            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlanAvg)
+            
+            //imputationParamsKnn = HashMap(
+            //"k" -> 2,
+            //"kLimit" -> kn)
+            
+            //impPlanKnn.addStrategy(new ImputationStrategy(imputationParamsKnn, new Knn()))
+            
+            //baggingParamsKnn = HashMap(
+            //"imputationPlan" -> impPlanKnn,
+            //"T" -> T)
+            
+            //impPlanKnn.addEnsembleStrategy(new EnsembleStrategy(baggingParamsKnn, new Bagging()))
+            
+            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlanKnn)
+            
+            
+            
             var impPlanKnn = new ImputationPlan(idf, odf, mr, feature, features, parallelExecution)
 
             var selectionParamsKnn: HashMap[String, Any] = HashMap(

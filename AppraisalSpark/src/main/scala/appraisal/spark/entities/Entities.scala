@@ -11,7 +11,7 @@ object Entities {
                           error: Double = 0, percentualError: Double = 0)
 
   final case class ImputationResult(result: RDD[Result] = null, k: Int = 0, avgError: Double = 0,
-                                    totalError: Double = 0, avgPercentError: Double = 0, varianceCompleteError: Double = 0, boostedparams: Seq[(Int, List[Double])] = null, params: String = null) extends StrategyResult
+                                    totalError: Double = 0, avgPercentError: Double = 0, varianceCompleteError: Double = 0, varianceImputedError: Double = 0, boostedparams: Seq[(Int, List[Double])] = null, params: String = null) extends StrategyResult
 
   final case class CResult(cluster: Int, lineId: Long)
 

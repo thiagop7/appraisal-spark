@@ -128,6 +128,7 @@ class AdaboostR2_old extends ImputationAlgorithm {
       0,
       0,
       varianceDfCompl,
+      0,
       boostStats.toSeq.sortBy(_._1),
       params.toString()))
   }

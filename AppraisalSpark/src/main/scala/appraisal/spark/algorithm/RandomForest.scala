@@ -116,9 +116,22 @@ class RandomForest extends ImputationAlgorithm {
 
 
     val stats =  predictions.select("prediction", attribute, "lineId").collect().toSeq
-        
+       
+    val dfImputed = predictions.select("prediction").toDF().collect()
+    
+    val dfImputedDouble = dfImputed.map(x =>
+      {
+        val array = x.toSeq.toArray
+        val arrDouble = array.map(_.toString().toDouble)
+        Vectors.dense(arrDouble).toArray
+      }).flatten
+    
+    val arrComplete = arrBefCalcDf ++ dfImputedDouble
+    
+    val varianceImputated = Util.variance(arrComplete).get
+    
     Statistic.statisticInfo(Entities.ImputationResult(context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("prediction"), r.getAs(attribute), r.getAs("lineId"))).toList), 
-                                                                              0, 0, 0, 0, varianceDfCompl, null, params.toString()))
+                                                                              0, 0, 0, 0, varianceDfCompl, varianceImputated, null, params.toString()))
   }
 
   def name(): String = { "RandomForest" }

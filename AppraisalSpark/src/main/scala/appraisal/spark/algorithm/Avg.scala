@@ -35,7 +35,7 @@ class Avg extends ImputationAlgorithm {
       val originalValue = r.getDouble(1)
       val imputationValue = r.getDouble(2)
       
-      Entities.Result(lineId, originalValue, imputationValue)}), 0, 0, 0, 0, 0, null ,params.toString())
+      Entities.Result(lineId, originalValue, imputationValue)}), 0, 0, 0, 0, 0,0, null ,params.toString())
       
     Statistic.statisticInfo(impResult)
     

@@ -106,6 +106,13 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
       vnidf.columns.filter(!"lineId".equals(_)).foreach(att => vnidf = vnidf.withColumn(att, appraisal.spark.util.Util.toDouble(col(att))))
       var _vnidf = vnidf
       
+      
+      val removeColodf = _odf.columns.diff(features).filter(c => !"lineId".equals(c) && !imputationFeature.equals(c) && !"originalValue".equals(c))
+      var vnodf = appraisal.spark.util.Util.filterNullAndNonNumeric(odf.drop(removeColodf: _*), calcCol)
+      vnodf.columns.filter(!"lineId".equals(_)).foreach(att => vnodf = vnodf.withColumn(att, appraisal.spark.util.Util.toDouble(col(att))))
+      val _vnodf = vnodf
+      
+    
       try{
       
         var imputationBatch = Seq.empty[DataFrame]
@@ -230,7 +237,7 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
                
                p_imputationBatch = p_imputationBatch.filter(df => df != null && df.count() > 0 && Util.hasNullatColumn(df, is.params("imputationFeature").asInstanceOf[String])) 
              
-               p_imputationBatch.foreach(_.printSchema())
+               //p_imputationBatch.foreach(_.printSchema())
                
                logStack = logStack :+ "Batch for imputation before imputation strategy: " + p_imputationBatch.size
                
@@ -240,7 +247,7 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
                  
                  val irs = p_imputationBatch.map(x => 
                    {
-                     is.run(x)
+                     is.run(x, _vnodf)
                    })
                  
                  //firs = is.combineResult(irs)
@@ -251,8 +258,11 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
                  logStack = logStack :+ "totalError: " + firs.totalError
                  logStack = logStack :+ "avgError: " + firs.avgError
                  logStack = logStack :+ "avgPercentError: " + firs.avgPercentError
-                 logStack = logStack :+ "BoostedStats: " + firs.boostedparams.map(x => "T: "+ x._1 + " "+ x._2)
+                 //logStack = logStack :+ "BoostedStats: " + firs.boostedparams.map(x => "T: "+ x._1 + " "+ x._2)
                  logStack = logStack :+ "varianceCompleteError: " + firs.varianceCompleteError
+                 logStack = logStack :+ "varianceImputedError: " + firs.varianceImputedError
+                 logStack = logStack :+ "weights: " + firs.params
+                 
                  
                  
                }else{

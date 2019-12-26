@@ -73,6 +73,9 @@ object AdaboostR2Exec {
       val _vnodf = vnodf
       // ----------------------------------- //
 
+      _vnidf.show()
+      _vnodf.show()
+      
       //Cálculo da variância por feature para comparação depois de imputado
       val arrFeatComplete = odf.select(col(feature)).collect().map(_.toSeq.toArray).flatten
       val varianceBefore = Util.variance(arrFeatComplete.map(x => x.toString().toDouble)).get
@@ -88,14 +91,12 @@ object AdaboostR2Exec {
 
       val imputationResult = new AdaboostR2().run(_vnidf, _vnodf, params)
 
-      imputationResult.result.foreach(Logger.getLogger("appraisal").error(_))
-
-      Logger.getLogger("appraisal").error("best k: " + imputationResult.k)
       Logger.getLogger("appraisal").error("totalError: " + imputationResult.totalError)
       Logger.getLogger("appraisal").error("avgError: " + imputationResult.avgError)
       Logger.getLogger("appraisal").error("avgPercentError: " + imputationResult.avgPercentError)
-      //Logger.getLogger("appraisal").error("varianceImputedError: " + imputationResult.varianceImputedError)
+      Logger.getLogger("appraisal").error("varianceImputedError: " + imputationResult.varianceImputedError)
       Logger.getLogger("appraisal").error("varianceCompleteError: " + imputationResult.varianceCompleteError)
+      Logger.getLogger("appraisal").error("weights: " + imputationResult.params)
 
       val wallStopTime = new java.util.Date()
 
