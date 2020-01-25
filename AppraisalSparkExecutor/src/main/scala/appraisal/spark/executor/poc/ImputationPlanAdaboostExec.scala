@@ -50,7 +50,7 @@ object ImputationPlanAdaboostExec extends Serializable {
       }
     }
 
-    parallelExecution = true
+    parallelExecution = false
 
     val wallStartTime = new java.util.Date()
     Logger.getLogger(getClass.getName).error("Appraisal Spark - Wall start time: " + appraisal.spark.util.Util.getCurrentTime(wallStartTime))
@@ -120,8 +120,8 @@ object ImputationPlanAdaboostExec extends Serializable {
         odf = odf.withColumn("originalValue", col(feature))
 
         //Cálculo da variância por feature para comparação depois de imputado
-        val arrFeatComplete = odf.select(col(feature)).collect().map(_.toSeq.toArray).flatten
-        val varianceBefore = Util.variance(arrFeatComplete.map(x =>Util.extractDouble(x)))
+        //val arrFeatComplete = odf.select(col(feature)).collect().map(_.toSeq.toArray).flatten
+        //val varianceBefore = Util.variance(arrFeatComplete.map(x =>Util.extractDouble(x)))
     
         missingRate.foreach(mr => {
 
@@ -189,8 +189,7 @@ object ImputationPlanAdaboostExec extends Serializable {
 
             var imputationParamsKnn: HashMap[String, Any] = HashMap(
               "k" -> 2,
-              "kLimit" -> kn,
-              "varianceComplete" -> varianceBefore.get,
+              "kLimit" -> kn,              
               "learningRate" -> 0.1,
               "T" -> T)
 

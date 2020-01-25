@@ -51,7 +51,7 @@ object ImputationPlanRandomForestExec extends Serializable {
       }
     }
 
-    parallelExecution = true
+    parallelExecution = false
 
     val wallStartTime = new java.util.Date()
     Logger.getLogger(getClass.getName).error("Appraisal Spark - Wall start time: " + appraisal.spark.util.Util.getCurrentTime(wallStartTime))
@@ -82,9 +82,9 @@ object ImputationPlanRandomForestExec extends Serializable {
 
       if (breastCancer) {
 
-        odf = Util.loadData(spark, "file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/breast-cancer-wisconsin.reduced.csv").withColumn("lineId", monotonically_increasing_id)
+        //odf = Util.loadData(spark, "file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/breast-cancer-wisconsin.reduced.csv").withColumn("lineId", monotonically_increasing_id)
 
-        //odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
+        odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
         features = Util.breastcancer_features
 
         //odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
@@ -131,32 +131,43 @@ object ImputationPlanRandomForestExec extends Serializable {
 
           selectionReduction.foreach(sr => {
 
-            var impPlanKnn = new ImputationPlan(idf, odf, mr, feature, features, parallelExecution)
+            var impPlan = new ImputationPlan(idf, odf, mr, feature, features, parallelExecution)
 
-            var selectionParamsKnn: HashMap[String, Any] = HashMap(
+            var selectionParams: HashMap[String, Any] = HashMap(
               "percentReduction" -> sr)
 
-            var clusteringParamsKnn: HashMap[String, Any] = HashMap(
+            var clusteringParams: HashMap[String, Any] = HashMap(
               "k" -> 2,
               "maxIter" -> 1000,
               "kLimit" -> kn)
 
-            var imputationParamsKnn: HashMap[String, Any] = HashMap(
+            var imputationParams: HashMap[String, Any] = HashMap(
               "k" -> 2,
               "kLimit" -> kn,
               "varianceComplete" -> varianceBefore.get,
               "learningRate" -> 0.1,
               "features" -> features)
 
-            var adaboostParamsKnn: HashMap[String, Any] = HashMap(
-              "imputationPlan" -> impPlanKnn)
+            var adaboostParams: HashMap[String, Any] = HashMap(
+              "imputationPlan" -> impPlan)
 
-            impPlanKnn.addStrategy(new ImputationStrategy(imputationParamsKnn, new RandomForest()))
+            // regression
 
-            impPlanKnn.addEnsembleStrategy(new EnsembleStrategy(adaboostParamsKnn, new Boost()))
+            impPlan.addStrategy(new ImputationStrategy(imputationParams, new RandomForest()))
 
-            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlanKnn)
+            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
 
+            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+
+            // clustering -> regression
+
+            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeansPlus()))
+
+            //impPlan.addStrategy(new ImputationStrategy(imputationParams, new RandomForest()))
+
+            //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+
+            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
           })
 
         })
@@ -207,7 +218,7 @@ object ImputationPlanRandomForestExec extends Serializable {
       }
 
     }
-  
+
   }
 
 }

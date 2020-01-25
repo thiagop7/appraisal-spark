@@ -8,7 +8,8 @@ import appraisal.spark.entities._
 import org.apache.spark.ml.linalg.{ Vector, Vectors }
 import scala.math.log
 import scala.collection.parallel.immutable._
-
+import org.apache.spark.sql.types._
+import org.apache.spark.ml.evaluation.RegressionEvaluator
 
 object Util {
 
@@ -117,14 +118,31 @@ object Util {
     mean(xs).flatMap(m => mean(xs.map(x => Math.pow(x - m, 2))))
 
   }
+
+  def rootMeanSquaredError(originalValues: Array[Double], predictedValues: Array[Double], session: SparkSession): Double = {
+
+    import session.implicits._
+
+    val predictions = session.sparkContext.parallelize(originalValues zip predictedValues).toDF("originalValues", "predictedValues")
+
+    // Get the RMSE using regression metrics
+    val evaluator = new RegressionEvaluator()
+      .setMetricName("rmse")
+      .setLabelCol("originalValues")
+      .setPredictionCol("predictedValues")
+
+    return evaluator.evaluate(predictions)
+
+  }
+
   def extractDouble: (Any) => Double = {
     case i: Int    => i.toDouble
     case f: Float  => f.toDouble
     case d: Double => d.toDouble
     case l: Long   => l.toDouble
-    case s: String => s.toDouble    
+    case s: String => s.toDouble
   }
-  
+
   // Métodos utilizados para cálculo dos pesos e realização do weighted bootstrap sample
 
   // a very simple weighted sampling function
@@ -212,7 +230,7 @@ object Util {
       })
     nrdf
   }
-  
+
   def resampleByWheitedSample(weightedLines: Array[Long], origImpDf: ParSeq[Row], columns: Array[String], linesWeight: Array[(Long, Double)]): ParSeq[Row] = {
 
     val lineIdIndex = columns.indexOf("lineId")

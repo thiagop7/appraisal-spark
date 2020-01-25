@@ -7465,3 +7465,2295 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
 !SUBENTRY 3 org.eclipse.core.resources 4 274 2019-12-22 19:15:50.468
 !MESSAGE Resource is out of sync with the file system: '/AppraisalSparkExecutor/C:\temp\breastCancer_single.log'.
+!SESSION 2019-12-26 21:15:46.262 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-26 21:15:56.689
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-26 21:16:02.310
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-26 21:16:02.310
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@257738c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6ed9c624,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2019-12-26 21:33:04.174
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala at: offset: 3428, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2019-12-26 21:55:05.611
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$25(ScalaHoverImpl.scala:227)
+	at scala.Option$WithFilter.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$lzycompute$1(ScalaHoverImpl.scala:226)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$1(ScalaHoverImpl.scala:205)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$2(ScalaHoverImpl.scala:238)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$1(ScalaHoverImpl.scala:103)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:101)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.super$getHoverInfo2(TextHoverFactory.scala:53)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$6(TextHoverFactory.scala:53)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$1(TextHoverFactory.scala:51)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2019-12-27 11:27:16.700
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala at: offset: 5080, length: 0
+!SESSION 2019-12-27 11:35:39.238 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2019-12-27 11:35:51.355
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-27 11:35:51.355
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ce29b97,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@370cf017,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2019-12-28 10:03:02.171 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2019-12-28 10:04:08.818
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-28 10:04:08.818
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4fff8767,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@69db3d64,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 0 2019-12-29 23:47:19.893
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at org.eclipse.debug.internal.ui.viewers.model.ViewerStateTracker.restorePendingStateNode(ViewerStateTracker.java:1266)
+	at org.eclipse.debug.internal.ui.viewers.model.ViewerStateTracker.compareFinished(ViewerStateTracker.java:1524)
+	at org.eclipse.debug.internal.ui.viewers.model.ElementCompareRequest$1.run(ElementCompareRequest.java:82)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:37)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4497)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4110)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+!SESSION 2019-12-30 18:20:36.060 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-30 18:20:42.693
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2019-12-30 18:20:48.692
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-12-30 18:20:48.692
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5af350a2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ed94d7a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-03 10:16:38.231 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-03 10:16:58.412
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-03 10:17:04.637
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-03 10:17:04.637
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@776fa2ae,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1608a570,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-03 15:32:22.273 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-03 15:32:35.821
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-03 15:32:35.821
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c5baa96,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66fad8be,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-03 18:01:28.152 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-03 18:01:38.798
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-03 18:01:38.798
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@25cbe209,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54e654d4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-03 18:04:49.399
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/GradientBoost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:507)
+	at scala.tools.nsc.interactive.Global.signalDone(Global.scala:348)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5611)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2452)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction(Typers.scala:3022)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$97(Typers.scala:5477)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5514)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedArg$1(Typers.scala:3236)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:478)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgToPoly$1(Typers.scala:3626)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$doTypedApply$34(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.handlePolymorphicCall$1(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3645)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:4718)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:4746)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5536)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2453)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction(Typers.scala:3022)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$97(Typers.scala:5477)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5514)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedArg$1(Typers.scala:3236)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:478)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgToPoly$1(Typers.scala:3626)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$doTypedApply$34(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.handlePolymorphicCall$1(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3645)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:4718)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:4746)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5536)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2453)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction(Typers.scala:3022)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$97(Typers.scala:5477)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5514)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedArg$1(Typers.scala:3236)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:478)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgToPoly$1(Typers.scala:3626)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$doTypedApply$34(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.handlePolymorphicCall$1(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3645)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:4718)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:4746)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5536)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2452)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTry$1(Typers.scala:5252)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5522)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2453)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.transformedOrTyped(Typers.scala:5801)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedDefDef(Typers.scala:2283)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5501)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1983)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1854)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5503)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5202)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5505)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5646)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$$anon$3.apply(Analyzer.scala:102)
+	at scala.tools.nsc.Global$GlobalPhase.$anonfun$applyPhase$1(Global.scala:426)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:419)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1327)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1327)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1320)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:657)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$7(Global.scala:572)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$6(Global.scala:568)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$6$adapted(Global.scala:568)
+	at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:568)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-03 18:04:52.425
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/GradientBoost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-03 18:05:36.063
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanGradientboostExec.scala at: offset: 5290, length: 0
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-03 18:31:42.635
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/StackedGeneralization.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-03 18:31:44.068
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/StackedGeneralization.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+!SESSION 2020-01-03 19:33:44.179 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-03 19:33:56.206
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-03 19:33:56.206
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66ab7bd9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6477a7ad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-04 10:19:13.060
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala at: offset: 3100, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-04 10:19:13.064
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala at: offset: 3101, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-04 10:43:27.362
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.$anonfun$mkCompletionProposal$7(ScalaPresentationCompiler.scala:417)
+	at org.scalaide.ui.internal.completion.ScalaCompletionProposalImpl.getAdditionalProposalInfo(ScalaCompletionProposalImpl.scala:109)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2020-01-04 12:16:16.240 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-04 12:16:30.300
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-04 12:16:30.300
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3bfe44dd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63d20cc3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-04 12:20:36.196 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-04 12:21:15.968
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-04 12:21:15.968
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4d5e3c3d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6261a3b8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-04 12:21:45.865
+!MESSAGE Timeout in askOption
+!STACK 0
+java.lang.Throwable
+	at org.scalaide.core.compiler.IScalaPresentationCompiler$Implicits$RichResponse$.getOption$extension(IScalaPresentationCompiler.scala:342)
+	at org.scalaide.core.internal.compiler.Scaladoc.withFragments$1(ScalaDoc.scala:55)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaClassFile.withSourceFile(ScalaClassFile.scala:26)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$25(ScalaHoverImpl.scala:227)
+	at scala.Option$WithFilter.flatMap(Option.scala:171)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$lzycompute$1(ScalaHoverImpl.scala:226)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.docComment$1(ScalaHoverImpl.scala:205)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$2(ScalaHoverImpl.scala:238)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.$anonfun$getHoverInfo2$1(ScalaHoverImpl.scala:103)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.ui.internal.editor.hover.ScalaHoverImpl.getHoverInfo2(ScalaHoverImpl.scala:101)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.super$getHoverInfo2(TextHoverFactory.scala:53)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$6(TextHoverFactory.scala:53)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.$anonfun$getHoverInfo2$1(TextHoverFactory.scala:51)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.debug.internal.editor.TextHoverFactory$$anon$1.getHoverInfo2(TextHoverFactory.scala:37)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-04 12:30:25.675
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/RandomForest.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:507)
+	at scala.tools.nsc.interactive.Global.signalDone(Global.scala:348)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5611)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5712)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5715)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedValDefImpl(Typers.scala:2034)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedValDef(Typers.scala:2020)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5500)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2452)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction(Typers.scala:3022)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$97(Typers.scala:5477)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5514)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedArg$1(Typers.scala:3236)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:478)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgToPoly$1(Typers.scala:3626)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$doTypedApply$34(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.handlePolymorphicCall$1(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3645)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:4718)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:4746)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5536)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2453)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction(Typers.scala:3022)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$97(Typers.scala:5477)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5514)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedArg$1(Typers.scala:3236)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:478)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgToPoly$1(Typers.scala:3626)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$doTypedApply$34(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.handlePolymorphicCall$1(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3645)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:4718)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:4746)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5536)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2453)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction(Typers.scala:3022)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$97(Typers.scala:5477)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedFunction$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5514)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedArg$1(Typers.scala:3236)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:478)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgToPoly$1(Typers.scala:3626)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$doTypedApply$34(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.handlePolymorphicCall$1(Typers.scala:3634)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3645)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:4718)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:4746)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5536)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2452)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTry$1(Typers.scala:5252)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5522)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2453)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.transformedOrTyped(Typers.scala:5801)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedDefDef(Typers.scala:2283)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5501)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1983)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1854)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5503)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5202)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5505)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5646)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$$anon$3.apply(Analyzer.scala:102)
+	at scala.tools.nsc.Global$GlobalPhase.$anonfun$applyPhase$1(Global.scala:426)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:419)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1327)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1327)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1320)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:657)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$7(Global.scala:572)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$6(Global.scala:568)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$6$adapted(Global.scala:568)
+	at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:568)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+
+!ENTRY org.eclipse.text 4 2 2020-01-04 14:01:18.606
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
+!STACK 0
+org.eclipse.jface.text.BadPositionCategoryException
+	at org.eclipse.jface.text.AbstractDocument.removePositionCategory(AbstractDocument.java:1057)
+	at org.scalaide.ui.internal.completion.ScalaCompletionProposalImpl$$anon$1.left(ScalaCompletionProposalImpl.scala:197)
+	at org.eclipse.jface.text.link.LinkedModeModel.exit(LinkedModeModel.java:333)
+	at org.eclipse.jface.text.link.LinkedModeModel$DocumentListener.documentChanged(LinkedModeModel.java:200)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:744)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:713)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:697)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:771)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1102)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.replace(SynchronizableDocument.java:173)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1120)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.replace(SynchronizableDocument.java:161)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:103)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1095)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1120)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:625)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:233)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7355)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8203)
+	at org.eclipse.swt.custom.StyledText.doContent(StyledText.java:2531)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:6003)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6034)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5732)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5268)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1357)
+	at org.eclipse.swt.widgets.Widget.sendIMKeyEvent(Widget.java:1436)
+	at org.eclipse.swt.widgets.Control.gtk_commit(Control.java:3304)
+	at org.eclipse.swt.widgets.Canvas.gtk_commit(Canvas.java:165)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1957)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6169)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5528)
+	at org.eclipse.swt.internal.gtk.OS._gtk_im_context_filter_keypress(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_im_context_filter_keypress(OS.java:8618)
+	at org.eclipse.swt.widgets.Control.filterKey(Control.java:2615)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3520)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:785)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1976)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6169)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5528)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9253)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1252)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2112)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4105)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+!SESSION 2020-01-05 10:33:29.459 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-05 10:33:38.073
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-05 10:33:43.038
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-05 10:33:43.038
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@32e42560,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f2a187f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-05 15:07:16.281
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala at: offset: 3833, length: 0
+!SESSION 2020-01-05 22:15:24.292 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-05 22:15:36.954
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-05 22:15:41.727
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-05 22:15:41.727
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79697c7e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ddaab12,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-06 21:03:59.269 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-06 21:04:10.342
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-06 21:04:10.342
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4bc25b28,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7e90d46,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-06 21:04:54.482
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/KMeans.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-06 21:04:55.690
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/KMeansExec.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-06 21:04:55.882
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/KMeansPlus.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+!SESSION 2020-01-06 22:23:05.371 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-06 22:24:16.374
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-06 22:24:16.374
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2bc326,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4430697d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-07 07:46:21.250
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec.scala at: offset: 2571, length: 0
+!SESSION 2020-01-07 14:53:30.605 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-07 14:53:41.329
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-07 14:53:41.329
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2dabc324,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62959d1d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-07 18:39:29.027 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-07 18:39:56.743
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-07 18:40:06.835
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-07 18:40:06.836
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1692cc18,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ebfca85,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-08 08:17:34.520
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec.scala at: offset: 3690, length: 0
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-08 11:09:52.826
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/StackedGeneralization.scala at: offset: 3978, length: 0
+!SESSION 2020-01-08 22:16:15.676 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-08 22:16:21.088
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-08 22:16:26.084
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-08 22:16:26.084
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ddaab12,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47a1b219,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-09 00:09:12.730 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-09 00:09:19.168
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-09 00:09:26.255
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-09 00:09:26.255
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5188cee2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72080a68,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-09 08:43:19.619
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec.scala at: offset: 6354, length: 0
+!SESSION 2020-01-09 21:21:03.819 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-09 21:21:15.707
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-09 21:21:15.708
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3a76ed9b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b9b892f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-10 19:52:48.046 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-10 19:52:58.321
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-10 19:52:58.321
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6cc9b5c2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7252331e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-11 15:25:02.645 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-11 15:25:18.232
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-11 15:25:18.232
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2b70cb85,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58376e3c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-12 12:28:00.552 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-12 12:28:06.045
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-12 12:28:10.654
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-12 12:28:10.654
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f777c73,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5bb64ea4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-12 12:29:49.519
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/StackedGeneralization.scala at: offset: 2505, length: 0
+!SESSION 2020-01-13 20:29:53.839 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-13 20:30:04.243
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-13 20:30:04.243
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6cc9b5c2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7252331e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-16 22:47:51.631 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-16 22:48:10.794
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-16 22:48:10.794
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58cdb431,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@444c59cd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-16 23:41:46.585
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/BaggingRegressor.scala at: offset: 5321, length: 0
+!SESSION 2020-01-17 18:31:33.808 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-17 18:31:49.796
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-17 18:31:55.120
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-17 18:31:55.120
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6df31f04,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d695aad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-18 09:25:55.627 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-18 09:26:07.693
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-18 09:26:07.693
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d92fd6c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@208f51ec,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jdt.core 4 4 2020-01-18 10:02:01.910
+!MESSAGE File not found: '/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2_old.scala'
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2_old.scala' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:275)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsCharArray(Util.java:1190)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getContents(CompilationUnit.java:652)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.super$getContents(ScalaSourceFile.scala:155)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.$anonfun$getContents$2(ScalaSourceFile.scala:155)
+	at scala.util.control.Exception$Catch.apply(Exception.scala:224)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.getContents(ScalaSourceFile.scala:155)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.lastSourceMap(ScalaCompilationUnit.scala:79)
+	at org.scalaide.core.internal.jdt.model.ScalaCompilationUnit.lastSourceMap$(ScalaCompilationUnit.scala:78)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.lastSourceMap(ScalaSourceFile.scala:71)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.$anonfun$filesDeleted$3(ScalaPresentationCompiler.scala:289)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:234)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:227)
+	at scala.collection.immutable.List.map(List.scala:295)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.filesDeleted(ScalaPresentationCompiler.scala:289)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$19(ScalaPlugin.scala:332)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$19$adapted(ScalaPlugin.scala:332)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$18(ScalaPlugin.scala:332)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$17(ScalaPlugin.scala:330)
+	at org.scalaide.core.internal.ScalaPlugin.$anonfun$elementChanged$17$adapted(ScalaPlugin.scala:328)
+	at scala.collection.immutable.Map$Map1.foreach(Map.scala:120)
+	at org.scalaide.core.internal.ScalaPlugin.elementChanged(ScalaPlugin.scala:328)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1703)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1693)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1527)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1503)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyAndFire(DeltaProcessor.java:2219)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2109)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:473)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:529)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:262)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2020-01-18 10:02:01.911
+!MESSAGE Resource '/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2_old.scala' does not exist.
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 10:08:39.398
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/Bagging.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-18 10:33:40.084
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanGradientboostExec.scala at: offset: 5102, length: 0
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 10:34:37.051
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/Adaboost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 10:34:43.395
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/Adaboost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 10:34:44.476
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/AdaboostR2.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 10:34:44.621
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/Avg.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 10:34:44.792
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/Bagging.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 10:34:45.363
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/Boost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 10:36:38.967
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/GradientBoost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 11:09:28.064
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/RandomForest.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 11:09:58.442
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/GBRegressor.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:507)
+	at scala.tools.nsc.interactive.Global.signalDone(Global.scala:348)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5611)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedQualifier(Typers.scala:5670)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedQualifier(Typers.scala:5676)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelectOrSuperCall$1(Typers.scala:4999)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5537)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedQualifier(Typers.scala:5670)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedQualifier(Typers.scala:5678)
+	at scala.tools.nsc.typechecker.Typers$Typer.makeAccessible(Typers.scala:566)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdent$2(Typers.scala:5080)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdentOrWildcard$1(Typers.scala:5095)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5534)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5712)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedInPattern(PatternTypers.scala:153)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedInPattern$(PatternTypers.scala:151)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInPattern(Typers.scala:112)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTyped$1(Typers.scala:5281)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5539)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBind$1(Typers.scala:4301)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5535)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedPattern$2(Typers.scala:5707)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedPattern$1(Typers.scala:5707)
+	at scala.tools.nsc.typechecker.TypeDiagnostics.typingInPattern(TypeDiagnostics.scala:63)
+	at scala.tools.nsc.typechecker.TypeDiagnostics.typingInPattern$(TypeDiagnostics.scala:60)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler$$anon$1.typingInPattern(ScalaPresentationCompiler.scala:72)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPattern(Typers.scala:5707)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedCase(Typers.scala:2494)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedCases$1(Typers.scala:2534)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedCases(Typers.scala:2533)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTry$1(Typers.scala:5253)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5522)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2453)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.transformedOrTyped(Typers.scala:5801)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedDefDef(Typers.scala:2283)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5501)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1983)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1854)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5503)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5202)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5505)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5646)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$$anon$3.apply(Analyzer.scala:102)
+	at scala.tools.nsc.Global$GlobalPhase.$anonfun$applyPhase$1(Global.scala:426)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:419)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1327)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1327)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1320)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:657)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$7(Global.scala:572)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$6(Global.scala:568)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$6$adapted(Global.scala:568)
+	at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:568)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 11:10:00.965
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/GradientBoost.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2020-01-18 21:45:53.616
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.util.NoSuchElementException: key not found: /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSpark/src/main/scala/appraisal/spark/algorithm/GBRegressor.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:507)
+	at scala.tools.nsc.interactive.Global.signalDone(Global.scala:348)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5611)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5712)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5715)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedValDefImpl(Typers.scala:2034)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedValDef(Typers.scala:2020)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5500)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2452)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5661)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTry$1(Typers.scala:5252)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5522)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedBlock(Typers.scala:2453)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$98(Typers.scala:5511)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typerWithLocalContext$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:487)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInAnyMode$1(Typers.scala:5546)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5553)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.transformedOrTyped(Typers.scala:5801)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedDefDef(Typers.scala:2283)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5501)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1983)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1854)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5503)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5650)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:3075)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3220)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5202)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5505)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5552)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5589)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedInternal(Typers.scala:5619)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5563)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5567)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5646)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$$anon$3.apply(Analyzer.scala:102)
+	at scala.tools.nsc.Global$GlobalPhase.$anonfun$applyPhase$1(Global.scala:426)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:419)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1327)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1327)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1320)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:657)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$7(Global.scala:572)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$6(Global.scala:568)
+	at scala.tools.nsc.interactive.Global.$anonfun$backgroundCompile$6$adapted(Global.scala:568)
+	at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:568)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+!SESSION 2020-01-21 10:31:59.746 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-21 10:32:06.545
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-21 10:32:11.395
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-21 10:32:11.395
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7a490f47,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11f5cbc8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-21 14:30:35.163 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-21 14:30:45.693
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-21 14:30:45.693
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77d52c08,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3e163fd2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.scala-ide.sdt.core 1 0 2020-01-21 15:34:55.174
+!MESSAGE Timeout while resolving hyperlink in /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec.scala at: offset: 5333, length: 0
+!SESSION 2020-01-22 18:52:19.013 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-22 18:52:32.019
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-22 18:52:32.019
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6749fd11,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4fa00a36,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-23 15:51:06.757 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-23 15:51:16.411
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-23 15:51:21.197
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-23 15:51:21.197
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1608a570,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4d4dddd6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-25 10:18:17.498 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2020-01-25 10:18:32.884
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-25 10:18:32.884
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5b23ef5f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62e37985,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2020-01-25 10:48:24.075 -----------------------------------------------
+eclipse.buildId=4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe
+java.version=1.8.0_222
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-01-25 10:48:31.667
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-01-25 10:48:36.319
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-25 10:48:36.319
+!MESSAGE A conflict occurred for CTRL+F4:
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@dfcc06d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F4,
+	ParameterizedCommand(Command(org.scala.tools.eclipse.search.commands.OpenTypeHierarchy,Open Type Hierarchy,
+		Open Type Hierarchy,
+		Category(org.scala.tools.eclipse.search.commands,Search - Scala,Search - Scala,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b291937,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)

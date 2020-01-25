@@ -1,35 +1,55 @@
-[0m[[0m[0minfo[0m] [0m[0mPackaging C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\target\scala-2.11\appraisalsparkexecutor_2.11-1.0-sources.jar ...[0m
+[0m[[0m[0minfo[0m] [0m[0mPackaging /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/appraisalsparkexecutor_2.11-1.0-sources.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KMeansExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/KMeansExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanRandomForestExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanRandomForestExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/util/Util.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/util/Util.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanAdaboostExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanStackGenExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanStackGenExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/RandomForestExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/RandomForestExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/AvgExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/AvgExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	data/breast-cancer-wisconsin.data.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/resources/data/breast-cancer-wisconsin.data.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/EraserExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/EraserExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanGradientboostExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	data/AIDS Occurrence and Death and Queries.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/resources/data/AIDS Occurrence and Death and Queries.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/PcaExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/PcaExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KnnBoostedExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/KnnBoostedExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/CorrelationMatrix.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/TesteExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/TesteExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/AdaboostR2Exec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/AdaboostR2Exec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/GradientBoostExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/GradientBoostExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KnnExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/KnnExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/StackedGeneralizationExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/StackedGeneralizationExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	breast_cancer_wisconsin.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\resources\breast_cancer_wisconsin.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\AvgExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\AvgExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\util\Util.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\util\Util.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\TesteExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\TesteExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	data\AIDS Occurrence and Death and Queries.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\resources\data\AIDS Occurrence and Death and Queries.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	data\iris.data.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\resources\data\iris.data.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\ImputationPlanExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\ImputationPlanExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/resources/breast_cancer_wisconsin.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	data/iris.data.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/resources/data/iris.data.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanBaggingExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanBaggingExec.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	AIDS_Occurrence_and_Death_and_Queries.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\resources\AIDS_Occurrence_and_Death_and_Queries.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\KnnExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\KnnExec.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/resources/AIDS_Occurrence_and_Death_and_Queries.csv[0m
 [0m[[0m[0mdebug[0m] [0m[0m	data[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\resources\data[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\CorrelationMatrix.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\CorrelationMatrix.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\ImputationPlanBaggingExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\ImputationPlanBaggingExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\EraserExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\EraserExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\KMeansExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\KMeansExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal\spark\executor\poc\PcaExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\scala\appraisal\spark\executor\poc\PcaExec.scala[0m
-[0m[[0m[0mdebug[0m] [0m[0m	data\breast-cancer-wisconsin.data.csv[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\src\main\resources\data\breast-cancer-wisconsin.data.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/resources/data[0m
 [0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

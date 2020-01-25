@@ -4,7 +4,7 @@
 		module="appraisalsparkexecutor_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20191002110128"
+		publication="20200118214753"
 	>
 		<description>
 		AppraisalSparkExecutor
@@ -30,13 +30,13 @@
 		<artifact name="appraisalsparkexecutor_2.11" type="doc" ext="jar" conf="compile" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
-		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.8" conf="scala-tool->default,optional(default)"/>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.11.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.2.1" conf="compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.2.1" conf="compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-mllib_2.11" rev="2.2.1" conf="compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.2.1" conf="compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-hive_2.11" rev="2.2.1" conf="compile->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.12" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.12" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.4.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.4.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-mllib_2.11" rev="2.4.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.4.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-hive_2.11" rev="2.4.0" conf="compile->default(compile)"/>
 		<dependency org="com.appraisal.spark" name="appraisalspark_2.11" rev="1.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

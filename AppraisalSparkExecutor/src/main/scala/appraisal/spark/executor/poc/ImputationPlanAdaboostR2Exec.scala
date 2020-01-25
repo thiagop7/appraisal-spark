@@ -20,7 +20,7 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
 
   def main(args: Array[String]) {
 
-    var parallelExecution = true
+    var parallelExecution = false
     var breastCancer = true
     var aidsOccurrence = false
 
@@ -51,7 +51,7 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
       }
     }
 
-    parallelExecution = true
+    parallelExecution = false
 
     val wallStartTime = new java.util.Date()
     Logger.getLogger(getClass.getName).error("Appraisal Spark - Wall start time: " + appraisal.spark.util.Util.getCurrentTime(wallStartTime))
@@ -82,9 +82,10 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
 
       if (breastCancer) {
 
-        odf = Util.loadData(spark, "file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/breast-cancer-wisconsin.reduced.csv").withColumn("lineId", monotonically_increasing_id)
-
-        //odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
+        //odf = Util.loadData(spark, "file:///shared/appraisal/breast_cancer_wisconsin.csv").withColumn("lineId", monotonically_increasing_id)
+          
+        
+        odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)        
         features = Util.breastcancer_features
 
         //odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
@@ -108,24 +109,12 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
       var imputationPlans = List.empty[(String, Double, Double, Int, ImputationPlan)]
 
       //val missingRate = Seq(10d, 20d, 30d)
-      val missingRate = Seq(10d)
+      val missingRate = Seq(30d)
 
       //val selectionReduction = Seq(10d, 20d, 30d)
-      val selectionReduction = Seq(10d)
+      val selectionReduction = Seq(20d)
 
       val T = 3;
-
-      val teste = Array[String](
-        //"code_number",
-        //"clump_thickness",
-        "uniformity_of_cell_size")
-        //"uniformity_of_cell_shape")
-        //"marginal_adhesion",
-        //"single_epithelial_cell_size",
-        //"bare_nuclei",
-        //"bland_chromatin",
-        //"normal_nucleoli",
-        //"mitoses")
 
       features.foreach(feat => {
 
@@ -143,31 +132,65 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
 
           selectionReduction.foreach(sr => {
 
-            var impPlanKnn = new ImputationPlan(idf, odf, mr, feature, features, parallelExecution)
+            var impPlan = new ImputationPlan(idf, odf, mr, feature, features, parallelExecution)
 
-            var selectionParamsKnn: HashMap[String, Any] = HashMap(
+            var selectionParams: HashMap[String, Any] = HashMap(
               "percentReduction" -> sr)
 
-            var clusteringParamsKnn: HashMap[String, Any] = HashMap(
-              "k" -> 2,
+            var clusteringParams: HashMap[String, Any] = HashMap(
+              "k" -> 4,
               "maxIter" -> 1000,
-              "kLimit" -> kn)
+              "kLimit" -> 10)
 
-            var imputationParamsKnn: HashMap[String, Any] = HashMap(
-              "k" -> 2,
-              "kLimit" -> kn,
+            var imputationParams: HashMap[String, Any] = HashMap(
+              "k" -> 5,
+              "kLimit" -> 10,
               "varianceComplete" -> varianceBefore.get,
               "learningRate" -> 0.1,
               "features" -> features)
 
-            var adaboostParamsKnn: HashMap[String, Any] = HashMap(
-              "imputationPlan" -> impPlanKnn)
+            var adaboostParams: HashMap[String, Any] = HashMap(
+              "imputationPlan" -> impPlan)
 
-            impPlanKnn.addStrategy(new ImputationStrategy(imputationParamsKnn, new AdaboostR2()))
+            // regression
 
-            impPlanKnn.addEnsembleStrategy(new EnsembleStrategy(adaboostParamsKnn, new Boost()))
+            impPlan.addStrategy(new ImputationStrategy(imputationParams, new AdaboostR2()))
 
-            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlanKnn)
+            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+
+            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+
+            // clustering -> regression
+
+            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
+
+            //impPlan.addStrategy(new ImputationStrategy(imputationParams, new AdaboostR2()))
+
+            //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+
+            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+
+            // selection reduction -> clustering -> regression
+
+            //impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
+
+            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
+
+            //impPlan.addStrategy(new ImputationStrategy(imputationParams, new AdaboostR2()))
+
+            //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+
+            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+
+            // selection reduction -> regression
+
+            //impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
+
+            //impPlan.addStrategy(new ImputationStrategy(imputationParams, new AdaboostR2()))
+
+            //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+
+            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
 
           })
 

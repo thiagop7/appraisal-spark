@@ -22,15 +22,10 @@ import org.apache.spark.ml.regression.{ RandomForestRegressionModel, RandomFores
 
 class RandomForest extends ImputationAlgorithm {
 
-  val toDouble = udf[Double, String](_.toDouble)
-
   def run(idf: DataFrame, cdf: DataFrame, params: HashMap[String, Any] = null): Entities.ImputationResult = {
 
     val attribute: String = params("imputationFeature").asInstanceOf[String]
     val calcCol: Array[String] = params("calcFeatures").asInstanceOf[Array[String]]
-    val learningRate = params("learningRate").asInstanceOf[Double]
-
-    val varianceDfCompl = params("varianceComplete").asInstanceOf[Double]
 
     val fidf = idf
 
@@ -56,24 +51,18 @@ class RandomForest extends ImputationAlgorithm {
       .flatten
       .map(x => Util.extractDouble(x))
 
-    val nvDf = cdf.select(attribute, "lineId").withColumn("originalValue", col(attribute))
-    nvDf.show()
-    fidf.show()
+    val nvDf = cdf.select(attribute, "lineId")
 
     val originalValues = nvDf.join(fidf, "lineId").select("originalValue", "lineId")
-    originalValues.show()
 
     val df3 = Util.transformToMLlib(calcDf, attribute, sqlContext, context)
     var df4 = Util.transformToMLlib(impDf, attribute, sqlContext, context)
-              .drop(attribute, "label")
-              .join(originalValues, "lineId")
-              .select("features", "lineId","originalValue")
-              .withColumn(attribute, col("originalValue"))
-              .withColumn("label", col("originalValue"))
-              .drop("originalValue")
-              
-    df3.printSchema()
-    df4.printSchema()
+      .drop(attribute, "label")
+      .join(originalValues, "lineId")
+      .select("features", "lineId", "originalValue")
+      .withColumn(attribute, col("originalValue"))
+      .withColumn("label", col("originalValue"))
+      .drop("originalValue")
 
     // Automatically identify categorical features, and index them.
     // Set maxCategories so features with > 4 distinct values are treated as continuous.
@@ -98,8 +87,6 @@ class RandomForest extends ImputationAlgorithm {
     // Make predictions.
     val predictions = model.transform(df4)
 
-    predictions.printSchema()
-
     // Select example rows to display.
     predictions.select("prediction", attribute, "features", "lineId").show(5)
 
@@ -112,26 +99,30 @@ class RandomForest extends ImputationAlgorithm {
     println(s"Root Mean Squared Error (RMSE) on test data = $rmse")
 
     val rfModel = model.stages(1).asInstanceOf[RandomForestRegressionModel]
-    println(s"Learned regression forest model:\n ${rfModel.toDebugString}")
+    println(rfModel.treeWeights.mkString(","))
 
+    //println(s"Learned regression forest model:\n ${rfModel.toDebugString}")
 
-    val stats =  predictions.select("prediction", attribute, "lineId").collect().toSeq
-       
+    val stats = predictions.select("prediction", attribute, "lineId").collect().toSeq
+
     val dfImputed = predictions.select("prediction").toDF().collect()
-    
+
     val dfImputedDouble = dfImputed.map(x =>
       {
         val array = x.toSeq.toArray
         val arrDouble = array.map(_.toString().toDouble)
         Vectors.dense(arrDouble).toArray
       }).flatten
-    
+
     val arrComplete = arrBefCalcDf ++ dfImputedDouble
-    
     val varianceImputated = Util.variance(arrComplete).get
-    
-    Statistic.statisticInfo(Entities.ImputationResult(context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("prediction"), r.getAs(attribute), r.getAs("lineId"))).toList), 
-                                                                              0, 0, 0, 0, varianceDfCompl, varianceImputated, null, params.toString()))
+
+    val arrFeatComplete = cdf.select(col(attribute)).collect().map(_.toSeq.toArray).flatten
+    val varianceBefore = Util.variance(arrFeatComplete.map(x => Util.extractDouble(x))).get
+
+    Statistic.statisticInfo(Entities.ImputationResult(
+      context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("lineId"), r.getAs("label"), r.getAs("prediction"))).toList),
+      0, 0, rmse, 0, varianceBefore, varianceImputated, null, rfModel.treeWeights.mkString(",")))
   }
 
   def name(): String = { "RandomForest" }

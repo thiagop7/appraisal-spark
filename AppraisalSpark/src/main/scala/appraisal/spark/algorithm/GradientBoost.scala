@@ -56,12 +56,11 @@ class GradientBoost extends ImputationAlgorithm {
       .flatten
       .map(x => Util.extractDouble(x))
 
-    val nvDf = cdf.select(attribute, "lineId").withColumn("originalValue", col(attribute))
-    nvDf.show()
-    fidf.show()
+    cdf.printSchema()
 
+    val nvDf = cdf.select(attribute, "lineId")
+    
     val originalValues = nvDf.join(fidf, "lineId").select("originalValue", "lineId")
-    originalValues.show()
 
     val df3 = Util.transformToMLlib(calcDf, attribute, sqlContext, context)
     var df4 = Util.transformToMLlib(impDf, attribute, sqlContext, context)
@@ -71,9 +70,6 @@ class GradientBoost extends ImputationAlgorithm {
       .withColumn(attribute, col("originalValue"))
       .withColumn("label", col("originalValue"))
       .drop("originalValue")
-
-    df3.printSchema()
-    df4.printSchema()
 
     // Automatically identify categorical features, and index them.
     // Set maxCategories so features with > 4 distinct values are treated as continuous.
@@ -98,8 +94,6 @@ class GradientBoost extends ImputationAlgorithm {
     // Make predictions.
     val predictions = model.transform(df4)
 
-    predictions.printSchema()
-
     // Select example rows to display.
     predictions.select("prediction", attribute, "features").show(5)
 
@@ -114,24 +108,26 @@ class GradientBoost extends ImputationAlgorithm {
     val rfModel = model.stages(1).asInstanceOf[GBTRegressionModel]
     println(s"Learned regression forest model:\n ${rfModel.toDebugString}")
 
-    val stats =  predictions.select("prediction", attribute, "lineId").collect().toSeq
-    
+    val stats = predictions.select("prediction", attribute, "lineId").collect().toSeq
+
     val dfImputed = predictions.select("prediction").toDF().collect()
-    
+
     val dfImputedDouble = dfImputed.map(x =>
       {
         val array = x.toSeq.toArray
         val arrDouble = array.map(_.toString().toDouble)
         Vectors.dense(arrDouble).toArray
       }).flatten
-    
+
     val arrComplete = arrBefCalcDf ++ dfImputedDouble
-    
     val varianceImputated = Util.variance(arrComplete).get
-    
+
+    val arrFeatComplete = cdf.select(col(attribute)).collect().map(_.toSeq.toArray).flatten
+    val varianceBefore = Util.variance(arrFeatComplete.map(x => Util.extractDouble(x))).get
+
     Statistic.statisticInfo(Entities.ImputationResult(
-      context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("prediction"), r.getAs(attribute), r.getAs("lineId"))).toList),
-      0, 0, 0, 0, varianceDfCompl, varianceImputated, null, params.toString()))
+      context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("lineId"), r.getAs("label"), r.getAs("prediction"))).toList),
+      0, 0, rmse, 0, varianceBefore, varianceImputated, null, rfModel.treeWeights.mkString(",")))
 
   }
 

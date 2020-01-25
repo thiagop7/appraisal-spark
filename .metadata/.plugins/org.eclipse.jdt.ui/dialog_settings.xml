@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
 	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="false" key="ProjectSelectionDialog.show_all"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
-	<item value="C:\spark\jars" key="org.eclipse.jdt.ui.lastextjar"/>
-	<item value="filter_imports;" key="filters_last_used"/>
+	<item value="2" key="CallHierarchyViewPart.field_mode"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="500" key="CallHierarchyViewPart.ratio0"/>
+	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
+	<item value="500" key="CallHierarchyViewPart.ratio3"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="0" key="CallHierarchyViewPart.call_mode"/>
+	<item value="/usr/local/spark-2.4.4-bin-hadoop2.7/jars" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="filter_imports;" key="filters_last_used"/>
+	<item value="3" key="CallHierarchyViewPart.orientation"/>
+	<list key="SearchScopeActionGroup.working_set">
+	</list>
+	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="SearchInDialog">
+		<item value="true" key="SearchInProjects"/>
+		<item value="true" key="SearchInAppLibs"/>
+		<item value="true" key="SearchInJRE"/>
+		<item value="true" key="SearchInSources"/>
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
@@ -37,8 +53,8 @@
 		</section>
 	</section>
 	<section name="completion_proposal_size">
-		<item value="252" key="size.y"/>
-		<item value="354" key="size.x"/>
+		<item value="240" key="size.y"/>
+		<item value="615" key="size.x"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
 		<item value="true" key="ShowStatusLine"/>

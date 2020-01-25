@@ -55,6 +55,7 @@ object Util {
   def loadBreastCancer(spark: SparkSession): DataFrame = {
 
     //spark.read.option("header", true).csv("C:\\data\\breast-cancer-wisconsin.csv")
+    //spark.read.option("header", true).csv("file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/breast-cancer-wisconsin.data.csv")
     spark.read.option("header", true).csv("file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/breast-cancer-wisconsin.reduced.csv")
   }
 

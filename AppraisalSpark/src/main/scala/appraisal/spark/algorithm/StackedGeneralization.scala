@@ -18,7 +18,8 @@ import org.apache.spark.ml.evaluation.RegressionEvaluator
 import org.apache.spark.ml.tuning.{ CrossValidator, ParamGridBuilder }
 import org.apache.spark.ml.regression.{ StackingRegressor, DecisionTreeRegressor, RandomForestRegressor, StackingRegressionModel }
 import org.apache.spark.ml.linalg.{ Vector, Vectors }
-
+import org.apache.spark.ml.regression.BoostingRegressor
+import org.apache.spark.ml.regression.BaggingRegressor
 
 class StackedGeneralization extends ImputationAlgorithm {
 
@@ -69,12 +70,29 @@ class StackedGeneralization extends ImputationAlgorithm {
       .withColumn("val", lit(true))
       .drop("originalValue")
 
-    val full = df4.union(df3)
-    full.cache().first()
+    val full = df4.union(df3).toDF()
+    full.cache()
+
+    val dr = new DecisionTreeRegressor()
+      .setMaxDepth(10)
+    val br = new BoostingRegressor()
+      .setLoss("squared")
+      .setValidationIndicatorCol("val")
+      .setNumBaseLearners(20)
+      .setTol(1E-9)
+      .setNumRound(3)
+      .setBaseLearner(dr)
+
+    val bgr = new BaggingRegressor()      
+      .setFeaturesCol("val")
+      .setNumBaseLearners(20)
+      .setReplacement(true)
+      .setBaseLearner(dr)
+      .setParallelism(2)
 
     val sr = new StackingRegressor()
       .setStacker(new DecisionTreeRegressor())
-      .setBaseLearners(Array(new DecisionTreeRegressor(), new RandomForestRegressor()))
+      .setBaseLearners(Array(br, bgr))
       .setParallelism(2)
 
     val re = new RegressionEvaluator()
@@ -90,17 +108,12 @@ class StackedGeneralization extends ImputationAlgorithm {
       .setEvaluator(re)
       .setEstimatorParamMaps(srParamGrid)
       .setNumFolds(3)
-      .setParallelism(4)
+      .setParallelism(2)
 
     val srCVModel = srCV.fit(full)
 
     // Make predictions.
     val predictions = srCVModel.transform(full)
-
-    predictions.printSchema()
-
-    // Select example rows to display.
-    predictions.select("prediction", "label").show(5)
 
     val rmse = re.evaluate(predictions)
     println(s"Root Mean Squared Error (RMSE) on test data = $rmse")
@@ -108,26 +121,29 @@ class StackedGeneralization extends ImputationAlgorithm {
     println(srCVModel.avgMetrics.min)
 
     val bm = srCVModel.bestModel.asInstanceOf[StackingRegressionModel]
-    println(bm.models.length)
 
-    val stats = predictions.select("prediction", attribute, "lineId").collect().toSeq
+    val stats = predictions.select("prediction", "label", "lineId").collect().toSeq
 
     val dfImputed = predictions.select("prediction").toDF().collect()
-    
+
     val dfImputedDouble = dfImputed.map(x =>
       {
         val array = x.toSeq.toArray
         val arrDouble = array.map(_.toString().toDouble)
         Vectors.dense(arrDouble).toArray
       }).flatten
-    
+
     val arrComplete = arrBefCalcDf ++ dfImputedDouble
-    
     val varianceImputated = Util.variance(arrComplete).get
-    
+
+    val arrFeatComplete = cdf.select(col(attribute)).collect().map(_.toSeq.toArray).flatten
+    val varianceBefore = Util.variance(arrFeatComplete.map(x => Util.extractDouble(x))).get
+
+    val weights = srCVModel.bestModel.asInstanceOf[StackingRegressionModel]
+
     Statistic.statisticInfo(Entities.ImputationResult(
-      context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("prediction"), r.getAs(attribute), r.getAs("lineId"))).toList),
-      0, 0, 0, 0, varianceDfCompl, varianceImputated, null, params.toString()))
+      context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("lineId"), r.getAs("label"), r.getAs("prediction"))).toList),
+      0, 0, rmse, srCVModel.avgMetrics.min, varianceDfCompl, varianceImputated, null, params.toString()))
   }
 
   def name(): String = { "StackedGeneralization" }

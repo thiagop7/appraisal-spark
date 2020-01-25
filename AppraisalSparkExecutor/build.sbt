@@ -4,9 +4,9 @@ version := "1.0"
 
 organization := "com.appraisal.spark.executor"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.12"
 
-val sparkVersion = "2.2.1"
+val sparkVersion = "2.4.0"
 val appraisalsparkversion = "1.0"
 
 libraryDependencies ++= Seq(

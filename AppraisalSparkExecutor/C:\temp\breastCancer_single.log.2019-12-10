@@ -1,9 +1,0 @@
-2019-12-10 10:46:29 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 10/12/2019 10:46:29
-2019-12-10 10:50:17 ERROR GradientBoostExec$:52 â Appraisal Spark - Wall start time: 10/12/2019 10:50:17
-2019-12-10 10:53:01 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 10/12/2019 10:53:01
-2019-12-10 10:54:58 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 10/12/2019 10:54:58
-2019-12-10 10:55:06 ERROR GradientBoostExec$:52 â Appraisal Spark - Wall start time: 10/12/2019 10:55:06
-2019-12-10 10:55:39 ERROR appraisal:54 â java.lang.NullPointerException
-2019-12-10 15:56:16 ERROR RandomForestExec$:52 â Appraisal Spark - Wall start time: 10/12/2019 15:56:16
-2019-12-10 15:59:18 ERROR GradientBoostExec$:52 â Appraisal Spark - Wall start time: 10/12/2019 15:59:18
-2019-12-10 15:59:58 ERROR appraisal:54 â java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Long

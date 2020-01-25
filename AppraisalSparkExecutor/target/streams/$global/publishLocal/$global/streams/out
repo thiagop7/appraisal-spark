@@ -1,52 +1,52 @@
-[0m[[0m[0minfo[0m] [0m[0m:: delivering :: com.appraisal.spark.executor#appraisalsparkexecutor_2.11;1.0 :: 1.0 :: release :: Sun Oct 06 19:57:51 BRT 2019[0m
-[0m[[0m[0mdebug[0m] [0m[0m	options = status=release pubdate=Sun Oct 06 19:57:51 BRT 2019 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
-[0m[[0m[0minfo[0m] [0m[0m	delivering ivy file to C:\Users\thiagop7\Documents\Mestrado\Dissertação\Projeto\appraisal-spark\AppraisalSparkExecutor\target\scala-2.11\ivy-1.0.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0m	deliver done (79ms)[0m
+[0m[[0m[0minfo[0m] [0m[0m:: delivering :: com.appraisal.spark.executor#appraisalsparkexecutor_2.11;1.0 :: 1.0 :: release :: Wed Jan 22 08:02:58 BRST 2020[0m
+[0m[[0m[0mdebug[0m] [0m[0m	options = status=release pubdate=Wed Jan 22 08:02:58 BRST 2020 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
+[0m[[0m[0minfo[0m] [0m[0m	delivering ivy file to /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/ivy-1.0.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deliver done (40ms)[0m
 [0m[[0m[0mdebug[0m] [0m[0mlocal do not support transaction. ivy pattern does not use revision as a directory[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\poms\appraisalsparkexecutor_2.11.pom already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\poms\appraisalsparkexecutor_2.11.pom (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\poms\appraisalsparkexecutor_2.11.pom.sha1 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\poms\appraisalsparkexecutor_2.11.pom.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom.sha1 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\poms\appraisalsparkexecutor_2.11.pom.md5 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\poms\appraisalsparkexecutor_2.11.pom.md5 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom.md5 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0minfo[0m] [0m[0m	published appraisalsparkexecutor_2.11 to C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\poms\appraisalsparkexecutor_2.11.pom[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\jars\appraisalsparkexecutor_2.11.jar.sha1 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\jars\appraisalsparkexecutor_2.11.jar.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[0minfo[0m] [0m[0m	published appraisalsparkexecutor_2.11 to /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/jars/appraisalsparkexecutor_2.11.jar.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/jars/appraisalsparkexecutor_2.11.jar.sha1 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\jars\appraisalsparkexecutor_2.11.jar.md5 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\jars\appraisalsparkexecutor_2.11.jar.md5 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/jars/appraisalsparkexecutor_2.11.jar.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/jars/appraisalsparkexecutor_2.11.jar.md5 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0minfo[0m] [0m[0m	published appraisalsparkexecutor_2.11 to C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\jars\appraisalsparkexecutor_2.11.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\srcs\appraisalsparkexecutor_2.11-sources.jar already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\srcs\appraisalsparkexecutor_2.11-sources.jar (non-SNAPSHOT)[0m
+[0m[[0m[0minfo[0m] [0m[0m	published appraisalsparkexecutor_2.11 to /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/jars/appraisalsparkexecutor_2.11.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/srcs/appraisalsparkexecutor_2.11-sources.jar already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/srcs/appraisalsparkexecutor_2.11-sources.jar (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\srcs\appraisalsparkexecutor_2.11-sources.jar.sha1 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\srcs\appraisalsparkexecutor_2.11-sources.jar.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/srcs/appraisalsparkexecutor_2.11-sources.jar.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/srcs/appraisalsparkexecutor_2.11-sources.jar.sha1 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\srcs\appraisalsparkexecutor_2.11-sources.jar.md5 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\srcs\appraisalsparkexecutor_2.11-sources.jar.md5 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/srcs/appraisalsparkexecutor_2.11-sources.jar.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/srcs/appraisalsparkexecutor_2.11-sources.jar.md5 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0minfo[0m] [0m[0m	published appraisalsparkexecutor_2.11 to C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\srcs\appraisalsparkexecutor_2.11-sources.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\docs\appraisalsparkexecutor_2.11-javadoc.jar already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\docs\appraisalsparkexecutor_2.11-javadoc.jar (non-SNAPSHOT)[0m
+[0m[[0m[0minfo[0m] [0m[0m	published appraisalsparkexecutor_2.11 to /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/srcs/appraisalsparkexecutor_2.11-sources.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/docs/appraisalsparkexecutor_2.11-javadoc.jar already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/docs/appraisalsparkexecutor_2.11-javadoc.jar (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\docs\appraisalsparkexecutor_2.11-javadoc.jar.sha1 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\docs\appraisalsparkexecutor_2.11-javadoc.jar.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/docs/appraisalsparkexecutor_2.11-javadoc.jar.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/docs/appraisalsparkexecutor_2.11-javadoc.jar.sha1 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\docs\appraisalsparkexecutor_2.11-javadoc.jar.md5 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\docs\appraisalsparkexecutor_2.11-javadoc.jar.md5 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/docs/appraisalsparkexecutor_2.11-javadoc.jar.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/docs/appraisalsparkexecutor_2.11-javadoc.jar.md5 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0minfo[0m] [0m[0m	published appraisalsparkexecutor_2.11 to C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\docs\appraisalsparkexecutor_2.11-javadoc.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\ivys\ivy.xml already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\ivys\ivy.xml (non-SNAPSHOT)[0m
+[0m[[0m[0minfo[0m] [0m[0m	published appraisalsparkexecutor_2.11 to /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/docs/appraisalsparkexecutor_2.11-javadoc.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/ivys/ivy.xml already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/ivys/ivy.xml (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\ivys\ivy.xml.sha1 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\ivys\ivy.xml.sha1 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/ivys/ivy.xml.sha1 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/ivys/ivy.xml.sha1 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0mdebug[0m] [0m[0mC:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\ivys\ivy.xml.md5 already exists, nothing done[0m
-[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\ivys\ivy.xml.md5 (non-SNAPSHOT)[0m
+[0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/ivys/ivy.xml.md5 already exists, nothing done[0m
+[0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/ivys/ivy.xml.md5 (non-SNAPSHOT)[0m
 [0m[[0m[33mwarn[0m] [0m[0m	You need to remove it from the cache manually to take effect.[0m
-[0m[[0m[0minfo[0m] [0m[0m	published ivy to C:\Users\thiagop7\.ivy2\local\com.appraisal.spark.executor\appraisalsparkexecutor_2.11\1.0\ivys\ivy.xml[0m
+[0m[[0m[0minfo[0m] [0m[0m	published ivy to /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/ivys/ivy.xml[0m

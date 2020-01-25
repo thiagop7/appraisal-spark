@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanGradientboostExec.scala:157:78: not found: type GBRegressor[0m
+[0m[[0m[31merror[0m] [0m[0m            impPlan.addStrategy(new ImputationStrategy(imputationParams, new GBRegressor()))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/src/main/scala/appraisal/spark/executor/poc/ImputationPlanRandomForestExec.scala:156:78: not found: type BaggingReg[0m
+[0m[[0m[31merror[0m] [0m[0m            impPlan.addStrategy(new ImputationStrategy(imputationParams, new BaggingReg()))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

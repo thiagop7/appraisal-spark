@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="445" key="DIALOG_X_ORIGIN"/>
+		<item value="216" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="varianceImputated" key="selection"/>
+		<item value="monotonically_increasing_id" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="varianceImputated"/>
-			<item value="variance"/>
-			<item value="varianceDfCompl"/>
-			<item value="println("/>
-			<item value="print("/>
-			<item value="print"/>
-			<item value="Logger"/>
-			<item value="Context"/>
-			<item value="context"/>
-			<item value="context["/>
-			<item value="label"/>
-			<item value="&quot;originalValue&quot;"/>
-			<item value="eraser"/>
-			<item value="df4"/>
-			<item value="attribute"/>
+			<item value="monotonically_increasing_id"/>
+			<item value="Params"/>
+			<item value="params"/>
+			<item value="val originalValues = nvDf.join(fidf, &quot;lineId&quot;).select(&quot;originalValue&quot;, &quot;lineId&quot;)"/>
+			<item value="weight"/>
+			<item value="wei"/>
+			<item value="imputationBatch"/>
+			<item value="firs"/>
+			<item value="?"/>
+			<item value="setBaseLearner"/>
+			<item value="basel"/>
+			<item value="randomfo"/>
+			<item value="random"/>
+			<item value="best"/>
+			<item value="gradientboostParams"/>
 		</list>
 		<list key="replacehistory">
+			<item value="gradientboostParams"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="339" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="438" key="DIALOG_HEIGHT"/>
-		<item value="666" key="DIALOG_X_ORIGIN"/>
-		<item value="290" key="DIALOG_Y_ORIGIN"/>
+		<item value="828" key="DIALOG_X_ORIGIN"/>
+		<item value="168" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

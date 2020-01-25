@@ -32,8 +32,6 @@ class AdaboostR2 extends ImputationAlgorithm {
     val attribute: String = params("imputationFeature").asInstanceOf[String]
     val calcCol: Array[String] = params("calcFeatures").asInstanceOf[Array[String]]
 
-    val varianceDfCompl = params("varianceComplete").asInstanceOf[Double]
-
     val fidf = idf
 
     val context = fidf.sparkSession
@@ -66,6 +64,9 @@ class AdaboostR2 extends ImputationAlgorithm {
       .withColumn("val", lit(false))
       .drop(attribute)
 
+    //df3.printSchema()
+    //df3.show()
+
     var df4 = Util.transformToMLlib(impDf, attribute, sqlContext, context)
       .drop(attribute, "label")
       .join(originalValues, "lineId")
@@ -74,8 +75,7 @@ class AdaboostR2 extends ImputationAlgorithm {
       .withColumn("val", lit(true))
       .drop("originalValue")
 
-    val full = df4.union(df3)
-    full.cache().first()
+    var full = df4.union(df3).toDF()
 
     val dr = new DecisionTreeRegressor()
     val br = new BoostingRegressor()
@@ -89,7 +89,7 @@ class AdaboostR2 extends ImputationAlgorithm {
     val brParamGrid = new ParamGridBuilder()
       .addGrid(br.loss, Array("squared"))
       .addGrid(br.validationIndicatorCol, Array("val"))
-      .addGrid(br.numBaseLearners, Array(20))
+      .addGrid(br.numBaseLearners, Array(100))
       .addGrid(br.tol, Array(1E-9))
       .addGrid(br.numRound, Array(3))
       .addGrid(dr.maxDepth, Array(10))
@@ -100,7 +100,7 @@ class AdaboostR2 extends ImputationAlgorithm {
       .setEvaluator(re)
       .setEstimatorParamMaps(brParamGrid)
       .setNumFolds(3)
-      .setParallelism(4)
+      .setParallelism(2)
 
     val brCVModel = brCV.fit(full)
 
@@ -108,16 +108,16 @@ class AdaboostR2 extends ImputationAlgorithm {
     val predictions = brCVModel.transform(full)
 
     // Select example rows to display.
-//    predictions.select("prediction", "label").show(5)
+    //predictions.select("prediction", "label").show(5)
 
     val rmse = re.evaluate(predictions)
     println(s"Root Mean Squared Error (RMSE) on test data = $rmse")
 
-//    println(brCVModel.avgMetrics.mkString(","))
-//    println(brCVModel.bestModel.asInstanceOf[BoostingRegressionModel].getLoss)
-//    println(brCVModel.bestModel.asInstanceOf[BoostingRegressionModel].models.length)
-//    println(brCVModel.bestModel.asInstanceOf[BoostingRegressionModel].weights.mkString(","))
-//    println(brCVModel.avgMetrics.min)   
+    //    println(brCVModel.avgMetrics.mkString(","))
+    //    println(brCVModel.bestModel.asInstanceOf[BoostingRegressionModel].getLoss)
+    //    println(brCVModel.bestModel.asInstanceOf[BoostingRegressionModel].models.length)
+    //    println(brCVModel.bestModel.asInstanceOf[BoostingRegressionModel].weights.mkString(","))
+    //    println(brCVModel.avgMetrics.min)
 
     val stats = predictions.select("prediction", "label", "lineId").collect().toSeq
 
@@ -131,12 +131,16 @@ class AdaboostR2 extends ImputationAlgorithm {
       }).flatten
 
     val arrComplete = arrBefCalcDf ++ dfImputedDouble
-
     val varianceImputated = Util.variance(arrComplete).get
+
+    val arrFeatComplete = cdf.select(col(attribute)).collect().map(_.toSeq.toArray).flatten
+    val varianceBefore = Util.variance(arrFeatComplete.map(x => Util.extractDouble(x))).get
+
     val weights = brCVModel.bestModel.asInstanceOf[BoostingRegressionModel].weights.mkString(",")
+
     Statistic.statisticInfo(Entities.ImputationResult(
       context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("lineId"), r.getAs("label"), r.getAs("prediction"))).toList),
-      0, 0, rmse, brCVModel.avgMetrics.min, varianceDfCompl, varianceImputated, null, weights))
+      0, 0, rmse, brCVModel.avgMetrics.min, varianceBefore, varianceImputated, null, weights))
   }
 
   def name(): String = { "AdaboostR2" }
