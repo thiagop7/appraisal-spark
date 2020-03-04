@@ -12,6 +12,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/RandomForestExec$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanBaggingExec$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$mcVD$sp$1$$anonfun$apply$mcVD$sp$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanBaggingExec$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$mcVD$sp$1$$anonfun$apply$mcVD$sp$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostExec$$anonfun$main$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostExec$$anonfun$main$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/StackedGeneralizationExec$$anonfun$main$5.class[0m
@@ -20,6 +22,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnExec$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KnnBoostedExec$$anonfun$main$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnBoostedExec$$anonfun$main$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KnnBoostedExec$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnBoostedExec$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$4.class[0m
@@ -60,6 +64,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanRandomForestExec$$anonfun$main$1$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanRandomForestExec$$anonfun$main$1$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/GradientBoostExec$$anonfun$6.class[0m
@@ -68,6 +74,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/util/Util$$anonfun$variance$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/EraserExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/EraserExec$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/GradientBoostExec$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/GradientBoostExec$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/StackedGeneralizationExec.class[0m
@@ -82,8 +90,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/GradientBoostExec$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/AvgExec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/AvgExec.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$3.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/StackedGeneralizationExec$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/StackedGeneralizationExec$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/AdaboostR2Exec$$anonfun$main$3.class[0m
@@ -126,6 +132,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/AvgExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanExec$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KMeansExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KMeansExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$6.class[0m
@@ -136,18 +144,12 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanStackGenExec$$anonfun$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/CorrelationMatrix.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$4.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$3.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanExec$$anonfun$main$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanExec$$anonfun$main$1$$anonfun$apply$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/PcaExec$$anonfun$main$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/PcaExec$$anonfun$main$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/AdaboostR2Exec$$anonfun$2.class[0m
@@ -180,6 +182,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnExec$$anonfun$main$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	data/AIDS Occurrence and Death and Queries.csv[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/data/AIDS Occurrence and Death and Queries.csv[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KnnExec$$anonfun$3.class[0m
@@ -198,6 +202,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnBoostedExec$$anonfun$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/RandomForestExec$$anonfun$main$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/RandomForestExec$$anonfun$main$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/TesteExec$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/TesteExec$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanRandomForestExec$$anonfun$main$2.class[0m
@@ -208,6 +214,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/StackedGeneralizationExec$$anonfun$main$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanStackGenExec$$anonfun$main$1$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanStackGenExec$$anonfun$main$1$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KnnExec$$anonfun$main$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnExec$$anonfun$main$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanRandomForestExec$$anonfun$main$1$$anonfun$1.class[0m
@@ -286,18 +294,12 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnBoostedExec$$anonfun$main$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$mcVD$sp$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$mcVD$sp$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/GradientBoostExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/GradientBoostExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$7.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$7.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$main$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$main$3.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/PcaExec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/PcaExec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/TesteExec$$anonfun$main$1.class[0m
@@ -310,6 +312,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/GradientBoostExec$$anonfun$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanStackGenExec$$anonfun$main$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanStackGenExec$$anonfun$main$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/StackedGeneralizationExec$$anonfun$main$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/StackedGeneralizationExec$$anonfun$main$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KnnBoostedExec$$anonfun$4.class[0m
@@ -320,6 +324,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnBoostedExec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanExec$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanExec$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$mcVD$sp$1$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	data/breast-cancer-wisconsin.data.csv[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/data/breast-cancer-wisconsin.data.csv[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostExec$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$mcVD$sp$1.class[0m
@@ -348,14 +354,10 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanRandomForestExec$$anonfun$main$1$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$main$1$$anonfun$apply$mcVI$sp$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$main$1$$anonfun$apply$mcVI$sp$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/util[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/util[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostExec$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostExec$$anonfun$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec$$anonfun$main$1$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$main$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/CorrelationMatrix$$anonfun$main$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KMeansExec$$anonfun$main$2.class[0m
@@ -398,8 +400,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/KnnBoostedExec$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/KnnBoostedExec$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$mcVD$sp$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanAdaboostR2Exec$$anonfun$main$1$$anonfun$apply$1$$anonfun$apply$mcVD$sp$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/ImputationPlanGradientboostExec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/classes/appraisal/spark/executor/poc/ImputationPlanGradientboostExec.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	appraisal/spark/executor/poc/RandomForestExec$$anonfun$3.class[0m

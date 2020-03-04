@@ -4,17 +4,30 @@ import org.apache.spark.sql._
 
 object Util {
 
+  //  val breastcancer_features = Array[String](
+  //    //"code_number",
+  //    "clump_thickness",
+  //    "uniformity_of_cell_size",
+  //    "uniformity_of_cell_shape",
+  //    "marginal_adhesion",
+  //    "single_epithelial_cell_size",
+  //    "bare_nuclei",
+  //    "bland_chromatin",
+  //    "normal_nucleoli",
+  //    "mitoses")
+  //  //"class")
+
   val breastcancer_features = Array[String](
     //"code_number",
+    "single_epithelial_cell_size",
+    "bland_chromatin",
+    "bare_nuclei",
+    "mitoses",
+    "normal_nucleoli",
     "clump_thickness",
     "uniformity_of_cell_size",
     "uniformity_of_cell_shape",
-    "marginal_adhesion",
-    "single_epithelial_cell_size",
-    "bare_nuclei",
-    "bland_chromatin",
-    "normal_nucleoli",
-    "mitoses")
+    "marginal_adhesion")
   //"class")
 
   val aidsocurrence_features = Array[String](

@@ -82,13 +82,10 @@ object ImputationPlanRandomForestExec extends Serializable {
 
       if (breastCancer) {
 
-        //odf = Util.loadData(spark, "file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/breast-cancer-wisconsin.reduced.csv").withColumn("lineId", monotonically_increasing_id)
-
-        odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
-        features = Util.breastcancer_features
+        odf = Util.loadData(spark, "file:///rukbat/appraisal/breast_cancer_wisconsin.csv").withColumn("lineId", monotonically_increasing_id)
 
         //odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
-        //features = Util.breastcancer_features
+        features = Util.breastcancer_features
 
       } else if (aidsOccurrence) {
 
@@ -108,7 +105,7 @@ object ImputationPlanRandomForestExec extends Serializable {
       var imputationPlans = List.empty[(String, Double, Double, Int, ImputationPlan)]
 
       //val missingRate = Seq(10d, 20d, 30d)
-      val missingRate = Seq(10d)
+      val missingRate = Seq(20d)
 
       //val selectionReduction = Seq(10d, 20d, 30d)
       val selectionReduction = Seq(10d)
@@ -137,13 +134,13 @@ object ImputationPlanRandomForestExec extends Serializable {
               "percentReduction" -> sr)
 
             var clusteringParams: HashMap[String, Any] = HashMap(
-              "k" -> 2,
+              "k" -> 4,
               "maxIter" -> 1000,
-              "kLimit" -> kn)
+              "kLimit" -> 10)
 
             var imputationParams: HashMap[String, Any] = HashMap(
-              "k" -> 2,
-              "kLimit" -> kn,
+              "k" -> 5,
+              "kLimit" -> 10,
               "varianceComplete" -> varianceBefore.get,
               "learningRate" -> 0.1,
               "features" -> features)
@@ -153,21 +150,21 @@ object ImputationPlanRandomForestExec extends Serializable {
 
             // regression
 
-            impPlan.addStrategy(new ImputationStrategy(imputationParams, new RandomForest()))
+            // impPlan.addStrategy(new ImputationStrategy(imputationParams, new BaggingReg()))
+
+            // impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+
+            // imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+
+            // clustering -> regression
+
+            impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans()))
+
+            impPlan.addStrategy(new ImputationStrategy(imputationParams, new BaggingReg()))
 
             impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
 
             imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
-
-            // clustering -> regression
-
-            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeansPlus()))
-
-            //impPlan.addStrategy(new ImputationStrategy(imputationParams, new RandomForest()))
-
-            //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
-
-            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
           })
 
         })

@@ -7,14 +7,14 @@
 		revision="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20200118214753"/>
+		date="20200204122945"/>
 	<dependencies>
 		<module organisation="com.appraisal.spark" name="appraisalspark_2.11">
 			<revision name="1.0" status="release" pubdate="20191226214325" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="176">
 				<metadata-artifact status="no" details="" size="2503" time="0" location="/home/oem/.ivy2/cache/com.appraisal.spark/appraisalspark_2.11/ivy-1.0.xml" searched="false" origin-is-local="true" origin-location="/home/oem/.ivy2/local/com.appraisal.spark/appraisalspark_2.11/1.0/ivys/ivy.xml"/>
 				<caller organisation="com.appraisal.spark.executor" name="appraisalsparkexecutor_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="appraisalspark_2.11" type="jar" ext="jar" status="no" details="" size="1091565" time="0" location="/home/oem/.ivy2/local/com.appraisal.spark/appraisalspark_2.11/1.0/jars/appraisalspark_2.11.jar">
+					<artifact name="appraisalspark_2.11" type="jar" ext="jar" status="no" details="" size="1094196" time="0" location="/home/oem/.ivy2/local/com.appraisal.spark/appraisalspark_2.11/1.0/jars/appraisalspark_2.11.jar">
 						<origin-location is-local="true" location="/home/oem/.ivy2/local/com.appraisal.spark/appraisalspark_2.11/1.0/jars/appraisalspark_2.11.jar"/>
 					</artifact>
 				</artifacts>

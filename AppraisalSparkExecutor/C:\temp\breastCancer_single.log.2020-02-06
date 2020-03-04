@@ -1,0 +1,26 @@
+2020-02-06 11:05:18 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 06/02/2020 11:05:17
+2020-02-06 11:05:18 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-02-06 11:05:22 ERROR ImputationPlanRandomForestExec$:217 â org.apache.spark.sql.AnalysisException: Path does not exist: file:/rukbat/appraisal/breast_cancer_wisconsin.csv;
+2020-02-06 11:06:27 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 06/02/2020 11:06:25
+2020-02-06 11:06:27 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-02-06 11:06:32 ERROR ImputationPlanRandomForestExec$:103 â Data count: 146
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â -------------------------------------
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â Running imputation plan: Imputation[AdaboostR2]
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature clump_thickness
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â Running Imputation[AdaboostR2] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> clump_thickness, kLimit -> 146, varianceComplete -> 8.8339744792644, features -> [Ljava.lang.String;@56587330, calcFeatures -> [Ljava.lang.String;@227cba85)
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â ImputationResult: 2.8,4.0,5.65,9.65,8.25,2.0,3.95,9.4,1.0,3.3,1.0,1.9,5.9,2.0,5.2,5.65,1.4,1.05,1.95,8.4,1.05,3.8,1.05,5.5,5.3,6.9,2.0,9.75,4.85,2.6,3.0,1.05,5.6,4.7,3.0,9.15,3.0,1.95,3.0,3.3,4.7,2.6,8.2,10.0,1.0,1.0,5.0,2.05,4.9,3.0,5.0,1.7,10.0,8.95,5.0,3.7,9.0,10.0,10.0,6.8,5.0,1.1,6.35,4.0,4.0,4.0,9.0,10.0,7.0,5.25,8.0,1.0,1.0,10.0,4.0,1.0,1.0,10.0,1.0,3.05,5.0,2.95,2.1,6.0,4.0,6.9,8.05,5.25,6.15,5.0,3.15,4.0,3.05,1.1,7.65,2.95,4.85,4.0,2.25,10.0,1.0,4.0,4.0,1.0,10.0,3.3,4.0,2.1,1.0,8.0,2.0,3.0,10.0,10.0,1.45,8.0,5.0,6.8,5.95,10.0,3.15,7.0,1.1,7.7,8.0,8.95,4.0,1.0,7.45,1.1,2.05,8.1,2.0,10.0,2.05,1.0,4.0,3.0,5.0,3.0,2.0,5.0,5.0,5.0,1.0,2.2
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â OriginalValues: 3.0,5.0,5.0,10.0,9.0,2.0,4.0,10.0,1.0,3.0,1.0,2.0,6.0,2.0,5.0,5.0,1.0,1.0,2.0,8.0,1.0,3.0,1.0,6.0,5.0,8.0,2.0,10.0,5.0,3.0,3.0,1.0,6.0,5.0,3.0,10.0,3.0,2.0,3.0,3.0,5.0,2.0,9.0,10.0,1.0,1.0,5.0,2.0,5.0,3.0,5.0,1.0,10.0,9.0,5.0,3.0,9.0,10.0,10.0,7.0,5.0,1.0,6.0,4.0,4.0,4.0,9.0,10.0,7.0,5.0,8.0,1.0,1.0,10.0,4.0,1.0,1.0,10.0,1.0,3.0,5.0,3.0,2.0,6.0,4.0,7.0,8.0,5.0,6.0,5.0,3.0,4.0,3.0,1.0,8.0,3.0,4.0,4.0,2.0,10.0,1.0,4.0,4.0,1.0,10.0,3.0,4.0,2.0,1.0,8.0,2.0,3.0,10.0,10.0,1.0,8.0,5.0,7.0,6.0,10.0,3.0,7.0,1.0,8.0,8.0,9.0,4.0,1.0,7.0,1.0,2.0,8.0,2.0,10.0,2.0,1.0,4.0,3.0,5.0,3.0,2.0,5.0,5.0,5.0,1.0,2.0
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â bestK: 0
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â RMSE: 0.2748598646683059
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â avgError: 0.0
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â avgPercentError: 1.0720493534058033
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â varianceCompleteError: 8.8339744792644
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â varianceImputedError: 8.69701504814439
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 2, imputationFeature -> clump_thickness, kLimit -> 146, varianceComplete -> 8.8339744792644, features -> [Ljava.lang.String;@56587330, calcFeatures -> [Ljava.lang.String;@227cba85)
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 8.390764683805592
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 8.833974479264404
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â RMSE: 0.2748598646683059
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â -------------------------------------
+2020-02-06 11:43:58 ERROR ImputationPlan:389 â Total plan execution time: 2231 seconds, 37 minutes, 0 hours.
+2020-02-06 11:43:58 ERROR Crowner:103 â Executed plans: 1 / 9 : 12%.

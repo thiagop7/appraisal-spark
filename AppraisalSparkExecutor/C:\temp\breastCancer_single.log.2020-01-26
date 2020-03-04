@@ -1,0 +1,8 @@
+2020-01-26 05:36:30 ERROR ImputationPlanAdaboostR2Exec$:205 â 
+2020-01-26 05:36:30 ERROR ImputationPlanAdaboostR2Exec$:206 â 
+2020-01-26 05:36:30 ERROR ImputationPlanAdaboostR2Exec$:207 â 
+2020-01-26 05:36:30 ERROR ImputationPlanAdaboostR2Exec$:208 â  ------ CONSOLIDATED RESULT ------ 
+2020-01-26 05:36:30 ERROR ImputationPlanAdaboostR2Exec$:212 â Plan: Clustering[KMeansPlus]->Imputation[AdaboostR2]	Missing rate: 30.0	Selection reduction: 20.0	Error: 0.537543261041084%
+2020-01-26 05:36:30 ERROR ImputationPlanAdaboostR2Exec$:219 â 
+2020-01-26 05:36:30 ERROR ImputationPlanAdaboostR2Exec$:220 â Best plan: Clustering[KMeansPlus]->Imputation[AdaboostR2]	Missing rate: 30.0	Selection reduction: 20.0	Error: 0.537543261041084%
+2020-01-26 05:36:30 ERROR ImputationPlanAdaboostR2Exec$:231 â ------------------ Wall stop time: 25/01/2020 19:48:59 --- Total wall time: 35250 seconds, 587 minutes, 9 hours.

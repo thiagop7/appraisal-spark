@@ -4,7 +4,7 @@
 		module="appraisalsparkexecutor-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20200118214751"
+		publication="20200204122943"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>
