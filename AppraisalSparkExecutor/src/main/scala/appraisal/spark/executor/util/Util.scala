@@ -30,9 +30,11 @@ object Util {
     "marginal_adhesion")
   //"class")
 
+  //val aidsocurrence_features = Array[String]( "AIDS_HIV" )
+
   val aidsocurrence_features = Array[String](
     //"Time",
-    //"AIDS_Death",
+    "AIDS_Death",
     "Regulation_on_the_Prevention_and_Treatment_of_AIDS",
     "AIDS_prevention_knowledge",
     "AIDS_awareness",
@@ -65,6 +67,19 @@ object Util {
     "Number_of_AIDS_patients_in_China",
     "Symptoms_of_AIDS_in_incubation_period")
 
+  val redshift = Array[String](
+    "u",
+    "g",
+    "r",
+    "i",
+    "z",
+    "modelmagerr_u",
+    "modelmagerr_g",
+    "modelmagerr_r",
+    "modelmagerr_i",
+    "modelmagerr_z",
+    "redshift")
+
   def loadBreastCancer(spark: SparkSession): DataFrame = {
 
     //spark.read.option("header", true).csv("C:\\data\\breast-cancer-wisconsin.csv")
@@ -74,7 +89,7 @@ object Util {
 
   def loadAidsOccurenceAndDeath(spark: SparkSession): DataFrame = {
 
-    spark.read.option("header", true).csv("file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/AIDS Occurrence and Death and Queries.csv")
+    spark.read.option("header", true).csv("file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/AIDS_Occurrence_and_Death_and_Queries.csv")
 
   }
 

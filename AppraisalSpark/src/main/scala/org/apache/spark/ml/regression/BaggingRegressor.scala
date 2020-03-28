@@ -148,7 +148,7 @@ class BaggingRegressor(override val uid: String)
       } else {
         dataset.select($(labelCol), $(featuresCol))
       }
-
+      
       val optWeightColName = if (weightColIsUsed) {
         Some($(weightCol))
       } else {

@@ -1,0 +1,6 @@
+2020-03-27 20:40:09 ERROR ImputationPlanAdaboostR2Exec$:57 â Appraisal Spark - Wall start time: 27/03/2020 20:40:08
+2020-03-27 20:40:09 ERROR ImputationPlanAdaboostR2Exec$:58 â Parallel execution: false
+2020-03-27 20:40:17 ERROR ImputationPlanAdaboostR2Exec$:105 â Data count: 78
+2020-03-27 20:51:08 ERROR ImputationPlanAdaboostR2Exec$:57 â Appraisal Spark - Wall start time: 27/03/2020 20:51:06
+2020-03-27 20:51:08 ERROR ImputationPlanAdaboostR2Exec$:58 â Parallel execution: false
+2020-03-27 20:51:14 ERROR ImputationPlanAdaboostR2Exec$:105 â Data count: 78

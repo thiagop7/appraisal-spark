@@ -64,8 +64,8 @@ class AdaboostR2 extends ImputationAlgorithm {
       .withColumn("val", lit(false))
       .drop(attribute)
 
-    //df3.printSchema()
-    //df3.show()
+    df3.printSchema()
+    df3.show()
 
     var df4 = Util.transformToMLlib(impDf, attribute, sqlContext, context)
       .drop(attribute, "label")
@@ -91,7 +91,7 @@ class AdaboostR2 extends ImputationAlgorithm {
       .addGrid(br.validationIndicatorCol, Array("val"))
       .addGrid(br.numBaseLearners, Array(100))
       .addGrid(br.tol, Array(1E-9))
-      .addGrid(br.numRound, Array(3))
+      .addGrid(br.numRound, Array(5))
       .addGrid(dr.maxDepth, Array(10))
       .build()
 
@@ -99,7 +99,7 @@ class AdaboostR2 extends ImputationAlgorithm {
       .setEstimator(br)
       .setEvaluator(re)
       .setEstimatorParamMaps(brParamGrid)
-      .setNumFolds(3)
+      .setNumFolds(2)
       .setParallelism(2)
 
     val brCVModel = brCV.fit(full)

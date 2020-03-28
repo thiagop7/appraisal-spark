@@ -82,9 +82,9 @@ object ImputationPlanStackGenExec extends Serializable {
 
       if (breastCancer) {
 
-        odf = Util.loadData(spark, "file:///opt/spark-data/appraisal/appraisal/breast_cancer_wisconsin.csv").withColumn("lineId", monotonically_increasing_id)
+        //odf = Util.loadData(spark, "file:///opt/spark-data/appraisal/appraisal/breast_cancer_wisconsin.csv").withColumn("lineId", monotonically_increasing_id)
         //odf = Util.loadData(spark, "file:///rukbat/appraisal/breast_cancer_wisconsin.csv").withColumn("lineId", monotonically_increasing_id)
-        //odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
+        odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
         features = Util.breastcancer_features
 
         //odf = Util.loadBreastCancer(spark).withColumn("lineId", monotonically_increasing_id)
@@ -111,7 +111,7 @@ object ImputationPlanStackGenExec extends Serializable {
       val missingRate = Seq(10d, 20d, 30d)
 
       //val selectionReduction = Seq(10d, 20d, 30d)
-      val selectionReduction = Seq(10d)
+      val selectionReduction = Seq(30d)
 
       val T = 3;
 
@@ -153,11 +153,11 @@ object ImputationPlanStackGenExec extends Serializable {
 
             // regression
 
-            //impPlan.addStrategy(new ImputationStrategy(imputationParams, new StackedGeneralization()))
+            impPlan.addStrategy(new ImputationStrategy(imputationParams, new StackedGeneralization()))
 
-            //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
 
-            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
 
             // clustering -> regression
 
@@ -183,17 +183,7 @@ object ImputationPlanStackGenExec extends Serializable {
 
             // clustering -> selection reduction -> regression
 
-            impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
-
-            impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
-
-            impPlan.addStrategy(new ImputationStrategy(imputationParams, new StackedGeneralization()))
-
-            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
-
-            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
-
-            // selection reduction -> regression
+            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
 
             //impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
 
@@ -202,6 +192,16 @@ object ImputationPlanStackGenExec extends Serializable {
             //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
 
             //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+
+            // selection reduction -> regression
+
+            //            impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
+            //
+            //            impPlan.addStrategy(new ImputationStrategy(imputationParams, new StackedGeneralization()))
+            //
+            //            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+            //
+            //            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
 
           })
 

@@ -1,0 +1,741 @@
+2020-03-12 15:38:18 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 15:38:16
+2020-03-12 15:38:18 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 15:38:23 ERROR ImputationPlanRandomForestExec$:227 â org.apache.spark.sql.AnalysisException: Path does not exist: file:/opt/spark-data/appraisal/appraisal/breast_cancer_wisconsin.csv;
+2020-03-12 15:38:41 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 15:38:40
+2020-03-12 15:38:41 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 15:38:48 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 15:46:20 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 15:46:17
+2020-03-12 15:46:20 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 15:46:27 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 15:46:57 ERROR Instrumentation:70 â java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:102)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+
+2020-03-12 15:46:57 ERROR ImputationPlan:370 â -------------------------------------
+2020-03-12 15:46:57 ERROR ImputationPlan:370 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 15:46:57 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 15:46:57 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 1
+2020-03-12 15:46:57 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@316975be, calcFeatures -> [Ljava.lang.String;@6b09fcda)
+2020-03-12 15:46:57 ERROR ImputationPlan:371 â Error executing imputation plan: Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:102)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-03-12 15:46:57 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 15:46:57 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 15:46:57 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 15:46:57 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-03-12 15:46:57 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@316975be, calcFeatures -> [Ljava.lang.String;@6b09fcda)
+2020-03-12 15:46:57 ERROR ImputationPlan:389 â Total plan execution time: 23 seconds, 0 minutes, 0 hours.
+2020-03-12 15:46:57 ERROR Crowner:103 â Executed plans: 1 / 27 : 4%.
+2020-03-12 15:48:57 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 15:48:55
+2020-03-12 15:48:57 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 15:49:03 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 15:49:55 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 15:49:54
+2020-03-12 15:49:55 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 15:50:03 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 15:51:18 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 15:51:16
+2020-03-12 15:51:18 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 15:51:25 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 15:52:08 ERROR Instrumentation:70 â java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:104)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+
+2020-03-12 15:52:08 ERROR ImputationPlan:370 â -------------------------------------
+2020-03-12 15:52:08 ERROR ImputationPlan:370 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 15:52:08 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 15:52:08 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 1
+2020-03-12 15:52:08 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@22a5f12, calcFeatures -> [Ljava.lang.String;@316975be)
+2020-03-12 15:52:08 ERROR ImputationPlan:371 â Error executing imputation plan: Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:104)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-03-12 15:52:08 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 15:52:08 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 15:52:08 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 15:52:08 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-03-12 15:52:08 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@22a5f12, calcFeatures -> [Ljava.lang.String;@316975be)
+2020-03-12 15:52:08 ERROR ImputationPlan:389 â Total plan execution time: 37 seconds, 0 minutes, 0 hours.
+2020-03-12 15:52:08 ERROR Crowner:103 â Executed plans: 1 / 27 : 4%.
+2020-03-12 15:56:03 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 15:56:01
+2020-03-12 15:56:03 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 15:56:12 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 15:57:36 ERROR Instrumentation:70 â java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:104)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+
+2020-03-12 15:57:45 ERROR ImputationPlan:370 â -------------------------------------
+2020-03-12 15:57:45 ERROR ImputationPlan:370 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 15:57:45 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 15:57:45 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 1
+2020-03-12 15:57:45 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@2c95cb24, calcFeatures -> [Ljava.lang.String;@75f3c0c9)
+2020-03-12 15:57:45 ERROR ImputationPlan:371 â Error executing imputation plan: Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:104)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-03-12 15:57:45 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 15:57:45 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 15:57:45 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 15:57:45 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-03-12 15:57:45 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@2c95cb24, calcFeatures -> [Ljava.lang.String;@75f3c0c9)
+2020-03-12 15:57:45 ERROR ImputationPlan:389 â Total plan execution time: 78 seconds, 1 minutes, 0 hours.
+2020-03-12 15:57:45 ERROR Crowner:103 â Executed plans: 1 / 27 : 4%.
+2020-03-12 16:01:36 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:01:34
+2020-03-12 16:01:36 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:01:44 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:06:44 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:06:42
+2020-03-12 16:06:44 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:06:51 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:08:06 ERROR Instrumentation:70 â java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:100)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+
+2020-03-12 16:08:06 ERROR ImputationPlan:370 â -------------------------------------
+2020-03-12 16:08:06 ERROR ImputationPlan:370 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 16:08:06 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 16:08:06 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 1
+2020-03-12 16:08:06 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@6b09fcda, calcFeatures -> [Ljava.lang.String;@5cf4c93)
+2020-03-12 16:08:06 ERROR ImputationPlan:371 â Error executing imputation plan: Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:100)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-03-12 16:08:06 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 16:08:06 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 16:08:06 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 16:08:06 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-03-12 16:08:06 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@6b09fcda, calcFeatures -> [Ljava.lang.String;@5cf4c93)
+2020-03-12 16:08:06 ERROR ImputationPlan:389 â Total plan execution time: 66 seconds, 1 minutes, 0 hours.
+2020-03-12 16:08:06 ERROR Crowner:103 â Executed plans: 1 / 27 : 4%.
+2020-03-12 16:16:16 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:16:14
+2020-03-12 16:16:16 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:16:21 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:16:46 ERROR Instrumentation:70 â java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:100)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+
+2020-03-12 16:16:46 ERROR ImputationPlan:370 â -------------------------------------
+2020-03-12 16:16:46 ERROR ImputationPlan:370 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 16:16:46 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 16:16:46 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 1
+2020-03-12 16:16:46 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@25c6a9de, calcFeatures -> [Ljava.lang.String;@142422a4)
+2020-03-12 16:16:46 ERROR ImputationPlan:371 â Error executing imputation plan: Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:100)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-03-12 16:16:46 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 16:16:46 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 16:16:46 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 16:16:46 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-03-12 16:16:46 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@25c6a9de, calcFeatures -> [Ljava.lang.String;@142422a4)
+2020-03-12 16:16:46 ERROR ImputationPlan:389 â Total plan execution time: 18 seconds, 0 minutes, 0 hours.
+2020-03-12 16:16:46 ERROR Crowner:103 â Executed plans: 1 / 27 : 4%.
+2020-03-12 16:18:07 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:18:05
+2020-03-12 16:18:07 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:18:12 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:18:35 ERROR ImputationPlanStackGenExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:18:33
+2020-03-12 16:18:35 ERROR ImputationPlanStackGenExec$:58 â Parallel execution: false
+2020-03-12 16:18:38 ERROR ImputationPlanStackGenExec$:252 â org.apache.spark.sql.AnalysisException: Path does not exist: file:/opt/spark-data/appraisal/appraisal/breast_cancer_wisconsin.csv;
+2020-03-12 16:18:57 ERROR ImputationPlanStackGenExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:18:55
+2020-03-12 16:18:57 ERROR ImputationPlanStackGenExec$:58 â Parallel execution: false
+2020-03-12 16:19:04 ERROR ImputationPlanStackGenExec$:103 â Data count: 146
+2020-03-12 16:21:23 ERROR ImputationPlanStackGenExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:21:21
+2020-03-12 16:21:23 ERROR ImputationPlanStackGenExec$:58 â Parallel execution: false
+2020-03-12 16:21:29 ERROR ImputationPlanStackGenExec$:103 â Data count: 146
+2020-03-12 16:23:05 ERROR ImputationPlanStackGenExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:23:03
+2020-03-12 16:23:05 ERROR ImputationPlanStackGenExec$:58 â Parallel execution: false
+2020-03-12 16:23:11 ERROR ImputationPlanStackGenExec$:103 â Data count: 146
+2020-03-12 16:24:52 ERROR ImputationPlanStackGenExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:24:51
+2020-03-12 16:24:52 ERROR ImputationPlanStackGenExec$:58 â Parallel execution: false
+2020-03-12 16:24:58 ERROR ImputationPlanStackGenExec$:103 â Data count: 146
+2020-03-12 16:38:03 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:38:02
+2020-03-12 16:38:03 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:38:10 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:38:36 ERROR Instrumentation:70 â java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:100)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+
+2020-03-12 16:38:36 ERROR ImputationPlan:370 â -------------------------------------
+2020-03-12 16:38:36 ERROR ImputationPlan:370 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 16:38:36 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 16:38:36 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 1
+2020-03-12 16:38:36 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@31881213, calcFeatures -> [Ljava.lang.String;@2162e4a)
+2020-03-12 16:38:36 ERROR ImputationPlan:371 â Error executing imputation plan: Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:77)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:100)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-03-12 16:38:36 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 16:38:36 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 16:38:36 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 16:38:36 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-03-12 16:38:36 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@31881213, calcFeatures -> [Ljava.lang.String;@2162e4a)
+2020-03-12 16:38:36 ERROR ImputationPlan:389 â Total plan execution time: 23 seconds, 0 minutes, 0 hours.
+2020-03-12 16:38:36 ERROR Crowner:103 â Executed plans: 1 / 27 : 4%.
+2020-03-12 16:39:10 ERROR ImputationPlanStackGenExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:39:08
+2020-03-12 16:39:10 ERROR ImputationPlanStackGenExec$:58 â Parallel execution: false
+2020-03-12 16:39:17 ERROR ImputationPlanStackGenExec$:103 â Data count: 146
+2020-03-12 16:45:20 ERROR ImputationPlanStackGenExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:45:19
+2020-03-12 16:45:20 ERROR ImputationPlanStackGenExec$:58 â Parallel execution: false
+2020-03-12 16:45:49 ERROR ImputationPlanStackGenExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:45:47
+2020-03-12 16:45:49 ERROR ImputationPlanStackGenExec$:58 â Parallel execution: false
+2020-03-12 16:45:54 ERROR ImputationPlanStackGenExec$:103 â Data count: 146
+2020-03-12 16:46:14 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:46:12
+2020-03-12 16:46:14 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:46:19 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:47:06 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:47:04
+2020-03-12 16:47:06 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:47:11 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:50:26 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:50:24
+2020-03-12 16:50:26 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:50:31 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:52:18 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:52:17
+2020-03-12 16:52:18 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:52:24 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:52:39 ERROR Instrumentation:70 â java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$$anonfun$transformSchemaImpl$2.apply(ValidatorParams.scala:75)
+	at org.apache.spark.ml.tuning.ValidatorParams$$anonfun$transformSchemaImpl$2.apply(ValidatorParams.scala:74)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:101)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+
+2020-03-12 16:52:39 ERROR ImputationPlan:370 â -------------------------------------
+2020-03-12 16:52:39 ERROR ImputationPlan:370 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 16:52:39 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 16:52:39 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 1
+2020-03-12 16:52:39 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@22d82fe8, calcFeatures -> [Ljava.lang.String;@2175111e)
+2020-03-12 16:52:39 ERROR ImputationPlan:371 â Error executing imputation plan: Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column val must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually boolean.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.PredictorParams$class.validateAndTransformSchema(Predictor.scala:51)
+	at org.apache.spark.ml.Predictor.validateAndTransformSchema(Predictor.scala:82)
+	at org.apache.spark.ml.Predictor.transformSchema(Predictor.scala:144)
+	at org.apache.spark.ml.tuning.ValidatorParams$$anonfun$transformSchemaImpl$2.apply(ValidatorParams.scala:75)
+	at org.apache.spark.ml.tuning.ValidatorParams$$anonfun$transformSchemaImpl$2.apply(ValidatorParams.scala:74)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at org.apache.spark.ml.tuning.ValidatorParams$class.transformSchemaImpl(ValidatorParams.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchemaImpl(CrossValidator.scala:69)
+	at org.apache.spark.ml.tuning.CrossValidator.transformSchema(CrossValidator.scala:186)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:124)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:101)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:187)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-03-12 16:52:39 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 16:52:39 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 16:52:39 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 16:52:39 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-03-12 16:52:39 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@22d82fe8, calcFeatures -> [Ljava.lang.String;@2175111e)
+2020-03-12 16:52:39 ERROR ImputationPlan:389 â Total plan execution time: 12 seconds, 0 minutes, 0 hours.
+2020-03-12 16:52:39 ERROR Crowner:103 â Executed plans: 1 / 27 : 4%.
+2020-03-12 16:53:49 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:53:47
+2020-03-12 16:53:49 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:53:54 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 16:54:49 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 16:54:47
+2020-03-12 16:54:49 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 16:54:55 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 17:06:43 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 17:06:42
+2020-03-12 17:06:43 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 17:06:51 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 17:09:55 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 12/03/2020 17:09:50
+2020-03-12 17:09:55 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-03-12 17:10:06 ERROR ImputationPlanRandomForestExec$:101 â Data count: 146
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature single_epithelial_cell_size
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@1766b7, calcFeatures -> [Ljava.lang.String;@56f3f9da)
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â ImputationResult: 3.7,2.1,2.6,4.6,2.0,2.6,2.0,2.7,1.8,4.7,1.8,5.1,2.0,7.6,2.0,2.0,10.0,5.0,2.0,2.0,4.1,5.0,2.0,8.0,2.0,8.0,6.2,4.0,8.0,10.0,8.6,10.0,2.0,2.0,2.0,2.0,3.0,10.0,3.0,2.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0,2.0,5.0,2.0,2.0,2.0,4.3,4.0,2.0,5.0,2.0,4.9,2.0,2.0,1.2,2.0,2.0,9.8,7.0,6.9,2.0,8.0,4.1,1.2,2.0,2.0,6.0,2.0,2.0,2.0,3.0,6.1,4.9,4.1,10.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0,2.0,2.0,2.0,3.0,2.0,2.0,8.0,2.0,10.0,1.2,2.0,2.0,2.0,2.0,10.0,2.0,2.0,2.0,2.0,6.0,2.0,10.0,2.0,2.0,2.0,6.6,2.0,2.0,2.0,3.0,6.1,3.0,8.0,2.0,2.0,8.0,4.1,1.2,10.0,2.1,8.0,2.0,2.0,6.0,2.0,2.0,2.0,10.0,3.0,6.0,8.0,2.0,2.0,9.8,4.1,2.0,6.0,1.1
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â OriginalValues: 3.0,2.0,2.0,5.0,2.0,3.0,2.0,2.0,2.0,4.0,2.0,5.0,2.0,8.0,2.0,2.0,10.0,5.0,2.0,2.0,4.0,5.0,2.0,8.0,2.0,8.0,6.0,4.0,8.0,10.0,9.0,10.0,2.0,2.0,2.0,2.0,3.0,10.0,3.0,2.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0,2.0,5.0,2.0,2.0,2.0,4.0,4.0,2.0,5.0,2.0,5.0,2.0,2.0,1.0,2.0,2.0,10.0,7.0,7.0,2.0,8.0,4.0,1.0,2.0,2.0,6.0,2.0,2.0,2.0,3.0,6.0,5.0,4.0,10.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0,2.0,2.0,2.0,3.0,2.0,2.0,8.0,2.0,10.0,1.0,2.0,2.0,2.0,2.0,10.0,2.0,2.0,2.0,2.0,6.0,2.0,10.0,2.0,2.0,2.0,7.0,2.0,2.0,2.0,3.0,6.0,3.0,8.0,2.0,2.0,8.0,4.0,1.0,10.0,2.0,8.0,2.0,2.0,6.0,2.0,2.0,2.0,10.0,3.0,6.0,8.0,2.0,2.0,10.0,4.0,2.0,6.0,1.0
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â bestK: 0
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â RMSE: 0.14850856716212685
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â avgError: 0.0
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â avgPercentError: 0.4370622435876082
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â varianceCompleteError: 7.14374179020453
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â varianceImputedError: 7.256932353397835
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> single_epithelial_cell_size, kLimit -> 10, varianceComplete -> 7.14374179020453, features -> [Ljava.lang.String;@1766b7, calcFeatures -> [Ljava.lang.String;@56f3f9da)
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 7.001750797522991
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 7.143741790204527
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â RMSE: 0.14850856716212685
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â -------------------------------------
+2020-03-12 17:38:55 ERROR ImputationPlan:389 â Total plan execution time: 1725 seconds, 28 minutes, 0 hours.
+2020-03-12 17:38:55 ERROR Crowner:103 â Executed plans: 1 / 27 : 4%.

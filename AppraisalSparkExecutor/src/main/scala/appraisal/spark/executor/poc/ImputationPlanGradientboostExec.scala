@@ -21,8 +21,9 @@ object ImputationPlanGradientboostExec extends Serializable {
   def main(args: Array[String]) {
 
     var parallelExecution = true
-    var breastCancer = true
+    var breastCancer = false
     var aidsOccurrence = false
+    var redshift = true
 
     if (args != null && args.length > 0) {
 
@@ -38,6 +39,10 @@ object ImputationPlanGradientboostExec extends Serializable {
 
         aidsOccurrence = true
 
+      } else if ("redshift".equalsIgnoreCase(args(0))) {
+
+        redshift = true
+
       }
 
       if (args.length > 1) {
@@ -47,6 +52,9 @@ object ImputationPlanGradientboostExec extends Serializable {
 
         else if ("aidsoccurrence".equalsIgnoreCase(args(1)))
           aidsOccurrence = true
+
+        else if ("redshift".equalsIgnoreCase(args(1)))
+          redshift = true
 
       }
     }
@@ -92,12 +100,22 @@ object ImputationPlanGradientboostExec extends Serializable {
 
       } else if (aidsOccurrence) {
 
-        odf = Util.loadData(spark, "file:///rukbat/appraisal/AIDS_Occurrence_and_Death_and_Queries.csv").withColumn("lineId", monotonically_increasing_id)
-        features = Util.aidsocurrence_features
+        //odf = Util.loadData(spark, "file:///rukbat/appraisal/AIDS_Occurrence_and_Death_and_Queries.csv").withColumn("lineId", monotonically_increasing_id)
 
-        //odf = Util.loadAidsOccurenceAndDeath(spark).withColumn("lineId", monotonically_increasing_id)
+        //odf = Util.loadData(spark, "file:///opt/spark-data/appraisal/appraisal/AIDS_Occurrence_and_Death_and_Queries.csv").withColumn("lineId", monotonically_increasing_id)
         //features = Util.aidsocurrence_features
 
+        odf = Util.loadAidsOccurenceAndDeath(spark).withColumn("lineId", monotonically_increasing_id)
+        features = Util.aidsocurrence_features
+
+      } else if (redshift) {
+        //odf = Util.loadData(spark, "file:///rukbat/appraisal/AIDS_Occurrence_and_Death_and_Queries.csv").withColumn("lineId", monotonically_increasing_id)
+
+        odf = Util.loadData(spark, "file:///opt/spark-data/appraisal/appraisal/redshift.csv").withColumn("lineId", monotonically_increasing_id)
+        //features = Util.aidsocurrence_features
+
+         //odf = Util.loadAidsOccurenceAndDeath(spark).withColumn("lineId", monotonically_increasing_id)
+        features = Util.redshift
       }
 
       Logger.getLogger(getClass.getName).error("Data count: " + odf.count())
@@ -111,7 +129,7 @@ object ImputationPlanGradientboostExec extends Serializable {
       val missingRate = Seq(10d, 20d, 30d)
 
       //val selectionReduction = Seq(10d, 20d, 30d)
-      val selectionReduction = Seq(30d)
+      val selectionReduction = Seq(10d)
 
       val T = 3;
 
@@ -153,11 +171,11 @@ object ImputationPlanGradientboostExec extends Serializable {
 
             // regression
 
-            //impPlan.addStrategy(new ImputationStrategy(imputationParams, new GBRegressor()))
+            impPlan.addStrategy(new ImputationStrategy(imputationParams, new GBRegressor()))
 
-            //impPlan.addEnsembleStrategy(new EnsembleStrategy(gradientboostParams, new Boost()))
+            impPlan.addEnsembleStrategy(new EnsembleStrategy(gradientboostParams, new Boost()))
 
-            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
 
             // clustering -> regression
 
@@ -195,13 +213,13 @@ object ImputationPlanGradientboostExec extends Serializable {
 
             // selection reduction -> regression
 
-            impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
+            // impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
 
-            impPlan.addStrategy(new ImputationStrategy(imputationParams, new GBRegressor()))
+            // impPlan.addStrategy(new ImputationStrategy(imputationParams, new GBRegressor()))
 
-            impPlan.addEnsembleStrategy(new EnsembleStrategy(gradientboostParams, new Boost()))
+            // impPlan.addEnsembleStrategy(new EnsembleStrategy(gradientboostParams, new Boost()))
 
-            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+            // imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
 
           })
 

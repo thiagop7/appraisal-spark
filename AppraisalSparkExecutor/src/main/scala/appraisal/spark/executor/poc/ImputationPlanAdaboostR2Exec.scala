@@ -21,8 +21,8 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
   def main(args: Array[String]) {
 
     var parallelExecution = false
-    var breastCancer = true
-    var aidsOccurrence = false
+    var breastCancer = false
+    var aidsOccurrence = true
 
     if (args != null && args.length > 0) {
 
@@ -92,18 +92,20 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
 
       } else if (aidsOccurrence) {
 
-        odf = Util.loadData(spark, "file:///rukbat/appraisal/AIDS_Occurrence_and_Death_and_Queries.csv").withColumn("lineId", monotonically_increasing_id)
-        features = Util.aidsocurrence_features
+        //odf = Util.loadData(spark, "file:///rukbat/appraisal/AIDS_Occurrence_and_Death_and_Queries.csv").withColumn("lineId", monotonically_increasing_id)
 
-        //odf = Util.loadAidsOccurenceAndDeath(spark).withColumn("lineId", monotonically_increasing_id)
+        //odf = Util.loadData(spark, "file:///opt/spark-data/appraisal/appraisal/AIDS_Occurrence_and_Death_and_Queries.csv").withColumn("lineId", monotonically_increasing_id)
         //features = Util.aidsocurrence_features
+
+        odf = Util.loadAidsOccurenceAndDeath(spark).withColumn("lineId", monotonically_increasing_id)
+        features = Util.aidsocurrence_features
 
       }
 
       Logger.getLogger(getClass.getName).error("Data count: " + odf.count())
 
       //val k_nsqrt = scala.math.sqrt(odf.value.count()).intValue()
-      val kn = odf.count().intValue()
+      //val kn = odf.count().intValue()
 
       var imputationPlans = List.empty[(String, Double, Double, Int, ImputationPlan)]
 
@@ -137,12 +139,12 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
               "percentReduction" -> sr)
 
             var clusteringParams: HashMap[String, Any] = HashMap(
-              "k" -> 4,
+              "k" -> 2,
               "maxIter" -> 1000,
               "kLimit" -> 10)
 
             var imputationParams: HashMap[String, Any] = HashMap(
-              "k" -> 4,
+              "k" -> 2,
               "kLimit" -> 10,
               "varianceComplete" -> varianceBefore.get,
               "learningRate" -> 0.1,
@@ -161,13 +163,13 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
 
             // clustering -> regression
 
-            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
+            impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
 
-            //impPlan.addStrategy(new ImputationStrategy(imputationParams, new AdaboostR2()))
+            impPlan.addStrategy(new ImputationStrategy(imputationParams, new AdaboostR2()))
 
-            //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
 
-            //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
 
             // selection reduction -> clustering -> regression
 
@@ -195,13 +197,13 @@ object ImputationPlanAdaboostR2Exec extends Serializable {
 
             // selection reduction -> regression
 
-            impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
+            // impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
 
-            impPlan.addStrategy(new ImputationStrategy(imputationParams, new AdaboostR2()))
+            // impPlan.addStrategy(new ImputationStrategy(imputationParams, new AdaboostR2()))
 
-            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+            // impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
 
-            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+            // imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
 
           })
 

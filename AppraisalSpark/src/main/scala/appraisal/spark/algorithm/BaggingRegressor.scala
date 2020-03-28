@@ -14,16 +14,12 @@ import org.apache.spark.broadcast._
 import appraisal.spark.statistic.Statistic
 import scala.math.log
 import scala.collection.parallel.immutable._
-import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.evaluation.RegressionEvaluator
-import org.apache.spark.ml.feature.VectorIndexer
-import org.apache.spark.ml.regression.DecisionTreeRegressionModel
-import org.apache.spark.ml.regression.DecisionTreeRegressor
-import org.apache.spark.ml.regression.BaggingRegressor
-import org.apache.spark.sql.functions.{ rand, when }
 import org.apache.spark.ml.tuning.{ CrossValidator, ParamGridBuilder }
-import org.apache.spark.ml.regression.BaggingRegressionModel
+import org.apache.spark.ml.regression.{ DecisionTreeRegressor, BaggingRegressionModel }
 import org.apache.spark.ml.linalg.{ Vector, Vectors }
+import org.apache.spark.ml.regression.BoostingRegressor
+import org.apache.spark.ml.regression.BaggingRegressor
 
 class BaggingReg extends ImputationAlgorithm {
 
@@ -64,9 +60,6 @@ class BaggingReg extends ImputationAlgorithm {
       .withColumn("val", lit(false))
       .drop(attribute)
 
-    //df3.printSchema()
-    //df3.show()
-
     var df4 = Util.transformToMLlib(impDf, attribute, sqlContext, context)
       .drop(attribute, "label")
       .join(originalValues, "lineId")
@@ -75,7 +68,8 @@ class BaggingReg extends ImputationAlgorithm {
       .withColumn("val", lit(true))
       .drop("originalValue")
 
-    var full = df4.union(df3).toDF()
+    val full = df4.union(df3).toDF()
+    full.cache()
 
     val dr = new DecisionTreeRegressor()
     val bgr = new BaggingRegressor()
@@ -87,18 +81,19 @@ class BaggingReg extends ImputationAlgorithm {
       .setPredictionCol("prediction")
       .setMetricName("rmse")
 
-    val brParamGrid = new ParamGridBuilder()
+    val srParamGrid = new ParamGridBuilder()
       .addGrid(bgr.subspaceRatio, Array(0.7, 1))
-      .addGrid(bgr.numBaseLearners, Array(20))
+      .addGrid(bgr.numBaseLearners, Array(200))
       .addGrid(bgr.replacement, Array(x = true))
       .addGrid(bgr.sampleRatio, Array(0.7, 1))
       .addGrid(dr.maxDepth, Array(10))
+      .addGrid(dr.maxBins, Array(30, 40))
       .build()
 
     val brCV = new CrossValidator()
       .setEstimator(bgr)
       .setEvaluator(re)
-      .setEstimatorParamMaps(brParamGrid)
+      .setEstimatorParamMaps(srParamGrid)
       .setNumFolds(3)
       .setParallelism(2)
 
@@ -106,9 +101,6 @@ class BaggingReg extends ImputationAlgorithm {
 
     // Make predictions.
     val predictions = brCVModel.transform(full)
-
-    // Select example rows to display.
-    //predictions.select("prediction", "label").show(5)
 
     val rmse = re.evaluate(predictions)
     println(s"Root Mean Squared Error (RMSE) on test data = $rmse")
@@ -143,5 +135,5 @@ class BaggingReg extends ImputationAlgorithm {
       0, 0, rmse, brCVModel.avgMetrics.min, varianceBefore, varianceImputated, null, params.toString()))
   }
 
-  def name(): String = { "AdaboostR2" }
+  def name(): String = { "BaggingRegressor" }
 }

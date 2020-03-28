@@ -76,6 +76,12 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
       val planStartTime = new java.util.Date()
 
       var logStack = List.empty[String]
+      var logToCsv = Seq.empty[(String, Double, Double, Double, Integer)]
+      var feature = ""
+      var varianceImputedErrorTotal = 0.0
+      var varianceCompleteErrorTotal = 0.0
+      var rmse = 0.0
+      var seconds = 0
 
       logStack = logStack :+ "-------------------------------------"
       logStack = logStack :+ "Running imputation plan: " + planName
@@ -90,7 +96,7 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
       val context = _idf.sparkSession.sparkContext
 
       val session = _idf.sparkSession
-      
+
       val remCol = _odf.columns.diff(_features).filter(c => !"lineId".equals(c) && !imputationFeature.equals(c) && !"originalValue".equals(c) && !"weight".equals(c))
       _odf = _odf.drop(remCol: _*)
       _odf = appraisal.spark.util.Util.filterNullAndNonNumeric(_odf)
@@ -263,23 +269,27 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
 
                   logStack = logStack :+ "imputationResult: " + x.result.map(_.imputationValue.toDouble).collect().mkString(",")
                   logStack = logStack :+ "originalValues: " + x.result.map(_.originalValue.toDouble).collect().mkString(",")
-                  logStack = logStack :+ "best k: " + x.k
-                  logStack = logStack :+ "totalError: " + x.totalError
+                  logStack = logStack :+ "bestK: " + x.k
+                  logStack = logStack :+ "RMSE: " + x.totalError
                   logStack = logStack :+ "avgError: " + x.avgError
                   logStack = logStack :+ "avgPercentError: " + x.avgPercentError
                   logStack = logStack :+ "varianceCompleteError: " + x.varianceCompleteError
                   logStack = logStack :+ "varianceImputedError: " + x.varianceImputedError
-                  logStack = logStack :+ "RMSE" 
                   logStack = logStack :+ "weights: " + x.params
                 })
 
                 val imputedValues = irs.map(x => x.result.map(_.imputationValue).collect()).flatten.toArray
                 val originalValues = irs.map(x => x.result.map(_.originalValue).collect()).flatten.toArray
 
+                feature = is.params("imputationFeature").asInstanceOf[String]
+                varianceImputedErrorTotal = Util.variance(imputedValues).get
+                varianceCompleteErrorTotal = Util.variance(originalValues).get
+                rmse = Util.rootMeanSquaredError(originalValues, imputedValues, session)
+
                 logStack = logStack :+ "varianceImputedErrorTotal: " + Util.variance(imputedValues).get
                 logStack = logStack :+ "varianceCompleteErrorTotal: " + Util.variance(originalValues).get
                 logStack = logStack :+ "RMSE: " + Util.rootMeanSquaredError(originalValues, imputedValues, session)
-                
+
               } else {
 
                 logStack = logStack :+ "ImputationResult: EMPTY BATCH - There is no tuples for imputation, skiping plan."
@@ -316,8 +326,8 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
 
                   logStack = logStack :+ "ImputationResult: " + x.result.map(_.imputationValue).collect().mkString(",")
                   logStack = logStack :+ "OriginalValues: " + x.result.map(_.originalValue).collect().mkString(",")
-                  logStack = logStack :+ "best k: " + x.k
-                  logStack = logStack :+ "totalError: " + x.totalError
+                  logStack = logStack :+ "bestK: " + x.k
+                  logStack = logStack :+ "RMSE: " + x.totalError
                   logStack = logStack :+ "avgError: " + x.avgError
                   logStack = logStack :+ "avgPercentError: " + x.avgPercentError
                   logStack = logStack :+ "varianceCompleteError: " + x.varianceCompleteError
@@ -328,10 +338,14 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
                 val imputedValues = irs.map(x => x.result.map(_.imputationValue).collect()).flatten.toArray
                 val originalValues = irs.map(x => x.result.map(_.originalValue).collect()).flatten.toArray
 
-                logStack = logStack :+ "varianceImputedErrorTotal: " + Util.variance(imputedValues).get
-                logStack = logStack :+ "varianceCompleteErrorTotal: " + Util.variance(originalValues).get
-                logStack = logStack :+ "RMSE: " + Util.rootMeanSquaredError(originalValues, imputedValues, session)
-                
+                feature = is.params("imputationFeature").asInstanceOf[String]
+                varianceImputedErrorTotal = Util.variance(imputedValues).get
+                varianceCompleteErrorTotal = Util.variance(originalValues).get
+                rmse = Util.rootMeanSquaredError(originalValues, imputedValues, session)
+
+                logStack = logStack :+ "varianceImputedErrorTotal: " + varianceImputedErrorTotal
+                logStack = logStack :+ "varianceCompleteErrorTotal: " + varianceCompleteErrorTotal
+                logStack = logStack :+ "RMSE: " + rmse
 
               } else {
 
@@ -344,8 +358,7 @@ class ImputationPlan(idf: DataFrame, odf: DataFrame, missingRate: Double, imputa
 
           }
 
-          count += 1
-
+          count += 1          
         }
 
         logStack = logStack :+ "-------------------------------------"

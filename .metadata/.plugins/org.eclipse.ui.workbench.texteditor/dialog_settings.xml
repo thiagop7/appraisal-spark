@@ -6,27 +6,25 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="monotonically_increasing_id" key="selection"/>
+		<item value="log4j" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="log4j"/>
+			<item value="adab"/>
+			<item value="adabostr2"/>
+			<item value="adabost"/>
+			<item value="adabo"/>
+			<item value="features"/>
+			<item value="  val breastcancer_features = Array[String]("/>
+			<item value="adaboost"/>
+			<item value="sampleRatio"/>
 			<item value="monotonically_increasing_id"/>
 			<item value="Params"/>
 			<item value="params"/>
 			<item value="val originalValues = nvDf.join(fidf, &quot;lineId&quot;).select(&quot;originalValue&quot;, &quot;lineId&quot;)"/>
-			<item value="weight"/>
-			<item value="wei"/>
-			<item value="imputationBatch"/>
-			<item value="firs"/>
-			<item value="?"/>
-			<item value="setBaseLearner"/>
-			<item value="basel"/>
-			<item value="randomfo"/>
-			<item value="random"/>
-			<item value="best"/>
-			<item value="gradientboostParams"/>
 		</list>
 		<list key="replacehistory">
 			<item value="gradientboostParams"/>
@@ -36,7 +34,7 @@
 		<item value="339" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="438" key="DIALOG_HEIGHT"/>
-		<item value="828" key="DIALOG_X_ORIGIN"/>
-		<item value="168" key="DIALOG_Y_ORIGIN"/>
+		<item value="158" key="DIALOG_X_ORIGIN"/>
+		<item value="281" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
