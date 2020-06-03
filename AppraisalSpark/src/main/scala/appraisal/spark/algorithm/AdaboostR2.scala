@@ -89,7 +89,7 @@ class AdaboostR2 extends ImputationAlgorithm {
     val brParamGrid = new ParamGridBuilder()
       .addGrid(br.loss, Array("squared"))
       .addGrid(br.validationIndicatorCol, Array("val"))
-      .addGrid(br.numBaseLearners, Array(100))
+      .addGrid(br.numBaseLearners, Array(10))
       .addGrid(br.tol, Array(1E-9))
       .addGrid(br.numRound, Array(5))
       .addGrid(dr.maxDepth, Array(10))
@@ -102,10 +102,10 @@ class AdaboostR2 extends ImputationAlgorithm {
       .setNumFolds(2)
       .setParallelism(2)
 
-    val brCVModel = brCV.fit(full)
+    val brCVModel = brCV.fit(df3)
 
     // Make predictions.
-    val predictions = brCVModel.transform(full)
+    val predictions = brCVModel.transform(df4)
 
     // Select example rows to display.
     //predictions.select("prediction", "label").show(5)

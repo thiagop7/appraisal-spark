@@ -89,9 +89,9 @@ class GBRegressor extends ImputationAlgorithm {
       .addGrid(br.loss, Array("squared"))
       .addGrid(br.learningRate, Array(0.1))
       .addGrid(br.validationIndicatorCol, Array("val"))
-      .addGrid(br.numBaseLearners, Array(100))
+      .addGrid(br.numBaseLearners, Array(10))
       .addGrid(br.tol, Array(1E-9))
-      .addGrid(br.numRound, Array(3))
+      .addGrid(br.numRound, Array(5))
       .addGrid(br.alpha, Array(0.3))
       .addGrid(dr.maxDepth, Array(10))
       .build()
@@ -100,13 +100,13 @@ class GBRegressor extends ImputationAlgorithm {
       .setEstimator(br)
       .setEvaluator(re)
       .setEstimatorParamMaps(brParamGrid)
-      .setNumFolds(3)
+      .setNumFolds(2)
       .setParallelism(2)
 
-    val brCVModel = brCV.fit(full)
+    val brCVModel = brCV.fit(df3)
     
     // Make predictions.
-    val predictions = brCVModel.transform(full)
+    val predictions = brCVModel.transform(df4)
 
     // Select example rows to display.
     //predictions.select("prediction", "label").show(5)

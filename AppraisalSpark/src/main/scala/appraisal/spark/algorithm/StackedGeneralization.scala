@@ -45,7 +45,6 @@ class StackedGeneralization extends ImputationAlgorithm {
     // Busco o dataset com os nulos para serem imputados
     val befImpDf = fidf.filter(t => t.get(columns.indexOf(attribute)) == null).drop(attribute).withColumn(attribute, lit(0.toDouble))
 
-    //preciso que seja var para atualizar os pesos a cada iteração de T
     var impDf = befImpDf.toDF()
 
     //Dados da feature a ser imputada completa (para cálculo da variância)
@@ -70,28 +69,17 @@ class StackedGeneralization extends ImputationAlgorithm {
       .withColumn("val", lit(true))
       .drop("originalValue")
 
-    val full = df4.union(df3).toDF()
-    full.cache()
-
     val dr = new DecisionTreeRegressor()
-      .setMaxDepth(15)
+      .setMaxDepth(10)
+
     val br = new BoostingRegressor()
-      .setLoss("squared")
-      .setValidationIndicatorCol("val")
-      .setNumBaseLearners(200)
-      .setTol(1E-9)
-      .setNumRound(5)
       .setBaseLearner(dr)
 
-    val bgr = new BaggingRegressor()      
-      .setFeaturesCol("val")
-      .setNumBaseLearners(200)
-      .setReplacement(true)
+    val bgr = new BaggingRegressor()
       .setBaseLearner(dr)
-      .setParallelism(2)
 
     val sr = new StackingRegressor()
-      .setStacker(new DecisionTreeRegressor())
+      .setStacker(dr)
       .setBaseLearners(Array(br, bgr))
       .setParallelism(2)
 
@@ -101,6 +89,13 @@ class StackedGeneralization extends ImputationAlgorithm {
       .setMetricName("rmse")
 
     val srParamGrid = new ParamGridBuilder()
+      .addGrid(bgr.numBaseLearners, Array(3))      
+      .addGrid(br.loss, Array("squared"))
+      .addGrid(br.validationIndicatorCol, Array("val"))
+      .addGrid(br.numBaseLearners, Array(3))
+      .addGrid(br.tol, Array(1E-9))
+      .addGrid(br.numRound, Array(5))
+      .addGrid(dr.maxDepth, Array(10))
       .build()
 
     val srCV = new CrossValidator()
@@ -110,10 +105,10 @@ class StackedGeneralization extends ImputationAlgorithm {
       .setNumFolds(3)
       .setParallelism(2)
 
-    val srCVModel = srCV.fit(full)
+    val srCVModel = srCV.fit(df3)
 
     // Make predictions.
-    val predictions = srCVModel.transform(full)
+    val predictions = srCVModel.transform(df4)
 
     val rmse = re.evaluate(predictions)
     println(s"Root Mean Squared Error (RMSE) on test data = $rmse")
@@ -143,7 +138,7 @@ class StackedGeneralization extends ImputationAlgorithm {
 
     Statistic.statisticInfo(Entities.ImputationResult(
       context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("lineId"), r.getAs("label"), r.getAs("prediction"))).toList),
-      0, 0, rmse, srCVModel.avgMetrics.min, varianceDfCompl, varianceImputated, null, params.toString()))
+      0, 0, rmse, srCVModel.avgMetrics.min, varianceBefore, varianceImputated, null, params.toString()))
   }
 
   def name(): String = { "StackedGeneralization" }

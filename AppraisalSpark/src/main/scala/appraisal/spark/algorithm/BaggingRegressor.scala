@@ -14,10 +14,12 @@ import org.apache.spark.broadcast._
 import appraisal.spark.statistic.Statistic
 import scala.math.log
 import scala.collection.parallel.immutable._
+import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.evaluation.RegressionEvaluator
 import org.apache.spark.ml.tuning.{ CrossValidator, ParamGridBuilder }
 import org.apache.spark.ml.regression.{ DecisionTreeRegressor, BaggingRegressionModel }
 import org.apache.spark.ml.linalg.{ Vector, Vectors }
+import org.apache.spark.ml.feature.VectorIndexer
 import org.apache.spark.ml.regression.BoostingRegressor
 import org.apache.spark.ml.regression.BaggingRegressor
 
@@ -57,52 +59,47 @@ class BaggingReg extends ImputationAlgorithm {
     val originalValues = nvDf.join(fidf, "lineId").select("originalValue", "lineId")
 
     val df3 = Util.transformToMLlib(calcDf, attribute, sqlContext, context)
-      .withColumn("val", lit(false))
-      .drop(attribute)
-
     var df4 = Util.transformToMLlib(impDf, attribute, sqlContext, context)
       .drop(attribute, "label")
       .join(originalValues, "lineId")
       .select("features", "lineId", "originalValue")
+      .withColumn(attribute, col("originalValue"))
       .withColumn("label", col("originalValue"))
-      .withColumn("val", lit(true))
       .drop("originalValue")
 
     val full = df4.union(df3).toDF()
-    full.cache()
+    df4.cache()
+
+    // Automatically identify categorical features, and index them.
+    // Set maxCategories so features with > 4 distinct values are treated as continuous.
+    val featureIndexer = new VectorIndexer()
+      .setInputCol("features")
+      .setOutputCol("indexedFeatures")
+      .setHandleInvalid("keep")
+      .fit(df3)
 
     val dr = new DecisionTreeRegressor()
     val bgr = new BaggingRegressor()
       .setBaseLearner(dr)
+      .setNumBaseLearners(5)
       .setParallelism(2)
 
-    val re = new RegressionEvaluator()
-      .setLabelCol("label")
+    val evaluator = new RegressionEvaluator()
+      .setLabelCol(attribute)
       .setPredictionCol("prediction")
       .setMetricName("rmse")
 
-    val srParamGrid = new ParamGridBuilder()
-      .addGrid(bgr.subspaceRatio, Array(0.7, 1))
-      .addGrid(bgr.numBaseLearners, Array(200))
-      .addGrid(bgr.replacement, Array(x = true))
-      .addGrid(bgr.sampleRatio, Array(0.7, 1))
-      .addGrid(dr.maxDepth, Array(10))
-      .addGrid(dr.maxBins, Array(30, 40))
-      .build()
+    // Chain indexer and forest in a Pipeline.
+    val pipeline = new Pipeline()
+      .setStages(Array(featureIndexer, bgr))
 
-    val brCV = new CrossValidator()
-      .setEstimator(bgr)
-      .setEvaluator(re)
-      .setEstimatorParamMaps(srParamGrid)
-      .setNumFolds(3)
-      .setParallelism(2)
-
-    val brCVModel = brCV.fit(full)
+    // Train model. This also runs the indexer.
+    val model = pipeline.fit(df3)
 
     // Make predictions.
-    val predictions = brCVModel.transform(full)
+    val predictions = model.transform(df4)
 
-    val rmse = re.evaluate(predictions)
+    val rmse = evaluator.evaluate(predictions)
     println(s"Root Mean Squared Error (RMSE) on test data = $rmse")
 
     //    println(brCVModel.avgMetrics.mkString(","))
@@ -128,11 +125,11 @@ class BaggingReg extends ImputationAlgorithm {
     val arrFeatComplete = cdf.select(col(attribute)).collect().map(_.toSeq.toArray).flatten
     val varianceBefore = Util.variance(arrFeatComplete.map(x => Util.extractDouble(x))).get
 
-    val weights = brCVModel.bestModel.asInstanceOf[BaggingRegressionModel]
+    //val weights = brCVModel.bestModel.asInstanceOf[BaggingRegressionModel]
 
     Statistic.statisticInfo(Entities.ImputationResult(
       context.sparkContext.parallelize(stats.map(r => Entities.Result(r.getAs("lineId"), r.getAs("label"), r.getAs("prediction"))).toList),
-      0, 0, rmse, brCVModel.avgMetrics.min, varianceBefore, varianceImputated, null, params.toString()))
+      0, 0, rmse, 0, varianceBefore, varianceImputated, null, params.toString()))
   }
 
   def name(): String = { "BaggingRegressor" }
