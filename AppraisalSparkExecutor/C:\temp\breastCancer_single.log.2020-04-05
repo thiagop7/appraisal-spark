@@ -1,0 +1,747 @@
+2020-04-05 12:11:48 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 05/04/2020 12:11:46
+2020-04-05 12:11:48 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-04-05 12:11:54 ERROR ImputationPlanRandomForestExec$:102 â Data count: 78
+2020-04-05 12:24:55 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 05/04/2020 12:24:54
+2020-04-05 12:24:55 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-04-05 12:25:01 ERROR ImputationPlanRandomForestExec$:102 â Data count: 78
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature AIDS_Death
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@7439b2aa)
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â ImputationResult: 0.29252925292529247,0.31413141314131415,0.29252925292529247,0.0774077407740774,0.44446444644464445,0.29252925292529247,0.29252925292529247
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â OriginalValues: 0.6291629162916292,0.5715571557155715,0.2844284428442845,0.3915391539153915,0.6759675967596759,0.6354635463546354,0.5670567056705671
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â RMSE: 0.27383450805809995
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â varianceCompleteError: 0.03656009325068233
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â varianceImputedError: 0.04028891404737597
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@7439b2aa)
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.009940169534505203
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.017792546902883673
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â RMSE: 0.27383450805809995
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:25:58 ERROR ImputationPlan:389 â Total plan execution time: 51 seconds, 0 minutes, 0 hours.
+2020-04-05 12:25:58 ERROR Crowner:103 â Executed plans: 1 / 96 : 2%.
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature AIDS_Death
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@38bd0e54)
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â ImputationResult: 0.32178217821782173,0.32178217821782173,0.32178217821782173,0.24482448244824484,0.32178217821782173,0.32178217821782173,0.39423942394239425,0.24482448244824484,0.32178217821782173,0.4198919891989199,0.5436543654365437,0.531053105310531,0.3757875787578758,0.531053105310531,0.32178217821782173
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â OriginalValues: 0.46984698469846986,0.6939693969396941,0.5553555355535553,0.08910891089108908,0.4014401440144014,0.40864086408640865,0.6345634563456346,0.41854185418541856,0.5562556255625563,0.6408640864086408,0.9297929792979298,0.6732673267326732,0.5112511251125113,0.8487848784878487,0.21242124212421243
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â RMSE: 0.22293072158036858
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â varianceCompleteError: 0.03656009325068233
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â varianceImputedError: 0.03299158164395735
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@38bd0e54)
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.008849660843672122
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.04504837882528126
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â RMSE: 0.22293072158036858
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:26:39 ERROR ImputationPlan:389 â Total plan execution time: 41 seconds, 0 minutes, 0 hours.
+2020-04-05 12:26:39 ERROR Crowner:103 â Executed plans: 2 / 96 : 3%.
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature AIDS_Death
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@2b67d8ad)
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â ImputationResult: 0.28847884788478856,0.31413141314131415,1.0,0.38343834383438347,0.31413141314131415,0.31413141314131415,0.5661566156615663,0.28847884788478856,0.38343834383438347,0.21242124212421243,0.38343834383438347,0.21242124212421243,0.46684668466846685,0.21242124212421243,0.42191719171917186,0.38343834383438347,0.31413141314131415,0.5364536453645367,0.28847884788478856,0.38343834383438347,0.5364536453645367,0.31413141314131415,0.49306930693069295
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â OriginalValues: 0.6291629162916292,0.5553555355535553,0.9612961296129612,0.4014401440144014,0.4104410441044104,0.40864086408640865,0.585058505850585,0.7848784878487849,0.4032403240324033,0.3915391539153915,0.5562556255625563,0.5328532853285328,0.6561656165616561,0.24482448244824484,0.6408640864086408,0.4446444644464447,0.4896489648964897,0.9297929792979298,0.4896489648964897,0.4716471647164716,0.6732673267326732,0.6255625562556255,0.6129612961296129
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â RMSE: 0.21452693428194547
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â varianceCompleteError: 0.03656009325068233
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â varianceImputedError: 0.03825619586300857
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@2b67d8ad)
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.026870390319851563
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.027998348047471
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â RMSE: 0.21452693428194547
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:27:18 ERROR ImputationPlan:389 â Total plan execution time: 38 seconds, 0 minutes, 0 hours.
+2020-04-05 12:27:18 ERROR Crowner:103 â Executed plans: 3 / 96 : 4%.
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Regulation_on_the_Prevention_and_Treatment_of_AIDS
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@66e2259d)
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â ImputationResult: 0.17908425900839883,0.32116731818709615,0.2701842319154702,0.17908425900839883,0.17908425900839883,0.2701842319154702,0.17908425900839883
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â OriginalValues: 0.32199945814142517,0.301815226225955,0.29490652939582773,0.3196965591980493,0.14061230018965054,0.31400704416147385,0.30438905445678677
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â RMSE: 0.09280093196476223
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â varianceCompleteError: 0.019379209414668162
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â varianceImputedError: 0.020288415595611474
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@66e2259d)
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0031090321123106537
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.0035740018970757542
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â RMSE: 0.09280093196476223
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:28:06 ERROR ImputationPlan:389 â Total plan execution time: 47 seconds, 0 minutes, 0 hours.
+2020-04-05 12:28:06 ERROR Crowner:103 â Executed plans: 4 / 96 : 5%.
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature Regulation_on_the_Prevention_and_Treatment_of_AIDS
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@2f08014b)
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â ImputationResult: 0.3001388512598212,0.3001388512598212,0.3001388512598212,0.3186805743700894,0.25142237875914386,0.23954664499232375,0.5544567867786508,0.23954664499232375,0.5544567867786508,0.34003560784920855,0.17908425900839883,0.427255486318071,0.3783527499322677,0.3001388512598212,0.3001388512598212
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â OriginalValues: 0.3381197507450556,0.37943646708209156,0.46139257653752375,0.301815226225955,0.32579246816580876,0.22148469249525882,0.4670820915740992,0.3457057707938228,0.5776212408561366,0.26347873205093475,0.12801408832294775,0.3673801137903008,0.39460850717962614,0.3286372256840965,0.4501490111081008
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â RMSE: 0.07956101681277924
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â varianceCompleteError: 0.019379209414668162
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â varianceImputedError: 0.01931474872754455
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@4af3cacb, calcFeatures -> [Ljava.lang.String;@2f08014b)
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.010832284133105474
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.011149571994281213
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â RMSE: 0.07956101681277924
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 12:28:49 ERROR ImputationPlan:389 â Total plan execution time: 42 seconds, 0 minutes, 0 hours.
+2020-04-05 12:28:49 ERROR Crowner:103 â Executed plans: 5 / 96 : 6%.
+2020-04-05 12:29:17 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 05/04/2020 12:29:15
+2020-04-05 12:29:17 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-04-05 12:29:22 ERROR ImputationPlanRandomForestExec$:57 â Appraisal Spark - Wall start time: 05/04/2020 12:29:20
+2020-04-05 12:29:22 ERROR ImputationPlanRandomForestExec$:58 â Parallel execution: false
+2020-04-05 12:29:23 ERROR ImputationPlanRandomForestExec$:102 â Data count: 78
+2020-04-05 12:29:33 ERROR ImputationPlanRandomForestExec$:102 â Data count: 78
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature AIDS_Death
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@3e1d79ad)
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â ImputationResult: 0.3447344734473446,0.31413141314131404,0.38778877887788793,0.14131413141314125,0.38778877887788793,0.31413141314131404,0.5352535253525355
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â OriginalValues: 0.6939693969396941,0.2844284428442845,0.4032403240324033,0.03420342034203422,0.6255625562556255,0.6354635463546354,0.6732673267326732
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â RMSE: 0.2115916793261059
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â varianceCompleteError: 0.03656009325068233
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â varianceImputedError: 0.03531257621537176
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@3e1d79ad)
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.011891030025870403
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.05305050059002116
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â RMSE: 0.2115916793261059
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:25:57 ERROR ImputationPlan:389 â Total plan execution time: 10575 seconds, 176 minutes, 2 hours.
+2020-04-05 15:25:57 ERROR Crowner:103 â Executed plans: 1 / 96 : 2%.
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature AIDS_Death
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@5fe6c7c2)
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â ImputationResult: 0.49054905490549067,0.31413141314131404,0.40537803780378034,0.31413141314131404,0.21242124212421234,0.31413141314131404,0.40537803780378034,0.40537803780378034,0.21242124212421234,0.40537803780378034,0.49054905490549067,0.28442844284428437,0.40537803780378034,0.49054905490549067,0.5352535253525355
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â OriginalValues: 0.8181818181818181,0.42844284428442847,0.6426642664266426,0.4104410441044104,0.7848784878487849,0.4833483348334834,0.5679567956795679,0.4032403240324033,0.37713771377137717,0.6021602160216022,0.6696669666966697,0.24482448244824484,0.4446444644464447,0.684968496849685,0.6732673267326732
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â RMSE: 0.22010054369350013
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â varianceCompleteError: 0.03656009325068233
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â varianceImputedError: 0.03619665138625636
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@5fe6c7c2)
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.009485884994640092
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.025385616869517732
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â RMSE: 0.2201005436935001
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:27:35 ERROR ImputationPlan:389 â Total plan execution time: 97 seconds, 1 minutes, 0 hours.
+2020-04-05 15:27:35 ERROR Crowner:103 â Executed plans: 2 / 96 : 3%.
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature AIDS_Death
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@151a7f12)
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â ImputationResult: 0.28442844284428437,0.4216278770734216,0.38973897389738976,0.28442844284428437,1.0,0.24482448244824476,0.38973897389738976,0.5562556255625564,0.14131413141314125,0.14131413141314125,0.24482448244824476,0.38973897389738976,0.38973897389738976,0.24482448244824476,0.38973897389738976,0.38973897389738976,0.28442844284428437,0.5352535253525355,0.38973897389738976,0.38973897389738976,0.49249924992499255,0.38973897389738976,0.28442844284428437
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â OriginalValues: 0.4392439243924392,0.8181818181818181,0.5553555355535553,0.5715571557155715,0.9612961296129612,0.34473447344734476,0.6426642664266426,0.585058505850585,0.7848784878487849,0.31593159315931596,0.31233123312331235,0.6921692169216922,0.2925292529252925,0.3915391539153915,0.3141314131413141,0.4896489648964897,0.4608460846084609,0.6732673267326732,0.5634563456345635,0.7101710171017102,0.6129612961296129,0.6507650765076507,0.21242124212421243
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â RMSE: 0.23083897809051562
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â varianceCompleteError: 0.03656009325068233
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â varianceImputedError: 0.038344907107587846
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_Death, kLimit -> 10, varianceComplete -> 0.03656009325068233, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@151a7f12)
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.02869053835720371
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.035537385042239515
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â RMSE: 0.23083897809051562
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:29:37 ERROR ImputationPlan:389 â Total plan execution time: 121 seconds, 2 minutes, 0 hours.
+2020-04-05 15:29:37 ERROR Crowner:103 â Executed plans: 3 / 96 : 4%.
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Regulation_on_the_Prevention_and_Treatment_of_AIDS
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@2bd550a6)
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â ImputationResult: 0.2437008940666487,0.29661677052289365,0.2437008940666487,0.25142237875914386,0.3727406432635369,0.3382745674807446,0.29661677052289365
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â OriginalValues: 0.32132213492278516,0.30438905445678677,0.2968030344080196,0.20333243023570846,0.23746952045516123,0.26347873205093475,0.2691682470875102
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â RMSE: 0.07157819000394042
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â varianceCompleteError: 0.019379209414668162
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â varianceImputedError: 0.01919340214399008
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@2bd550a6)
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0021450062915608875
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.0014394152961915913
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â RMSE: 0.07157819000394042
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:31:15 ERROR ImputationPlan:389 â Total plan execution time: 98 seconds, 1 minutes, 0 hours.
+2020-04-05 15:31:15 ERROR Crowner:103 â Executed plans: 4 / 96 : 5%.
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature Regulation_on_the_Prevention_and_Treatment_of_AIDS
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@6a4c7305)
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â ImputationResult: 0.2374695204551612,0.29490652939582773,0.3189740810981669,0.15531021403413717,0.2374695204551612,0.7545380655648875,0.2374695204551612,0.3189740810981669,0.5380655648875644,0.3380294409825702,0.3380294409825702,0.5380655648875644,0.29490652939582773,0.1790842590083988,0.5507992413979952
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â OriginalValues: 0.32199945814142517,0.2943646708209158,0.301815226225955,0.3201029531292333,0.10701706854510973,1.0,0.22148469249525882,0.3192901652668654,0.5776212408561366,0.24370089406664863,0.45177458683283667,0.5097534543484151,0.3795719317258196,0.14264426984557033,0.5360335952316446
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â RMSE: 0.09833205065013331
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â varianceCompleteError: 0.019379209414668162
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â varianceImputedError: 0.015529674248045149
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@6a4c7305)
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.02584316276081361
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.04455898573613862
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â RMSE: 0.0983320506501333
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:32:53 ERROR ImputationPlan:389 â Total plan execution time: 96 seconds, 1 minutes, 0 hours.
+2020-04-05 15:32:53 ERROR Crowner:103 â Executed plans: 5 / 96 : 6%.
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature Regulation_on_the_Prevention_and_Treatment_of_AIDS
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@6756429d)
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â ImputationResult: 0.1389189921430507,0.3013701281108488,0.3013701281108488,0.2374695204551612,0.2701842319154701,0.24756163641289622,0.43863451639122186,0.24756163641289622,0.10701706854510973,0.509753454348415,0.32108507179626133,0.1389189921430507,0.34120834462205357,0.35860877810891356,0.39542129504199414,0.1389189921430507,0.7545380655648872,0.34120834462205357,0.24756163641289622,0.509753454348415,0.3013701281108488,0.3013701281108488,0.24756163641289622
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â OriginalValues: 0.32199945814142517,0.3381197507450556,0.37943646708209156,0.4038201029531293,0.2943646708209158,0.22148469249525882,0.3393389325386075,0.3978596586290979,0.23746952045516123,0.5776212408561366,0.3301273367651043,0.1584936331617448,0.26347873205093475,0.354917366567326,0.3673801137903008,0.15212679490652942,0.5507992413979952,0.3131942562991059,0.2989704687076673,0.5380655648875644,0.4501490111081008,0.5056895150365754,0.37970739636954753
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â RMSE: 0.10602246734002606
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â varianceCompleteError: 0.019379209414668162
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â varianceImputedError: 0.021682812204901588
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Regulation_on_the_Prevention_and_Treatment_of_AIDS, kLimit -> 10, varianceComplete -> 0.019379209414668162, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@6756429d)
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.01988013824249907
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.012579920932074704
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â RMSE: 0.10602246734002606
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:34:29 ERROR ImputationPlan:389 â Total plan execution time: 95 seconds, 1 minutes, 0 hours.
+2020-04-05 15:34:29 ERROR Crowner:103 â Executed plans: 6 / 96 : 7%.
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature AIDS_prevention_knowledge
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_prevention_knowledge, kLimit -> 10, varianceComplete -> 0.029117319826118353, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@2294533a)
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â ImputationResult: 0.7068056253139124,0.18743721747865394,0.25326469110999483,0.35120542440984437,0.4925916624811653,0.27489326971371175,0.4925916624811653
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â OriginalValues: 0.41336012054244103,0.3262179809141135,0.3357609241587142,0.35434455047714725,0.3372677046710197,0.29105976896032154,0.28503264691110003
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â RMSE: 0.1602023183629825
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â varianceCompleteError: 0.029117319826118353
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â varianceImputedError: 0.031725005786364904
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_prevention_knowledge, kLimit -> 10, varianceComplete -> 0.029117319826118353, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@2294533a)
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.02796861445487308
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.0015748998600797755
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â RMSE: 0.16020231836298252
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:36:08 ERROR ImputationPlan:389 â Total plan execution time: 98 seconds, 1 minutes, 0 hours.
+2020-04-05 15:36:08 ERROR Crowner:103 â Executed plans: 7 / 96 : 8%.
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature AIDS_prevention_knowledge
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_prevention_knowledge, kLimit -> 10, varianceComplete -> 0.029117319826118353, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@48fa3259)
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â ImputationResult: 0.29227954366075937,0.29227954366075937,0.35421898543445524,0.2012807634354595,0.15199648417880465,0.15199648417880465,0.2012807634354595,0.27774987443495736,0.2012807634354595,0.039804118533400344,0.15199648417880465,0.413360120542441,0.15199648417880465,0.29227954366075937,0.413360120542441
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â OriginalValues: 0.18633852335509798,0.2772476142641889,0.23317428427925668,0.3790808638874938,0.21484178804620796,0.3041185334003014,0.27147162230035166,0.3345052737317931,0.2037920642893019,0.21308387744851837,0.3785786037167253,0.4925916624811653,0.2766197890507283,0.35371672526368664,0.24686087393269723
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â RMSE: 0.12318806931258378
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â varianceCompleteError: 0.029117319826118353
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â varianceImputedError: 0.03126602656028055
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_prevention_knowledge, kLimit -> 10, varianceComplete -> 0.029117319826118353, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@48fa3259)
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.010554757171698964
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.006571011176501076
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â RMSE: 0.12318806931258378
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:37:41 ERROR ImputationPlan:389 â Total plan execution time: 92 seconds, 1 minutes, 0 hours.
+2020-04-05 15:37:41 ERROR Crowner:103 â Executed plans: 8 / 96 : 9%.
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature AIDS_prevention_knowledge
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_prevention_knowledge, kLimit -> 10, varianceComplete -> 0.029117319826118353, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@77ade87d)
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â ImputationResult: 0.2762151905798315,0.24662768171055474,0.22009040683073838,0.24662768171055474,0.22009040683073838,0.039804118533400344,0.22009040683073838,0.13535911602209955,0.2762151905798315,0.29696132596685104,0.039804118533400344,0.19370500585970205,0.22009040683073838,0.2762151905798315,0.13535911602209955,0.33317428427925666,0.29696132596685104,0.13535911602209955,1.0,0.2762151905798315,0.8046207935710699,0.29696132596685104,0.24662768171055474
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â OriginalValues: 0.2305374183827223,0.23568558513309895,0.2898041185334003,0.2921898543445505,0.16863385233550982,0.23568558513309895,0.30964339527875445,0.2841536916122552,0.25489703666499247,0.32044198895027626,0.013058764439979942,0.21484178804620796,0.3041185334003014,0.3345052737317931,0.21308387744851837,0.3195630336514315,0.3002260170768459,0.24899547965846308,0.5883977900552486,0.29105976896032154,0.7994726268206931,0.35371672526368664,0.22576594676042194
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â RMSE: 0.11139730136233453
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â varianceCompleteError: 0.029117319826118353
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â varianceImputedError: 0.03634120242879988
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_prevention_knowledge, kLimit -> 10, varianceComplete -> 0.029117319826118353, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@77ade87d)
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.04350732575816991
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.020676056889910092
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â RMSE: 0.11139730136233453
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:39:12 ERROR ImputationPlan:389 â Total plan execution time: 90 seconds, 1 minutes, 0 hours.
+2020-04-05 15:39:12 ERROR Crowner:103 â Executed plans: 9 / 96 : 10%.
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature AIDS_awareness
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_awareness, kLimit -> 10, varianceComplete -> 0.04794098198816547, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@c33ec4b)
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â ImputationResult: 0.11238521735196996,0.1665761975844755,0.2618401411317682,0.5599131496810965,0.11238521735196996,0.01859139639028362,0.29491111412674714
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â OriginalValues: 0.1814357443343737,0.21115483783417016,0.3399375763332881,0.37454200027140727,0.2078979508752884,0.08196498846519201,0.3749491111412675
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â RMSE: 0.09765967018555087
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â varianceCompleteError: 0.04794098198816547
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â varianceImputedError: 0.04984466354319258
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_awareness, kLimit -> 10, varianceComplete -> 0.04794098198816547, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@c33ec4b)
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.027065570114991246
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.010765957831958184
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â RMSE: 0.09765967018555087
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:40:49 ERROR ImputationPlan:389 â Total plan execution time: 96 seconds, 1 minutes, 0 hours.
+2020-04-05 15:40:49 ERROR Crowner:103 â Executed plans: 10 / 96 : 11%.
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature AIDS_awareness
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_awareness, kLimit -> 10, varianceComplete -> 0.04794098198816547, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@4232d75b)
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â ImputationResult: 0.13393947618401422,0.01859139639028362,0.10062423666711903,0.01859139639028362,0.17044375084814772,0.10062423666711903,0.1470688017370064,0.17044375084814772,0.17044375084814772,0.10062423666711903,0.10062423666711903,0.2939566653096304,0.01859139639028362,0.7602116976523271,0.2239449043289455
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â OriginalValues: 0.28239924005970957,0.1582304247523409,0.11887637399918577,0.10096349572533586,0.21115483783417016,0.2944768625322296,0.05848826163658569,0.2239109784231239,0.25824399511466956,0.04586782467091871,0.3193106255937034,0.3839055502781924,0.13868910299905007,0.7382277106798751,0.3372235038675533
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â RMSE: 0.11341946768567013
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â varianceCompleteError: 0.04794098198816547
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â varianceImputedError: 0.05124060624186058
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_awareness, kLimit -> 10, varianceComplete -> 0.04794098198816547, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@4232d75b)
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.03042983009506179
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.027475406160887204
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â RMSE: 0.11341946768567013
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:42:28 ERROR ImputationPlan:389 â Total plan execution time: 98 seconds, 1 minutes, 0 hours.
+2020-04-05 15:42:28 ERROR Crowner:103 â Executed plans: 11 / 96 : 12%.
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature AIDS_awareness
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_awareness, kLimit -> 10, varianceComplete -> 0.04794098198816547, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@50c448ff)
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â ImputationResult: 0.10985208305061749,0.10985208305061749,0.2655719907721536,0.10985208305061749,0.1971321300945403,0.1971321300945403,0.10985208305061749,0.10985208305061749,0.8800379970145202,0.1638960510245623,0.10985208305061749,0.1638960510245623,0.13631428959153213,0.10985208305061749,0.1638960510245623,0.10985208305061749,0.10985208305061749,0.10985208305061749,0.10985208305061749,0.8294205455285655,0.1638960510245623,0.2428642511421722,0.10985208305061749
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â OriginalValues: 0.1817071515809472,0.1898493689781517,0.23843126611480525,0.10096349572533586,0.14927398561541594,0.34685846112091195,0.164472791423531,0.1443886551770932,0.7644185099742163,0.2239109784231239,0.01859139639028362,0.25824399511466956,0.20179128782738498,0.14208169358121864,0.28524901614873116,0.04586782467091871,0.25729406975166236,0.15253087257429776,0.08196498846519201,0.8876373999185779,0.2662505088885873,0.3372235038675533,0.2525444429366264
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â RMSE: 0.08523059681365683
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â varianceCompleteError: 0.04794098198816547
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â varianceImputedError: 0.05075064486213471
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_awareness, kLimit -> 10, varianceComplete -> 0.04794098198816547, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@50c448ff)
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.042213689653919625
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.03897965596388027
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â RMSE: 0.08523059681365684
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:44:08 ERROR ImputationPlan:389 â Total plan execution time: 98 seconds, 1 minutes, 0 hours.
+2020-04-05 15:44:08 ERROR Crowner:103 â Executed plans: 12 / 96 : 13%.
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Handwritten_AIDS_newspaper
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04855563575234153, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@8851442)
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â ImputationResult: 0.1374215930572263,0.41747400756143654,0.1374215930572263,0.0705576559546314,0.47702032136105876,0.16078883112791426,0.16078883112791426
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â OriginalValues: 0.15754962192816635,0.425921550094518,0.13338846880907373,0.0880789224952741,0.7493501890359168,0.20315453686200377,0.23564508506616258
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â RMSE: 0.10847094936781629
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â varianceCompleteError: 0.04855563575234153
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â varianceImputedError: 0.04590052346091652
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04855563575234153, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@8851442)
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.02113898373360883
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.04608880182639609
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â RMSE: 0.10847094936781629
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:45:45 ERROR ImputationPlan:389 â Total plan execution time: 96 seconds, 1 minutes, 0 hours.
+2020-04-05 15:45:45 ERROR Crowner:103 â Executed plans: 13 / 96 : 14%.
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature Handwritten_AIDS_newspaper
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04855563575234153, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@4eb5e930)
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â ImputationResult: 0.022477551984877123,0.09343494013862633,0.1812578764965344,0.15178571428571427,0.4112909577819785,0.07179426591052301,0.1278576913988658,0.09343494013862633,0.022477551984877123,0.022477551984877123,0.15178571428571427,0.4112909577819785,0.15178571428571427,0.1278576913988658,0.1278576913988658
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â OriginalValues: 0.03544423440453687,0.08949669187145558,0.22719754253308128,0.23830340264650285,0.425921550094518,0.06185018903591683,0.13622400756143668,0.09315926275992438,0.08890595463137996,0.00939272211720227,0.13462901701323252,0.9375,0.14780245746691872,0.15725425330812853,0.1587310964083176
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â RMSE: 0.13994519480988962
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â varianceCompleteError: 0.04855563575234153
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â varianceImputedError: 0.04262653878511579
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04855563575234153, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@4eb5e930)
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.013324388623892961
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.04866576646550084
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â RMSE: 0.13994519480988965
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:47:21 ERROR ImputationPlan:389 â Total plan execution time: 96 seconds, 1 minutes, 0 hours.
+2020-04-05 15:47:21 ERROR Crowner:103 â Executed plans: 14 / 96 : 15%.
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature Handwritten_AIDS_newspaper
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04855563575234153, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@7b452f73)
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â ImputationResult: 0.09022034499054817,0.04412807183364841,0.4513823251417771,0.018933128544423437,0.9375000000000002,0.3602315689981097,0.09022034499054817,0.9375000000000002,0.09022034499054817,0.4513823251417771,0.09022034499054817,0.1333162675908422,0.4513823251417771,0.018933128544423437,0.9375000000000002,0.4513823251417771,0.17860940453686203,0.15282372400756147,0.10650992438563318,0.1333162675908422,0.4513823251417771,0.15282372400756147,0.09022034499054817
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â OriginalValues: 0.08400283553875236,0.06947069943289225,0.3989248582230624,0.08937854442344045,0.9087901701323251,0.2381852551984877,0.08949669187145558,0.938031663516068,0.11424858223062381,0.425921550094518,0.0880789224952741,0.16280718336483932,0.47702032136105865,0.023570415879017016,0.9999999999999999,0.41446124763705106,0.20315453686200377,0.14780245746691872,0.15725425330812853,0.1587310964083176,0.7441517013232514,0.23564508506616258,0.07632325141776937
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â RMSE: 0.074826970871063
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â varianceCompleteError: 0.04855563575234153
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â varianceImputedError: 0.04639906875825676
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04855563575234153, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@7b452f73)
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.08398783487162366
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.08799405123687609
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â RMSE: 0.074826970871063
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:48:56 ERROR ImputationPlan:389 â Total plan execution time: 94 seconds, 1 minutes, 0 hours.
+2020-04-05 15:48:56 ERROR Crowner:103 â Executed plans: 15 / 96 : 16%.
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Handwritten_anti_AIDS_newspaper
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_anti_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04337701129851682, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@2e04fea1)
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â ImputationResult: 0.07204647459099463,0.24496887215867963,0.24496887215867963,0.24496887215867963,0.17978138120747067,0.24496887215867963,0.23740408281453598
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â OriginalValues: 0.04727088460981613,0.07318662226726509,0.17062400463298102,0.20131750398146805,0.16812653829448385,0.4591718546402201,0.08618068626031561
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â RMSE: 0.1233130981575741
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â varianceCompleteError: 0.04337701129851682
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â varianceImputedError: 0.04225398457527884
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_anti_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04337701129851682, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@2e04fea1)
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0036552140167578524
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.01657571053862611
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â RMSE: 0.1233130981575741
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:50:35 ERROR ImputationPlan:389 â Total plan execution time: 98 seconds, 1 minutes, 0 hours.
+2020-04-05 15:50:35 ERROR Crowner:103 â Executed plans: 16 / 96 : 17%.
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature Handwritten_anti_AIDS_newspaper
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_anti_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04337701129851682, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@63b158c)
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â ImputationResult: 0.24496887215867963,0.24496887215867963,0.24496887215867963,0.24496887215867963,0.24496887215867963,0.24496887215867963,0.24496887215867963,0.38866367453308226,0.24496887215867963,0.24496887215867963,0.20470175184595338,0.24496887215867963,0.24496887215867963,0.24496887215867963,0.24496887215867963
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â OriginalValues: 0.0419863906182134,0.3416823512378746,0.287751556392066,0.09157376574489648,0.10739105255537859,0.07318662226726509,0.17062400463298102,0.29813956855364127,0.02910091211814101,0.23740408281453598,0.10431446358766468,0.09030693499348487,0.1684160996090922,0.14463587664687996,0.20667438830172288
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â RMSE: 0.12546500219420587
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â varianceCompleteError: 0.04337701129851682
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â varianceImputedError: 0.04243023348394745
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_anti_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04337701129851682, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@63b158c)
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0014370989897725408
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.008733615319649795
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â RMSE: 0.12546500219420587
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:52:29 ERROR ImputationPlan:389 â Total plan execution time: 113 seconds, 1 minutes, 0 hours.
+2020-04-05 15:52:29 ERROR Crowner:103 â Executed plans: 17 / 96 : 18%.
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature Handwritten_anti_AIDS_newspaper
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_anti_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04337701129851682, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@79a254d1)
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â ImputationResult: 0.2981395685536413,0.11200955552338203,0.8731359490372089,0.3497538728825829,0.8731359490372089,0.2080859997104386,0.06019255827421457,0.2080859997104386,0.17291636504029734,0.8731359490372089,0.11200955552338203,0.11200955552338203,0.17291636504029734,0.5352540900535688,0.3497538728825829,0.8731359490372089,0.2080859997104386,0.09249674243521061,0.17291636504029734,0.2080859997104386,0.2411864774866078,0.5352540900535688,0.2080859997104386
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â OriginalValues: 0.35710149124077023,0.01835094831330534,0.13786738091790934,0.3416823512378746,0.15571159693065006,0.09157376574489648,0.04727088460981613,0.08983639785724626,0.17978138120747067,0.16229911683799042,0.022151440567540176,0.09461415954828434,0.06971188649196466,0.07318662226726509,0.17011727233241639,0.17062400463298102,0.0671420298248154,0.09461415954828434,0.10120167945562472,0.0772042855074562,0.04133487766034458,0.20667438830172288,0.08618068626031561
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â RMSE: 0.3338789257970417
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â varianceCompleteError: 0.04337701129851682
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â varianceImputedError: 0.06502697013155904
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> Handwritten_anti_AIDS_newspaper, kLimit -> 10, varianceComplete -> 0.04337701129851682, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@79a254d1)
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0735260232132707
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.007379844801983932
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â RMSE: 0.3338789257970417
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:54:24 ERROR ImputationPlan:389 â Total plan execution time: 115 seconds, 1 minutes, 0 hours.
+2020-04-05 15:54:24 ERROR Crowner:103 â Executed plans: 18 / 96 : 19%.
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature AIDS_virus
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_virus, kLimit -> 10, varianceComplete -> 0.03744374140030383, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@7175412e)
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â ImputationResult: 0.1695713612812058,0.10937352802637786,0.1408973151201131,0.05102841890406662,0.23595737164390015,0.0962081959491287,0.10937352802637786
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â OriginalValues: 0.20478097032501186,0.37835609985869056,0.2737870937352803,0.31959491285916164,0.17157324540744234,0.3861281205840792,0.38765897315120124
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â RMSE: 0.21680164167609584
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â varianceCompleteError: 0.03744374140030383
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â varianceImputedError: 0.04131945301511929
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_virus, kLimit -> 10, varianceComplete -> 0.03744374140030383, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@7175412e)
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0030200112164370176
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.00682923030132386
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â RMSE: 0.21680164167609584
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:56:29 ERROR ImputationPlan:389 â Total plan execution time: 123 seconds, 2 minutes, 0 hours.
+2020-04-05 15:56:29 ERROR Crowner:103 â Executed plans: 19 / 96 : 20%.
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature AIDS_virus
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_virus, kLimit -> 10, varianceComplete -> 0.03744374140030383, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@4e2ff519)
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â ImputationResult: 0.10336198775317951,0.10336198775317951,0.17439943476212913,0.12176165803108811,0.565120113047574,0.5199246349505416,0.12176165803108811,0.10336198775317951,0.10336198775317951,0.10336198775317951,0.27890956194065014,0.20292628356099876,0.10336198775317951,0.10336198775317951,1.0
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â OriginalValues: 0.5360339142722563,0.10786622703721149,0.44288742345737175,0.2656617993405559,0.656382477626001,0.6680405087140839,0.31959491285916164,0.44147432878002835,0.2304521902967499,0.13118228921337738,0.28297220913801235,0.21184644371172878,0.41356570890249655,0.23751766368346683,0.7582430522845032
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â RMSE: 0.2087160586242537
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â varianceCompleteError: 0.03744374140030383
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â varianceImputedError: 0.0437715753798976
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_virus, kLimit -> 10, varianceComplete -> 0.03744374140030383, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@4e2ff519)
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.06178136729550501
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.03791156459516074
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â RMSE: 0.2087160586242537
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 15:59:12 ERROR ImputationPlan:389 â Total plan execution time: 162 seconds, 2 minutes, 0 hours.
+2020-04-05 15:59:12 ERROR Crowner:103 â Executed plans: 20 / 96 : 21%.
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â Missing rate at 30.0% in feature AIDS_virus
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_virus, kLimit -> 10, varianceComplete -> 0.03744374140030383, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@24f78906)
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â ImputationResult: 0.12647197362223278,0.12647197362223278,0.1600918511540273,0.043805934997644846,0.5258282304914429,0.28367875647668406,0.12647197362223278,0.1600918511540273,0.1600918511540273,0.1600918511540273,0.1600918511540273,0.043805934997644846,0.043805934997644846,0.1600918511540273,0.043805934997644846,0.043805934997644846,0.23045219029674993,0.23045219029674993,0.1600918511540273,0.28367875647668406,0.12647197362223278,0.25926362066258435,0.23045219029674993
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â OriginalValues: 0.5360339142722563,0.10786622703721149,0.274493641073952,0.3714083843617523,0.656382477626001,0.18205369759773915,0.2887423457371644,0.4598445595854923,0.5651201130475743,0.2737870937352803,0.31229392369288744,0.10786622703721149,0.36328308996702785,0.3724682053697599,0.2304521902967499,0.10009420631182298,0.6151672162034858,0.17157324540744234,0.3669335845501649,0.28297220913801235,0.41356570890249655,0.4696184644371173,0.49705605275553477
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â RMSE: 0.22969525620451392
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â varianceCompleteError: 0.03744374140030383
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â varianceImputedError: 0.04136823084162664
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> AIDS_virus, kLimit -> 10, varianceComplete -> 0.03744374140030383, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@24f78906)
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.011272304379893239
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.024944137479952104
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â RMSE: 0.22969525620451392
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 16:01:15 ERROR ImputationPlan:389 â Total plan execution time: 122 seconds, 2 minutes, 0 hours.
+2020-04-05 16:01:15 ERROR Crowner:103 â Executed plans: 21 / 96 : 22%.
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature How_to_prevent_AIDS_A
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> How_to_prevent_AIDS_A, kLimit -> 10, varianceComplete -> 0.038253676394441626, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@3d3f1837)
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â ImputationResult: 0.23043002446246946,0.12569846787691513,0.21561735547830554,0.24380391399510745,0.16574932406334494,0.5463499420625728,0.24380391399510745
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â OriginalValues: 0.19312475859405176,0.07261490923136343,0.116969228788464,0.06514741856572676,0.11143298570876786,0.5850392687009142,0.1837903952620059
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â bestK: 0
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â RMSE: 0.0877560696779251
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â varianceCompleteError: 0.038253676394441626
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â varianceImputedError: 0.03721222396144473
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> How_to_prevent_AIDS_A, kLimit -> 10, varianceComplete -> 0.038253676394441626, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@3d3f1837)
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.015992645947880742
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.028139648222359714
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â RMSE: 0.0877560696779251
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 16:03:19 ERROR ImputationPlan:389 â Total plan execution time: 123 seconds, 2 minutes, 0 hours.
+2020-04-05 16:03:19 ERROR Crowner:103 â Executed plans: 22 / 96 : 23%.
+2020-04-05 16:03:28 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-05 16:03:28 ERROR ImputationPlan:370 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 16:03:28 ERROR ImputationPlan:370 â Missing rate at 20.0% in feature How_to_prevent_AIDS_A
+2020-04-05 16:03:28 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 1
+2020-04-05 16:03:28 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> How_to_prevent_AIDS_A, kLimit -> 10, varianceComplete -> 0.038253676394441626, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@5f643bcc)
+2020-04-05 16:03:28 ERROR ImputationPlan:371 â Error executing imputation plan: Imputation[BaggingRegressor]
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:226)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec.doExecuteBroadcast(BroadcastExchangeExec.scala:146)
+	at org.apache.spark.sql.execution.InputAdapter.doExecuteBroadcast(WholeStageCodegenExec.scala:387)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeBroadcast$1.apply(SparkPlan.scala:144)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeBroadcast$1.apply(SparkPlan.scala:140)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.executeBroadcast(SparkPlan.scala:140)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.prepareBroadcast(BroadcastHashJoinExec.scala:117)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.codegenOuter(BroadcastHashJoinExec.scala:259)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.doConsume(BroadcastHashJoinExec.scala:102)
+	at org.apache.spark.sql.execution.CodegenSupport$class.consume(WholeStageCodegenExec.scala:189)
+	at org.apache.spark.sql.execution.SampleExec.consume(basicPhysicalOperators.scala:239)
+	at org.apache.spark.sql.execution.SampleExec.doConsume(basicPhysicalOperators.scala:326)
+	at org.apache.spark.sql.execution.CodegenSupport$class.consume(WholeStageCodegenExec.scala:189)
+	at org.apache.spark.sql.execution.ProjectExec.consume(basicPhysicalOperators.scala:35)
+	at org.apache.spark.sql.execution.ProjectExec.doConsume(basicPhysicalOperators.scala:65)
+	at org.apache.spark.sql.execution.CodegenSupport$class.consume(WholeStageCodegenExec.scala:189)
+	at org.apache.spark.sql.execution.FileSourceScanExec.consume(DataSourceScanExec.scala:159)
+	at org.apache.spark.sql.execution.ColumnarBatchScan$class.produceRows(ColumnarBatchScan.scala:172)
+	at org.apache.spark.sql.execution.ColumnarBatchScan$class.doProduce(ColumnarBatchScan.scala:85)
+	at org.apache.spark.sql.execution.FileSourceScanExec.doProduce(DataSourceScanExec.scala:159)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.FileSourceScanExec.produce(DataSourceScanExec.scala:159)
+	at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:45)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:35)
+	at org.apache.spark.sql.execution.SampleExec.doProduce(basicPhysicalOperators.scala:275)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SampleExec.produce(basicPhysicalOperators.scala:239)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.doProduce(BroadcastHashJoinExec.scala:96)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.produce(BroadcastHashJoinExec.scala:40)
+	at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:45)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:35)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.doProduce(BroadcastHashJoinExec.scala:96)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.produce(BroadcastHashJoinExec.scala:40)
+	at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:45)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:35)
+	at org.apache.spark.sql.execution.FilterExec.doProduce(basicPhysicalOperators.scala:125)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.FilterExec.produce(basicPhysicalOperators.scala:85)
+	at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:45)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:35)
+	at org.apache.spark.sql.execution.FilterExec.doProduce(basicPhysicalOperators.scala:125)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.FilterExec.produce(basicPhysicalOperators.scala:85)
+	at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:45)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:90)
+	at org.apache.spark.sql.execution.CodegenSupport$$anonfun$produce$1.apply(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.CodegenSupport$class.produce(WholeStageCodegenExec.scala:85)
+	at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:35)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec.doCodeGen(WholeStageCodegenExec.scala:544)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:598)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.DeserializeToObjectExec.doExecute(objects.scala:89)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:80)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:80)
+	at org.apache.spark.sql.Dataset.rdd$lzycompute(Dataset.scala:3043)
+	at org.apache.spark.sql.Dataset.rdd(Dataset.scala:3041)
+	at appraisal.spark.util.Util$.transformToMLlib(Util.scala:180)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:62)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:296)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:210)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+Caused by: java.lang.IllegalStateException: SparkContext has been shutdown
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2053)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2082)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2126)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:945)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:944)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollectIterator(SparkPlan.scala:306)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec$$anonfun$relationFuture$1$$anonfun$apply$1.apply(BroadcastExchangeExec.scala:79)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec$$anonfun$relationFuture$1$$anonfun$apply$1.apply(BroadcastExchangeExec.scala:76)
+	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withExecutionId$1.apply(SQLExecution.scala:101)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withExecutionId(SQLExecution.scala:98)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec$$anonfun$relationFuture$1.apply(BroadcastExchangeExec.scala:75)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec$$anonfun$relationFuture$1.apply(BroadcastExchangeExec.scala:75)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-05 16:03:28 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-05 16:03:28 ERROR ImputationPlan:389 â Running imputation plan: Imputation[BaggingRegressor]
+2020-04-05 16:03:28 ERROR ImputationPlan:389 â Missing rate at 20.0% in feature How_to_prevent_AIDS_A
+2020-04-05 16:03:28 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 1
+2020-04-05 16:03:28 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> How_to_prevent_AIDS_A, kLimit -> 10, varianceComplete -> 0.038253676394441626, features -> [Ljava.lang.String;@15a7fda8, calcFeatures -> [Ljava.lang.String;@5f643bcc)
+2020-04-05 16:03:28 ERROR ImputationPlan:389 â Total plan execution time: 7 seconds, 0 minutes, 0 hours.
+2020-04-05 16:03:28 ERROR Crowner:103 â Executed plans: 23 / 96 : 24%.
+2020-04-05 16:03:28 ERROR ImputationPlanRandomForestExec$:250 â org.apache.spark.sql.catalyst.errors.package$TreeNodeException: execute, tree:
+Exchange SinglePartition
++- *(1) HashAggregate(keys=[], functions=[partial_count(1)], output=[count#150255L])
+   +- *(1) Sample 0.0, 1.0, false, -261584266024730992
+      +- *(1) FileScan csv [] Batched: false, Format: CSV, Location: InMemoryFileIndex[file:/home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/AIDS_Occurrence_..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<>
+

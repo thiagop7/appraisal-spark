@@ -1,0 +1,41 @@
+2020-04-15 20:49:34 ERROR ImputationPlanRandomForestExec$:60 â Appraisal Spark - Wall start time: 15/04/2020 20:49:32
+2020-04-15 20:49:34 ERROR ImputationPlanRandomForestExec$:61 â Parallel execution: false
+2020-04-15 20:50:15 ERROR ImputationPlanRandomForestExec$:60 â Appraisal Spark - Wall start time: 15/04/2020 20:50:14
+2020-04-15 20:50:15 ERROR ImputationPlanRandomForestExec$:61 â Parallel execution: false
+2020-04-15 20:50:27 ERROR ImputationPlanRandomForestExec$:114 â Data count: 336
+2020-04-15 20:59:53 ERROR ImputationPlanRandomForestExec$:60 â Appraisal Spark - Wall start time: 15/04/2020 20:59:51
+2020-04-15 20:59:53 ERROR ImputationPlanRandomForestExec$:61 â Parallel execution: false
+2020-04-15 21:00:02 ERROR ImputationPlanRandomForestExec$:114 â Data count: 336
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Pregnancies
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 2, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@1b6824c1)
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[118] at map at KMeans.scala:44,2,43.15307805167374)
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â best k: 2
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 2
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 2
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 2, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@4805d11b, calcFeatures -> [Ljava.lang.String;@1b6824c1)
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â ImputationResult: 1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â OriginalValues: 1.0,9.0,8.0,6.0,1.0,8.0,1.0,1.0,2.0,13.0,8.0,4.0,4.0,7.0,1.0,7.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â bestK: 0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â RMSE: 5.425633603552677
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â varianceCompleteError: 12.009573361082206
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â varianceImputedError: 11.852237252861595
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 2, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@4805d11b, calcFeatures -> [Ljava.lang.String;@1b6824c1)
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â ImputationResult: 1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â OriginalValues: 2.0,1.0,3.0,1.0,3.0,10.0,1.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â bestK: 0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â RMSE: 2.4238399287081647
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â varianceCompleteError: 6.549775999452823
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â varianceImputedError: 6.379809172052934
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 2, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@4805d11b, calcFeatures -> [Ljava.lang.String;@1b6824c1)
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 11.2490234375
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â RMSE: 4.2019340784929025
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-15 21:01:08 ERROR ImputationPlan:389 â Total plan execution time: 63 seconds, 1 minutes, 0 hours.
+2020-04-15 21:01:08 ERROR Crowner:103 â Executed plans: 1 / 7 : 15%.

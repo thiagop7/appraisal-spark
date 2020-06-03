@@ -1,0 +1,909 @@
+2020-04-16 07:45:04 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 07:45:03
+2020-04-16 07:45:04 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 07:45:07 ERROR ImputationPlanRandomForestExec$:264 â org.apache.spark.sql.AnalysisException: Path does not exist: file:/opt/spark-data/appraisal/appraisal/diabetes_normalized.csv;
+2020-04-16 07:45:28 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 07:45:27
+2020-04-16 07:45:28 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 07:45:38 ERROR ImputationPlanRandomForestExec$:116 â Data count: 336
+2020-04-16 07:48:23 ERROR Instrumentation:70 â org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:226)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$6.apply(CrossValidator.scala:166)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$6.apply(CrossValidator.scala:166)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4.apply(CrossValidator.scala:166)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4.apply(CrossValidator.scala:146)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:146)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:103)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:224)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+Caused by: java.lang.IllegalArgumentException: Field "BMI" does not exist.
+Available fields: features, lineId, label, val, prediction
+	at org.apache.spark.sql.types.StructType$$anonfun$apply$1.apply(StructType.scala:274)
+	at org.apache.spark.sql.types.StructType$$anonfun$apply$1.apply(StructType.scala:274)
+	at scala.collection.MapLike$class.getOrElse(MapLike.scala:128)
+	at scala.collection.AbstractMap.getOrElse(Map.scala:59)
+	at org.apache.spark.sql.types.StructType.apply(StructType.scala:273)
+	at org.apache.spark.ml.util.SchemaUtils$.checkNumericType(SchemaUtils.scala:74)
+	at org.apache.spark.ml.evaluation.RegressionEvaluator.evaluate(RegressionEvaluator.scala:78)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$5$$anonfun$apply$1.apply$mcD$sp(CrossValidator.scala:159)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$5$$anonfun$apply$1.apply(CrossValidator.scala:153)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$5$$anonfun$apply$1.apply(CrossValidator.scala:153)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature BMI
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â Running Clustering[KMeans] | params: Map(k -> 4, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@3a72160a)
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â ClusteringResult: ClusteringResult(MapPartitionsRDD[104] at map at KMeans.scala:44,4,316.18107666083716)
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â best k: 4
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â Batch for imputation after clustering strategy: 4
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 4
+2020-04-16 07:48:23 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@190c2bbf, calcFeatures -> [Ljava.lang.String;@3a72160a)
+2020-04-16 07:48:23 ERROR ImputationPlan:371 â Error executing imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:226)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$6.apply(CrossValidator.scala:166)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$6.apply(CrossValidator.scala:166)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4.apply(CrossValidator.scala:166)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4.apply(CrossValidator.scala:146)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:186)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:146)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1.apply(CrossValidator.scala:122)
+	at org.apache.spark.ml.util.Instrumentation$$anonfun$11.apply(Instrumentation.scala:185)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.ml.util.Instrumentation$.instrumented(Instrumentation.scala:185)
+	at org.apache.spark.ml.tuning.CrossValidator.fit(CrossValidator.scala:122)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:103)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:224)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+Caused by: java.lang.IllegalArgumentException: Field "BMI" does not exist.
+Available fields: features, lineId, label, val, prediction
+	at org.apache.spark.sql.types.StructType$$anonfun$apply$1.apply(StructType.scala:274)
+	at org.apache.spark.sql.types.StructType$$anonfun$apply$1.apply(StructType.scala:274)
+	at scala.collection.MapLike$class.getOrElse(MapLike.scala:128)
+	at scala.collection.AbstractMap.getOrElse(Map.scala:59)
+	at org.apache.spark.sql.types.StructType.apply(StructType.scala:273)
+	at org.apache.spark.ml.util.SchemaUtils$.checkNumericType(SchemaUtils.scala:74)
+	at org.apache.spark.ml.evaluation.RegressionEvaluator.evaluate(RegressionEvaluator.scala:78)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$5$$anonfun$apply$1.apply$mcD$sp(CrossValidator.scala:159)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$5$$anonfun$apply$1.apply(CrossValidator.scala:153)
+	at org.apache.spark.ml.tuning.CrossValidator$$anonfun$fit$1$$anonfun$4$$anonfun$5$$anonfun$apply$1.apply(CrossValidator.scala:153)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature BMI
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 4, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@3a72160a)
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[104] at map at KMeans.scala:44,4,316.18107666083716)
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â best k: 4
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 4
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 4
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@190c2bbf, calcFeatures -> [Ljava.lang.String;@3a72160a)
+2020-04-16 07:48:23 ERROR ImputationPlan:389 â Total plan execution time: 162 seconds, 2 minutes, 0 hours.
+2020-04-16 07:48:23 ERROR Crowner:103 â Executed plans: 1 / 7 : 15%.
+2020-04-16 07:51:29 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 07:51:27
+2020-04-16 07:51:29 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 07:51:39 ERROR ImputationPlanRandomForestExec$:116 â Data count: 336
+2020-04-16 07:54:02 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 07:54:00
+2020-04-16 07:54:02 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 07:54:08 ERROR ImputationPlanRandomForestExec$:116 â Data count: 336
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature BMI
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 4, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@2a01c55)
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[104] at map at KMeans.scala:44,4,290.807973413118)
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â best k: 4
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 4
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 4
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 4, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@7190b5ce, calcFeatures -> [Ljava.lang.String;@2a01c55)
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â ImputationResult: 0.28005115089514077,0.363682864450128,0.34092071611253205,0.32941176470588246,0.40179028132992345,0.3854219948849106,0.2877237851662405,0.1959079283887469,0.4217391304347826,0.15907928388746806,0.19795396419437347,0.28209718670076733,0.16334185848252353,0.808695652173913,0.5716112531969311,0.42148337595907936,0.5304347826086958,0.30920716112531976,0.3017902813299233,0.16368286445012795,0.03401534526854221,0.07084398976982102,0.07263427109974425,0.5176470588235296,0.25818414322250643,0.3677749360613812,0.1572890025575448,0.3153452685421995,0.03580562659846549,0.15248081841432232,0.2843989769820973,0.3437340153452687,0.3989769820971868,0.43299232736572907,0.36956521739130443,0.22071611253196943,0.42583120204603586,0.35524296675191824,0.4248081841432225,0.23375959079283892,0.6335038363171355,0.15580562659846553,0.4191815856777493,0.5347826086956522,0.12340153452685428,0.4020460358056267,0.183375959079284,0.022250639386189253,0.47212276214833765,0.3831202046035807,0.17953964194373415,0.05166240409207164,0.18772378516624053,0.42531969309462925,0.17306052855924983,0.5485933503836319,0.6516624040920718,0.5710997442455245,0.4076726342710998,0.5299232736572892,0.36061381074168813,0.3754475703324809,0.26035805626598474,0.21841432225063948,0.3815856777493607,0.7033248081841433,0.26636828644501287,0.34705882352941186,0.1112531969309463,0.1942455242966753,0.3260869565217392,0.5179028132992328,0.19884910485933519,0.4726342710997443,0.18286445012787733,0.6910485933503838,0.4107416879795397,0.19948849104859342,0.051918158567774965,0.18584825234441613,0.5462915601023018,0.5892583120204605,0.6240409207161125,0.38951406649616377,0.13827791986359766,0.26265984654731467,0.48670076726342726,0.3427109974424553,0.3063938618925833,0.5061381074168799,0.19616368286445024,0.6948849104859336,0.6659846547314581,0.6974424552429668,0.5404092071611254,0.30332480818414337,0.27084398976982105,0.2315856777493607,0.6667519181585678,0.5232736572890027,0.2626598465473146,0.2828644501278773,0.17894288150042637,0.19249786871270252,0.5161125319693096,0.2002557544757034,0.19539641943734026,0.5539641943734017,0.40818414322250646,0.12659846547314585,0.29718670076726356,0.47058823529411764,0.18721227621483383,0.39872122762148354,0.35524296675191824,0.04936061381074173,0.8626598465473148,0.050127877237851656,0.2713554987212278,0.11150895140664965,0.35601023017902833,0.6979539641943736,0.1429667519181586,0.4485933503836318,0.5751918158567777,0.4644501278772381,0.22583120204603593,0.2273657289002559,0.5079283887468031,0.17959079283887477,0.45984654731457814,0.48925831202046055,0.3314578005115091,0.370076726342711,0.47161125319693104,0.1274936061381074,0.2487212276214835,0.26432225063938625,0.5728900255754479,0.37263427109974423,0.40102301790281325,0.5051150895140666,0.70690537084399,0.37007672634271105,0.3097186700767264,0.41227621483375965,0.45882352941176485,0.38721227621483384,0.1429667519181586,0.48951406649616375,0.15157715260017057,0.38439897698209735,0.15554987212276222
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â OriginalValues: 0.30179028132992336,0.4194373401534528,0.3734015345268542,0.4782608695652174,0.6112531969309465,0.43222506393861904,0.2762148337595909,0.16368286445012792,0.42710997442455245,0.09207161125319696,0.17902813299232745,0.2506393861892584,0.15089514066496168,0.8056265984654734,0.5728900255754477,0.4168797953964195,0.5319693094629157,0.30434782608695665,0.30434782608695665,0.1662404092071612,0.03324808184143224,0.07416879795396425,0.07672634271099743,0.5217391304347827,0.2685421994884911,0.36572890025575455,0.15856777493606145,0.3120204603580563,0.03324808184143224,0.15601023017902815,0.26342710997442464,0.34271099744245537,0.3938618925831203,0.42966751918158574,0.37084398976982114,0.20460358056265993,0.42455242966751916,0.3529411764705883,0.4219948849104861,0.23785166240409217,0.618925831202046,0.15345268542199497,0.4143222506393862,0.5294117647058825,0.1253196930946292,0.3989769820971867,0.18158567774936074,0.0,0.4757033248081841,0.3836317135549874,0.17902813299232745,0.030690537084399006,0.1892583120204605,0.4194373401534528,0.17647058823529416,0.5575447570332481,0.6419437340153453,0.5703324808184145,0.40664961636828656,0.534526854219949,0.36317135549872126,0.3836317135549874,0.26342710997442464,0.21483375959079298,0.38618925831202044,0.70076726342711,0.26598465473145794,0.3529411764705883,0.05626598465473143,0.19948849104859345,0.32225063938618936,0.5166240409207161,0.20204603580562674,0.46803069053708446,0.18158567774936074,0.7135549872122764,0.40920716112531985,0.18414322250639392,0.035805626598465534,0.17902813299232745,0.5421994884910486,0.5907928388746804,0.618925831202046,0.38618925831202044,0.1483375959079285,0.2531969309462917,0.4859335038363173,0.34271099744245537,0.3145780051150896,0.5063938618925832,0.19693094629156016,0.6982097186700769,0.6470588235294119,0.6930946291560103,0.5421994884910486,0.3145780051150896,0.2966751918158569,0.24552429667519193,0.6726342710997444,0.5191815856777494,0.26086956521739135,0.28388746803069065,0.17902813299232745,0.18414322250639392,0.5115089514066498,0.19693094629156016,0.19693094629156016,0.5498721227621486,0.40664961636828656,0.13299232736572897,0.29923273657289007,0.46803069053708446,0.18414322250639392,0.3964194373401536,0.3529411764705883,0.04859335038363177,0.9411764705882355,0.05626598465473143,0.2762148337595909,0.1048593350383632,0.3580562659846549,0.6419437340153453,0.14066496163682873,0.442455242966752,0.5703324808184145,0.4603580562659848,0.2301790281329924,0.21483375959079298,0.5089514066496165,0.17391304347826098,0.4578005115089515,0.49616368286445023,0.3324808184143223,0.3759590792838875,0.47058823529411775,0.12787723785166238,0.24296675191815864,0.2685421994884911,0.5754475703324811,0.3734015345268542,0.3989769820971867,0.5012787723785167,0.7186700767263428,0.3759590792838875,0.30434782608695665,0.4143222506393862,0.45268542199488493,0.38618925831202044,0.13810741687979544,0.49104859335038364,0.15345268542199497,0.3836317135549874,0.15345268542199497
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â RMSE: 0.02543298885069677
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â avgPercentError: 0.06655946422612125
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceCompleteError: 0.03280586634057982
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceImputedError: 0.03233939621381721
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@7190b5ce, calcFeatures -> [Ljava.lang.String;@2a01c55)
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â ImputationResult: 0.40230179028133,0.41585677749360617,0.3184143222506395,0.5910485933503838,0.44936061381074177,0.2902813299232737,0.2795396419437341,0.4608695652173914,0.4176470588235294,0.60153452685422,0.525063938618926,0.5483375959079284,0.4186700767263428,0.6030690537084399,0.24936061381074173
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â OriginalValues: 0.47058823529411775,0.4373401534526854,0.30179028132992336,0.5805626598465474,0.47058823529411775,0.24040920716112546,0.21994884910485946,0.483375959079284,0.4578005115089515,0.6163682864450128,0.5370843989769822,0.5728900255754477,0.38618925831202044,0.6035805626598465,0.10230179028132991
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â RMSE: 0.05017804612352759
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â avgPercentError: 0.15114246114918806
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceCompleteError: 0.02214224716536973
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceImputedError: 0.018867133420698425
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@7190b5ce, calcFeatures -> [Ljava.lang.String;@2a01c55)
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â ImputationResult: 0.2639386189258312,0.11713554987212282,0.2841432225063939,0.4856777493606138,0.4038363171355499,0.18695652173913052,0.3396419437340154,0.3253196930946291,0.4570332480818415,0.20511508951406662,0.6647058823529414,0.6575447570332481,0.3033248081841433,0.36138107416879806,0.22685421994884916,0.16700767263427116,0.29769820971867017,0.26649616368286455,0.39462915601023035,0.5122762148337598,0.5005115089514067,0.19309462915601033,0.4992327365728901,0.39872122762148354,0.43554987212276225,0.3240409207161126,0.282608695652174,0.26675191815856786,0.29872122762148345,0.4388746803069054,0.38005115089514085,0.3370843989769822,0.4335038363171356,0.4104859335038363,0.5672634271099746,0.40179028132992334,0.2631713554987213,0.49028132992327383,0.3345268542199489,0.4378516624040921,0.40051150895140675,0.48925831202046055,0.4905370843989771,0.243222506393862,0.3907928388746805,0.5375959079283887,0.4900255754475705,0.4012787723785167,0.17058823529411776,0.37416879795396424,0.19565217391304354,0.6309462915601023,0.4000000000000001,0.3342710997442456,0.6764705882352942,0.40255754475703337,0.1951406649616369,0.15677749360613819,0.39079283887468036,0.4168797953964195,0.3375959079283889,0.29258312020460364,0.4452685421994885,0.423529411764706,0.19207161125319697,0.5145780051150897,0.657289002557545,0.40946291560102316
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â OriginalValues: 0.18670076726342721,0.06649616368286448,0.2710997442455244,0.5115089514066498,0.3120204603580563,0.18670076726342721,0.40153452685422,0.442455242966752,0.5038363171355499,0.22762148337595922,0.7135549872122764,0.7161125319693096,0.30179028132992336,0.3529411764705883,0.19693094629156016,0.14322250639386191,0.28388746803069065,0.24808184143222511,0.3938618925831203,0.5191815856777494,0.49616368286445023,0.19693094629156016,0.4987212276214835,0.3938618925831203,0.43478260869565233,0.32225063938618936,0.28388746803069065,0.2685421994884911,0.3145780051150896,0.442455242966752,0.37084398976982114,0.36317135549872126,0.4373401534526854,0.4117647058823529,0.5805626598465474,0.45268542199488493,0.2685421994884911,0.4987212276214835,0.32480818414322254,0.4398976982097187,0.40409207161125327,0.4859335038363173,0.49360613810741694,0.29923273657289007,0.3810741687979541,0.5421994884910486,0.49616368286445023,0.40153452685422,0.1483375959079285,0.3759590792838875,0.17647058823529416,0.6317135549872124,0.3964194373401536,0.3094629156010231,0.6956521739130435,0.40409207161125327,0.19948849104859345,0.035805626598465534,0.38618925831202044,0.4168797953964195,0.32992327365728913,0.30434782608695665,0.4398976982097187,0.4219948849104861,0.22250639386189264,0.5191815856777494,0.7289002557544759,0.40920716112531985
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â RMSE: 0.033479796878263225
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â avgPercentError: 0.10235291064896783
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceCompleteError: 0.021552784490386254
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceImputedError: 0.018978325408198098
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@7190b5ce, calcFeatures -> [Ljava.lang.String;@2a01c55)
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â ImputationResult: 0.6043478260869566,0.3294117647058824,0.41662404092071614,0.5253196930946291,0.30664961636828647,0.3767263427109976,0.4662404092071612,0.527621483375959,0.47237851662404096,0.3358056265984656,0.23017902813299237,0.268542199488491,0.2974424552429668,0.2583120204603581,0.3437340153452686,0.4800511508951407,0.26163682864450133,0.0572890025575448,0.281074168797954,0.09872122762148342,0.3593350383631714,0.3289002557544757,0.42455242966751927,0.40971867007672647,0.3882352941176471,0.45882352941176485,0.1652173913043479,0.46496163682864455,0.3662404092071613,0.21457800511508962,0.8695652173913049,0.2588235294117648,0.11534526854219954,0.3033248081841432,0.42480818414322263,0.4557544757033248,0.4028132992327366,0.33682864450127886,0.3273657289002558,0.29411764705882365,0.4846547314578006,0.5314578005115089,0.1171355498721228,0.39693094629156017,0.5754475703324811,0.33529411764705885,0.23759590792838878,0.34194373401534534,0.39258312020460373,0.17084398976982107,0.3235294117647059,0.50537084398977,0.3112531969309464,0.21381074168797967,0.3081841432225064,0.4690537084398976,0.2452685421994886,0.50613810741688,0.35549872122762155,0.35140664961636836,0.28900255754475707,0.41611253196930953,0.5089514066496166,0.5294117647058825,0.4143222506393863,0.24168797953964205,0.1769820971867009,0.33375959079283896,0.1575447570332482,0.2010230179028135,0.37851662404092073,0.2923273657289003,0.528388746803069,0.3268542199488492,0.1685421994884911,0.38721227621483384,0.43324808184143226,0.3854219948849106,0.42992327365728905,0.40920716112531974,0.5189258312020462,0.48312020460358074,0.2774936061381074,0.40971867007672635,0.378005115089514,0.3127877237851663,0.11560102301790283,0.21048593350383643,0.35115089514066505,0.5994884910485934
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â OriginalValues: 0.6496163682864451,0.32225063938618936,0.42710997442455245,0.5166240409207161,0.2890025575447571,0.3810741687979541,0.4578005115089515,0.5421994884910486,0.4808184143222507,0.350383631713555,0.23785166240409217,0.2736572890025576,0.29923273657289007,0.26086956521739135,0.34271099744245537,0.442455242966752,0.23785166240409217,0.02813299232736577,0.2941176470588236,0.09207161125319696,0.36317135549872126,0.32480818414322254,0.42455242966751916,0.40920716112531985,0.38618925831202044,0.44757033248081857,0.1662404092071612,0.4782608695652174,0.34271099744245537,0.2097186700767264,1.0,0.26086956521739135,0.09974424552429673,0.2736572890025576,0.43222506393861904,0.45012787723785164,0.40409207161125327,0.3324808184143223,0.32480818414322254,0.2915601023017904,0.47314578005115104,0.46547314578005117,0.12020460358056273,0.3989769820971867,0.544757033248082,0.3350383631713556,0.26086956521739135,0.34271099744245537,0.3938618925831203,0.15856777493606145,0.32480818414322254,0.524296675191816,0.26598465473145794,0.20460358056265993,0.30690537084398983,0.45012787723785164,0.24040920716112546,0.483375959079284,0.34271099744245537,0.3529411764705883,0.2890025575447571,0.4168797953964195,0.4987212276214835,0.5089514066496165,0.4168797953964195,0.24552429667519193,0.1892583120204605,0.3324808184143223,0.1483375959079285,0.19437340153452698,0.3759590792838875,0.2941176470588236,0.5396419437340154,0.32736572890025584,0.1687979539641945,0.38618925831202044,0.4117647058823529,0.3836317135549874,0.42966751918158574,0.40664961636828656,0.534526854219949,0.46547314578005117,0.2890025575447571,0.40409207161125327,0.3734015345268542,0.3120204603580563,0.12787723785166238,0.20716112531969322,0.3529411764705883,0.6317135549872124
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â RMSE: 0.02070423355826105
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â avgPercentError: 0.08535267196270671
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceCompleteError: 0.01949155483717224
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceImputedError: 0.018461708608018143
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 4, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@7190b5ce, calcFeatures -> [Ljava.lang.String;@2a01c55)
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.024039127714296303
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.026669932209569574
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â RMSE: 0.027777294205583107
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 08:19:15 ERROR ImputationPlan:389 â Total plan execution time: 1503 seconds, 25 minutes, 0 hours.
+2020-04-16 08:19:15 ERROR Crowner:103 â Executed plans: 1 / 7 : 15%.
+2020-04-16 13:13:52 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 13:13:50
+2020-04-16 13:13:52 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 13:13:55 ERROR ImputationPlanRandomForestExec$:264 â org.apache.spark.sql.AnalysisException: Path does not exist: file:/opt/spark-data/appraisal/appraisal/diabetes_normalized.csv;
+2020-04-16 13:14:22 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 13:14:21
+2020-04-16 13:14:22 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 13:14:27 ERROR ImputationPlanRandomForestExec$:117 â Data count: 336
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Pregnancies
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@19a2b224)
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[112] at map at KMeans.scala:44,3,35.39764864752315)
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@1fce8b06, calcFeatures -> [Ljava.lang.String;@19a2b224)
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â ImputationResult: 1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â OriginalValues: 3.0,1.0,1.0,7.0,10.0,12.0,2.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â RMSE: 5.8918830363717944
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â varianceCompleteError: 11.309948979591836
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â varianceImputedError: 10.29535147392289
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@1fce8b06, calcFeatures -> [Ljava.lang.String;@19a2b224)
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â ImputationResult: 1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â OriginalValues: 1.0,2.0,2.0,9.0,6.0,1.0,4.0,2.0,6.0,2.0,5.0,1.0,3.0,2.0,2.0,2.0,7.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â RMSE: 3.3077449222375406
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â varianceCompleteError: 6.26008632013511
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â varianceImputedError: 6.014449240007508
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@1fce8b06, calcFeatures -> [Ljava.lang.String;@19a2b224)
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â ImputationResult: 1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â OriginalValues: 4.0,1.0,7.0,5.0,2.0,12.0,1.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â RMSE: 5.11300861947808
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â varianceCompleteError: 11.364474826388888
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â varianceImputedError: 11.468315972222227
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@1fce8b06, calcFeatures -> [Ljava.lang.String;@19a2b224)
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 10.547346514047861
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â RMSE: 4.443189787064127
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:16:29 ERROR ImputationPlan:389 â Total plan execution time: 119 seconds, 1 minutes, 0 hours.
+2020-04-16 13:16:29 ERROR Crowner:103 â Executed plans: 1 / 7 : 15%.
+2020-04-16 13:17:59 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 13:17:57
+2020-04-16 13:17:59 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 13:18:06 ERROR ImputationPlanRandomForestExec$:117 â Data count: 336
+2020-04-16 13:19:51 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 13:19:49
+2020-04-16 13:19:51 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 13:20:00 ERROR ImputationPlanRandomForestExec$:117 â Data count: 336
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature Pregnancies
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@7d28d525)
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â ClusteringResult: ClusteringResult(MapPartitionsRDD[114] at map at KMeans.scala:44,3,35.39582675749913)
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â best k: 3
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:16 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@7d28d525)
+2020-04-16 13:20:16 ERROR ImputationPlan:371 â Error executing imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column Pregnancies must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually double.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.feature.VectorIndexer.transformSchema(VectorIndexer.scala:167)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.feature.VectorIndexer.fit(VectorIndexer.scala:144)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:79)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:225)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Pregnancies
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@7d28d525)
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[114] at map at KMeans.scala:44,3,35.39582675749913)
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@7d28d525)
+2020-04-16 13:20:16 ERROR ImputationPlan:389 â Total plan execution time: 12 seconds, 0 minutes, 0 hours.
+2020-04-16 13:20:16 ERROR Crowner:103 â Executed plans: 1 / 7 : 15%.
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature Glucose
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@57e21ffb)
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â ClusteringResult: ClusteringResult(MapPartitionsRDD[480] at map at KMeans.scala:44,3,480.96056218166166)
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â best k: 3
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:24 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Glucose, kLimit -> 10, varianceComplete -> 0.04752648831693699, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@57e21ffb)
+2020-04-16 13:20:24 ERROR ImputationPlan:371 â Error executing imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column Glucose must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually double.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.feature.VectorIndexer.transformSchema(VectorIndexer.scala:167)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.feature.VectorIndexer.fit(VectorIndexer.scala:144)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:79)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:225)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Glucose
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@57e21ffb)
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[480] at map at KMeans.scala:44,3,480.96056218166166)
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Glucose, kLimit -> 10, varianceComplete -> 0.04752648831693699, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@57e21ffb)
+2020-04-16 13:20:24 ERROR ImputationPlan:389 â Total plan execution time: 8 seconds, 0 minutes, 0 hours.
+2020-04-16 13:20:24 ERROR Crowner:103 â Executed plans: 2 / 7 : 29%.
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature BloodPressure
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@2ae293f8)
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â ClusteringResult: ClusteringResult(MapPartitionsRDD[846] at map at KMeans.scala:44,3,561.8200627433062)
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â best k: 3
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:36 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BloodPressure, kLimit -> 10, varianceComplete -> 0.020605567075847805, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@2ae293f8)
+2020-04-16 13:20:36 ERROR ImputationPlan:371 â Error executing imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column BloodPressure must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually double.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.feature.VectorIndexer.transformSchema(VectorIndexer.scala:167)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.feature.VectorIndexer.fit(VectorIndexer.scala:144)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:79)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:225)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature BloodPressure
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@2ae293f8)
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[846] at map at KMeans.scala:44,3,561.8200627433062)
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BloodPressure, kLimit -> 10, varianceComplete -> 0.020605567075847805, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@2ae293f8)
+2020-04-16 13:20:36 ERROR ImputationPlan:389 â Total plan execution time: 10 seconds, 0 minutes, 0 hours.
+2020-04-16 13:20:36 ERROR Crowner:103 â Executed plans: 3 / 7 : 43%.
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature SkinThickness
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@2ac2396c)
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â ClusteringResult: ClusteringResult(MapPartitionsRDD[1214] at map at KMeans.scala:44,3,487.93149945561316)
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â best k: 3
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:43 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> SkinThickness, kLimit -> 10, varianceComplete -> 0.051726920963858856, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@2ac2396c)
+2020-04-16 13:20:43 ERROR ImputationPlan:371 â Error executing imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column SkinThickness must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually double.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.feature.VectorIndexer.transformSchema(VectorIndexer.scala:167)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.feature.VectorIndexer.fit(VectorIndexer.scala:144)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:79)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:225)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature SkinThickness
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@2ac2396c)
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[1214] at map at KMeans.scala:44,3,487.93149945561316)
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> SkinThickness, kLimit -> 10, varianceComplete -> 0.051726920963858856, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@2ac2396c)
+2020-04-16 13:20:43 ERROR ImputationPlan:389 â Total plan execution time: 7 seconds, 0 minutes, 0 hours.
+2020-04-16 13:20:43 ERROR Crowner:103 â Executed plans: 4 / 7 : 58%.
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature Insulin
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@683c5345)
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â ClusteringResult: ClusteringResult(MapPartitionsRDD[1584] at map at KMeans.scala:44,3,497.7896394392108)
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â best k: 3
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:52 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Insulin, kLimit -> 10, varianceComplete -> 0.020369025099953975, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@683c5345)
+2020-04-16 13:20:52 ERROR ImputationPlan:371 â Error executing imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column Insulin must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually double.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.feature.VectorIndexer.transformSchema(VectorIndexer.scala:167)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.feature.VectorIndexer.fit(VectorIndexer.scala:144)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:79)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:225)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Insulin
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@683c5345)
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[1584] at map at KMeans.scala:44,3,497.7896394392108)
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Insulin, kLimit -> 10, varianceComplete -> 0.020369025099953975, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@683c5345)
+2020-04-16 13:20:52 ERROR ImputationPlan:389 â Total plan execution time: 8 seconds, 0 minutes, 0 hours.
+2020-04-16 13:20:52 ERROR Crowner:103 â Executed plans: 5 / 7 : 72%.
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature DiabetesPedigreeFunction
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@677fef19)
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â ClusteringResult: ClusteringResult(MapPartitionsRDD[1950] at map at KMeans.scala:44,3,493.2248799983677)
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â best k: 3
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 2
+2020-04-16 13:20:57 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> DiabetesPedigreeFunction, kLimit -> 10, varianceComplete -> 0.020899100775904282, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@677fef19)
+2020-04-16 13:20:57 ERROR ImputationPlan:371 â Error executing imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column DiabetesPedigreeFunction must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually double.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.feature.VectorIndexer.transformSchema(VectorIndexer.scala:167)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.feature.VectorIndexer.fit(VectorIndexer.scala:144)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:79)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:225)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature DiabetesPedigreeFunction
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@677fef19)
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[1950] at map at KMeans.scala:44,3,493.2248799983677)
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 2
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> DiabetesPedigreeFunction, kLimit -> 10, varianceComplete -> 0.020899100775904282, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@677fef19)
+2020-04-16 13:20:57 ERROR ImputationPlan:389 â Total plan execution time: 5 seconds, 0 minutes, 0 hours.
+2020-04-16 13:20:57 ERROR Crowner:103 â Executed plans: 6 / 7 : 86%.
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â -------------------------------------
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â Missing rate at 10.0% in feature BMI
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@6c592813)
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â ClusteringResult: ClusteringResult(MapPartitionsRDD[2320] at map at KMeans.scala:44,3,559.3115135696306)
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â best k: 3
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:21:04 ERROR ImputationPlan:370 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@6c592813)
+2020-04-16 13:21:04 ERROR ImputationPlan:371 â Error executing imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+java.lang.IllegalArgumentException: requirement failed: Column BMI must be of type struct<type:tinyint,size:int,indices:array<int>,values:array<double>> but was actually double.
+	at scala.Predef$.require(Predef.scala:224)
+	at org.apache.spark.ml.util.SchemaUtils$.checkColumnType(SchemaUtils.scala:43)
+	at org.apache.spark.ml.feature.VectorIndexer.transformSchema(VectorIndexer.scala:167)
+	at org.apache.spark.ml.PipelineStage.transformSchema(Pipeline.scala:74)
+	at org.apache.spark.ml.feature.VectorIndexer.fit(VectorIndexer.scala:144)
+	at appraisal.spark.algorithm.BaggingReg.run(BaggingRegressor.scala:79)
+	at appraisal.spark.strategies.ImputationStrategy.run(ImputationStrategy.scala:12)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:319)
+	at appraisal.spark.engine.ImputationPlan$$anonfun$13.apply(ImputationPlan.scala:314)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:314)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:104)
+	at appraisal.spark.algorithm.Boost$$anonfun$run$3.apply(Boost.scala:102)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.algorithm.Boost.run(Boost.scala:102)
+	at appraisal.spark.strategies.EnsembleStrategy.run(EnsembleStrategy.scala:11)
+	at appraisal.spark.engine.ImputationPlan.run(ImputationPlan.scala:395)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:91)
+	at appraisal.spark.engine.Crowner$$anonfun$runEnsemle$2.apply(Crowner.scala:89)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at appraisal.spark.engine.Crowner.runEnsemle(Crowner.scala:89)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec$.main(ImputationPlanRandomForestExec.scala:225)
+	at appraisal.spark.executor.poc.ImputationPlanRandomForestExec.main(ImputationPlanRandomForestExec.scala)
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature BMI
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@6c592813)
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[2320] at map at KMeans.scala:44,3,559.3115135696306)
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@11f30fc6, calcFeatures -> [Ljava.lang.String;@6c592813)
+2020-04-16 13:21:04 ERROR ImputationPlan:389 â Total plan execution time: 6 seconds, 0 minutes, 0 hours.
+2020-04-16 13:21:04 ERROR Crowner:103 â Executed plans: 7 / 7 : 100%.
+2020-04-16 13:21:04 ERROR ImputationPlanRandomForestExec$:229 â 
+2020-04-16 13:21:04 ERROR ImputationPlanRandomForestExec$:230 â 
+2020-04-16 13:21:04 ERROR ImputationPlanRandomForestExec$:231 â 
+2020-04-16 13:21:04 ERROR ImputationPlanRandomForestExec$:232 â  ------ CONSOLIDATED RESULT ------ 
+2020-04-16 13:21:04 ERROR ImputationPlanRandomForestExec$:265 â java.util.NoSuchElementException: head of empty list
+2020-04-16 13:22:25 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 16/04/2020 13:22:23
+2020-04-16 13:22:25 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-16 13:22:31 ERROR ImputationPlanRandomForestExec$:117 â Data count: 336
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Pregnancies
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@43d00636)
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[120] at map at KMeans.scala:44,3,35.39582675749913)
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@43d00636)
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â ImputationResult: 1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â OriginalValues: 1.0,8.0,7.0,4.0,7.0,4.0,5.0,4.0,3.0,2.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â RMSE: 4.110960958218893
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â varianceCompleteError: 11.389030470914129
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â varianceImputedError: 12.437229916897497
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@43d00636)
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â ImputationResult: 1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â OriginalValues: 1.0,1.0,11.0,5.0,7.0,1.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â RMSE: 5.033222956847166
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â varianceCompleteError: 11.218546712802775
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â varianceImputedError: 10.725813148788925
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@43d00636)
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â ImputationResult: 1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â OriginalValues: 1.0,3.0,4.0,6.0,10.0,4.0,1.0,1.0,3.0,3.0,2.0,3.0,6.0,1.0,5.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â RMSE: 3.483293460696835
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â varianceCompleteError: 6.26008632013511
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â varianceImputedError: 5.9939951210358515
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Pregnancies, kLimit -> 10, varianceComplete -> 9.882617630385473, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@43d00636)
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.0
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 7.225806451612903
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â RMSE: 4.028126916025972
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:24:13 ERROR ImputationPlan:389 â Total plan execution time: 99 seconds, 1 minutes, 0 hours.
+2020-04-16 13:24:13 ERROR Crowner:103 â Executed plans: 1 / 7 : 15%.
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Glucose
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@4a00d199)
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[1727] at map at KMeans.scala:44,3,489.3674883825646)
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Glucose, kLimit -> 10, varianceComplete -> 0.04752648831693699, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@4a00d199)
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â ImputationResult: 0.6453900709219859,0.5992907801418439,0.5992907801418439,0.5216706067769896,0.4865248226950355,0.4663120567375886,0.7234042553191489,0.3380614657210401,0.5992907801418439,0.3117190138466735,0.5992907801418439,0.7234042553191489,0.4663120567375886,0.7234042553191489,0.3654846335697399,0.4208037825059101,0.6992907801418439,0.5992907801418439,0.4663120567375886,0.5992907801418439,0.5992907801418439,0.5992907801418439,0.5992907801418439
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â OriginalValues: 0.45390070921985815,0.2695035460992907,0.17021276595744672,0.7588652482269503,0.3120567375886525,0.8085106382978723,0.1985815602836879,0.276595744680851,0.17730496453900702,0.4893617021276595,0.6382978723404255,0.6170212765957447,0.2836879432624113,0.5035460992907801,0.375886524822695,0.16312056737588654,0.6099290780141843,0.7163120567375886,0.26241134751773043,0.5957446808510638,0.6170212765957447,0.8156028368794325,0.276595744680851
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â RMSE: 0.24651692788692628
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â varianceCompleteError: 0.045430322797889555
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â varianceImputedError: 0.043444278602727524
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Glucose, kLimit -> 10, varianceComplete -> 0.04752648831693699, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@4a00d199)
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â ImputationResult: 0.4539007092198581,0.5957446808510638
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â OriginalValues: 0.5673758865248226,0.7588652482269503
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â RMSE: 0.14050789188765211
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â varianceCompleteError: 0.03732948543835823
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â varianceImputedError: 0.034605905135556544
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Glucose, kLimit -> 10, varianceComplete -> 0.04752648831693699, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@4a00d199)
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â ImputationResult: 0.33333333333333326,0.6099290780141843,0.7375886524822693,0.6997635933806144,0.5588652482269503,0.301418439716312,0.6997635933806144
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â OriginalValues: 0.3049645390070922,0.375886524822695,0.9219858156028368,0.8865248226950354,0.34751773049645385,0.9290780141843972,0.723404255319149
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â RMSE: 0.28376196546377563
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â varianceCompleteError: 0.04805590856297921
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â varianceImputedError: 0.04369053188054969
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Glucose, kLimit -> 10, varianceComplete -> 0.04752648831693699, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@4a00d199)
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.016402775485115376
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.056598823546979524
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â RMSE: 0.2500534073311304
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:25:28 ERROR ImputationPlan:389 â Total plan execution time: 74 seconds, 1 minutes, 0 hours.
+2020-04-16 13:25:28 ERROR Crowner:103 â Executed plans: 2 / 7 : 29%.
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature BloodPressure
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@3e003d67)
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[3351] at map at KMeans.scala:44,3,497.9897290845056)
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BloodPressure, kLimit -> 10, varianceComplete -> 0.020605567075847805, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@3e003d67)
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â ImputationResult: 0.372093023255814,0.3488372093023256,0.25581395348837205,0.2790697674418604,0.872093023255814,0.25581395348837205,0.6744186046511631,0.16279069767441862,0.06976744186046513,0.4870801033591731,0.9069767441860463,0.5116279069767442,0.41860465116279066,0.7441860465116279,0.5581395348837208,0.6279069767441863,0.372093023255814,0.25581395348837205,0.3023255813953489,0.6279069767441863,0.872093023255814,0.9069767441860463,0.7015503875968991,0.6046511627906977,0.372093023255814
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â OriginalValues: 0.7441860465116279,0.48837209302325585,0.4186046511627907,0.23255813953488375,0.48837209302325585,0.5348837209302326,0.46511627906976744,0.3488372093023256,0.3488372093023256,0.627906976744186,0.6744186046511629,0.5581395348837208,0.3953488372093023,0.441860465116279,0.46511627906976744,0.46511627906976744,0.3953488372093023,0.6744186046511629,0.5581395348837208,0.3953488372093023,0.5581395348837208,0.5116279069767442,0.627906976744186,0.6046511627906976,0.5348837209302326
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â RMSE: 0.23266032782149468
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â varianceCompleteError: 0.02044438062080907
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â varianceImputedError: 0.025351495107622257
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BloodPressure, kLimit -> 10, varianceComplete -> 0.020605567075847805, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@3e003d67)
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â ImputationResult: 0.5581395348837208,0.5813953488372092
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â OriginalValues: 0.5348837209302326,0.8139534883720929
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â RMSE: 0.16526360934362666
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â varianceCompleteError: 0.013493780421849644
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â varianceImputedError: 0.011815846403461328
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BloodPressure, kLimit -> 10, varianceComplete -> 0.020605567075847805, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@3e003d67)
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â ImputationResult: 0.6511627906976745,0.23255813953488375,0.5581395348837209,0.23255813953488375
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â OriginalValues: 0.7441860465116279,0.5813953488372092,0.441860465116279,0.5348837209302326
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â RMSE: 0.2425192280769094
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â varianceCompleteError: 0.01711962953560729
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â varianceImputedError: 0.019386206799287223
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BloodPressure, kLimit -> 10, varianceComplete -> 0.020605567075847805, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@3e003d67)
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.051906575043360735
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.015976237120045197
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â RMSE: 0.23022829684024645
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:26:42 ERROR ImputationPlan:389 â Total plan execution time: 73 seconds, 1 minutes, 0 hours.
+2020-04-16 13:26:42 ERROR Crowner:103 â Executed plans: 3 / 7 : 43%.
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature SkinThickness
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@23e453c0)
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[4977] at map at KMeans.scala:44,3,487.93149945561316)
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 2
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> SkinThickness, kLimit -> 10, varianceComplete -> 0.051726920963858856, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@23e453c0)
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â ImputationResult: 0.1388888888888889,0.022222222222222254,0.5555555555555556,0.022222222222222254,0.11111111111111112,0.11111111111111112,0.022222222222222254,0.1777777777777778,0.022222222222222254,0.022222222222222254,0.26666666666666666,0.1777777777777778,0.24444444444444446,0.022222222222222254,0.1388888888888889,0.3555555555555556,0.1777777777777778,0.1388888888888889,0.1388888888888889,0.022222222222222254,0.19999999999999996,0.1777777777777778,0.22222222222222224,0.9111111111111112,0.022222222222222254,0.24444444444444446
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â OriginalValues: 0.37777777777777777,0.9555555555555556,0.5777777777777778,0.4,0.8222222222222223,0.24444444444444446,0.1777777777777778,0.7777777777777778,0.8,0.15555555555555556,0.1111111111111111,0.7333333333333334,0.7111111111111111,0.4444444444444444,0.5777777777777778,0.4444444444444444,0.0888888888888889,0.5777777777777778,0.4666666666666667,0.7111111111111111,0.4,0.3111111111111111,0.5777777777777778,0.7111111111111111,0.2,0.9777777777777777
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â RMSE: 0.4432087522834638
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â varianceCompleteError: 0.05630046462879294
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â varianceImputedError: 0.05950560670780891
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> SkinThickness, kLimit -> 10, varianceComplete -> 0.051726920963858856, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@23e453c0)
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â ImputationResult: 0.1777777777777778,0.1777777777777778,0.2777777777777778,0.5555555555555555,0.1777777777777778,0.1777777777777778
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â OriginalValues: 0.5111111111111112,0.5777777777777778,0.48888888888888893,0.37777777777777777,0.26666666666666666,0.8222222222222223
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â RMSE: 0.3583512771849464
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â varianceCompleteError: 0.033624688558551
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â varianceImputedError: 0.03848553721900284
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> SkinThickness, kLimit -> 10, varianceComplete -> 0.051726920963858856, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@23e453c0)
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.03387719425154321
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.05844087577160493
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â RMSE: 0.42857969568745974
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:27:38 ERROR ImputationPlan:389 â Total plan execution time: 55 seconds, 0 minutes, 0 hours.
+2020-04-16 13:27:38 ERROR Crowner:103 â Executed plans: 4 / 7 : 58%.
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature Insulin
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@30d31dfa)
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[6141] at map at KMeans.scala:44,3,561.4716914607247)
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Insulin, kLimit -> 10, varianceComplete -> 0.020369025099953975, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@30d31dfa)
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â ImputationResult: 0.1955938165324447,0.32551143200962696,0.04469657899260787,0.24669073405535497,0.07599740812737202,0.5655836341756919,0.35499398315282793,0.16576413959085445,0.1955938165324447,0.14450461291616526,0.43321299638989175
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â OriginalValues: 0.06618531889290014,0.1022864019253911,0.027677496991576414,0.3790613718411553,0.09626955475330928,0.2009626955475331,0.21179302045728038,0.09506618531889291,0.18411552346570398,0.036101083032490974,0.07220216606498195
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â RMSE: 0.18719547624738347
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â varianceCompleteError: 0.019674388402435263
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â varianceImputedError: 0.021210659768516688
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Insulin, kLimit -> 10, varianceComplete -> 0.020369025099953975, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@30d31dfa)
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â ImputationResult: 0.5776173285198556,0.30806257521058966,0.5595667870036101,0.19554753309265943,0.30806257521058966
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â OriginalValues: 0.27075812274368233,0.10830324909747291,0.37304452466907345,0.1444043321299639,0.1684717208182912
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â RMSE: 0.19542678860372575
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â varianceCompleteError: 0.02118232495029404
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â varianceImputedError: 0.024704138076771773
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Insulin, kLimit -> 10, varianceComplete -> 0.020369025099953975, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@30d31dfa)
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â ImputationResult: 0.2645407139991977,0.3742478941034898,0.3068592057761733,0.5523465703971119,0.3152827918170879,0.32370637785800244,0.17288407541115122,0.42719614921781,0.3742478941034898,0.3742478941034898,0.3068592057761733,0.21058965102286403,0.3068592057761733
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â OriginalValues: 0.05896510228640193,0.3345367027677497,0.06377858002406739,0.5415162454873647,0.10830324909747291,0.36462093862815886,0.12033694344163659,0.0746089049338147,0.21058965102286403,0.3249097472924188,0.06738868832731648,0.11672683513838747,0.1263537906137184
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â RMSE: 0.17597948542907446
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â varianceCompleteError: 0.018898196604877984
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â varianceImputedError: 0.020020311733014214
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> Insulin, kLimit -> 10, varianceComplete -> 0.020369025099953975, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@30d31dfa)
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.018935720587475433
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.01582762155529579
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â RMSE: 0.18373668273736687
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:28:57 ERROR ImputationPlan:389 â Total plan execution time: 78 seconds, 1 minutes, 0 hours.
+2020-04-16 13:28:57 ERROR Crowner:103 â Executed plans: 5 / 7 : 72%.
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature DiabetesPedigreeFunction
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@7e12ca04)
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[7769] at map at KMeans.scala:44,3,502.0149917576184)
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 3
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> DiabetesPedigreeFunction, kLimit -> 10, varianceComplete -> 0.020899100775904282, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@7e12ca04)
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â ImputationResult: 0.9175558752173822,0.7294802155570346,0.5516027223737037,0.9175558752173822,0.5516027223737037,0.5516027223737037,0.5516027223737037,0.5516027223737037,0.5516027223737037,0.7294802155570346,0.7294802155570346,0.5516027223737037,0.9175558752173822,0.5516027223737037,0.9175558752173822,0.7294802155570346,0.5516027223737037,0.5516027223737037,0.9175558752173822,0.9175558752173822,0.5516027223737037,0.5516027223737037,0.5516027223737037,0.5516027223737037
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â OriginalValues: 0.2949309745153187,0.22579814071322754,0.19015823260407497,0.14464220538033792,0.20690469545054424,0.3936921656611632,0.12832513901711146,0.22665693367971315,0.3722223414990231,0.2129162462159435,0.07851514696094639,0.05446894389934946,0.07550937157824676,0.2970779569315327,0.06778023487987633,0.2687377890375078,4.2939648324280305E-6,5.324516392210748E-4,1.0,3.8645683491852193E-5,0.28891942374991947,0.09483221332417287,0.30008373231423235,0.2700259784872362
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â RMSE: 0.5144902421470585
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â varianceCompleteError: 0.02268602342290673
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â varianceImputedError: 0.04189314337853243
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> DiabetesPedigreeFunction, kLimit -> 10, varianceComplete -> 0.020899100775904282, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@7e12ca04)
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â ImputationResult: 0.42976147025355865,0.3975567340103485,0.3975567340103485
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â OriginalValues: 0.12231358825171221,0.10900229727118534,0.580909032355025
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â RMSE: 0.2654593053668505
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â varianceCompleteError: 0.021529517159953902
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â varianceImputedError: 0.017715569324756573
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> DiabetesPedigreeFunction, kLimit -> 10, varianceComplete -> 0.020899100775904282, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@7e12ca04)
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â ImputationResult: 0.5658801554415269,0.5658801554415269,0.5104880091032056,0.5104880091032056,0.5658801554415269,0.5658801554415269
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â OriginalValues: 0.15280073856195117,0.052321961483135455,0.2597204628894089,0.11200807265388496,0.10513772892200013,0.2326684844451124
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â RMSE: 0.40401337570709267
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â varianceCompleteError: 0.013479247685250165
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â varianceImputedError: 0.020091517780462215
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> DiabetesPedigreeFunction, kLimit -> 10, varianceComplete -> 0.020899100775904282, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@7e12ca04)
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.024678076766072136
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.035288651990876434
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â RMSE: 0.4781140917874047
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:30:11 ERROR ImputationPlan:389 â Total plan execution time: 73 seconds, 1 minutes, 0 hours.
+2020-04-16 13:30:11 ERROR Crowner:103 â Executed plans: 6 / 7 : 86%.
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â Running imputation plan: Clustering[KMeans]->Imputation[BaggingRegressor]
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â Missing rate at 10.0% in feature BMI
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â Running Clustering[KMeans] | params: Map(k -> 3, kLimit -> 10, maxIter -> 1000, calcFeatures -> [Ljava.lang.String;@298a0ccc)
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â ClusteringResult: ClusteringResult(MapPartitionsRDD[9391] at map at KMeans.scala:44,3,487.11057512459126)
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â best k: 3
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â Batch for imputation after clustering strategy: 3
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â Batch for imputation before imputation strategy: 2
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â Running Imputation[BaggingRegressor] | params: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@298a0ccc)
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â ImputationResult: 0.28849104859335045,0.3778772378516625,0.3043478260869566,0.17647058823529416,0.313299232736573,0.09974424552429673,0.1496163682864451,0.17647058823529416,0.09974424552429673,0.12787723785166238,0.12787723785166238
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â OriginalValues: 0.43478260869565233,0.42455242966751916,0.4373401534526854,0.42710997442455245,0.29923273657289007,0.32225063938618936,0.4987212276214835,0.4168797953964195,0.40153452685422,0.49616368286445023,0.36317135549872126
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â RMSE: 0.23655485770521462
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â varianceCompleteError: 0.018712036200251806
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â varianceImputedError: 0.021850202608019974
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@298a0ccc)
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â ImputationResult: 0.05626598465473143,0.17879562892350623,0.27468030690537093,0.12489343563512365,0.12489343563512365,0.12489343563512365,0.1555452220413858,0.12489343563512365,0.38502673796791453,0.24808184143222514,0.17879562892350623,0.05626598465473143,0.05626598465473143,0.29497016197783466,0.4075021312872977,0.03772378516624045,0.05626598465473143,0.12489343563512365,0.29497016197783466
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â OriginalValues: 0.2531969309462917,0.29923273657289007,0.07416879795396425,0.02813299232736577,0.5191815856777494,0.5166240409207161,0.4168797953964195,0.32736572890025584,0.3759590792838875,0.3120204603580563,0.30434782608695665,0.42710997442455245,0.1892583120204605,0.618925831202046,0.46547314578005117,0.2301790281329924,0.38618925831202044,0.38618925831202044,0.18414322250639392
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â bestK: 0
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â RMSE: 0.23294019002442753
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â avgError: 0.0
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â avgPercentError: 0.0
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â varianceCompleteError: 0.030757433868300644
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â varianceImputedError: 0.032515360121653375
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â weights: Map(learningRate -> 0.1, k -> 3, imputationFeature -> BMI, kLimit -> 10, varianceComplete -> 0.02645052047422998, features -> [Ljava.lang.String;@6aa34b05, calcFeatures -> [Ljava.lang.String;@298a0ccc)
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â varianceImputedErrorTotal: 0.011126409867560756
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â varianceCompleteErrorTotal: 0.016526877476962836
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â RMSE: 0.2342720440134353
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â -------------------------------------
+2020-04-16 13:31:12 ERROR ImputationPlan:389 â Total plan execution time: 60 seconds, 1 minutes, 0 hours.
+2020-04-16 13:31:12 ERROR Crowner:103 â Executed plans: 7 / 7 : 100%.
+2020-04-16 13:31:12 ERROR ImputationPlanRandomForestExec$:229 â 
+2020-04-16 13:31:12 ERROR ImputationPlanRandomForestExec$:230 â 
+2020-04-16 13:31:12 ERROR ImputationPlanRandomForestExec$:231 â 
+2020-04-16 13:31:12 ERROR ImputationPlanRandomForestExec$:232 â  ------ CONSOLIDATED RESULT ------ 
+2020-04-16 13:31:12 ERROR ImputationPlanRandomForestExec$:236 â Plan: Clustering[KMeans]->Imputation[BaggingRegressor]	Missing rate: 10.0	Selection reduction: 10.0	Error: 0.0%
+2020-04-16 13:31:12 ERROR ImputationPlanRandomForestExec$:243 â 
+2020-04-16 13:31:12 ERROR ImputationPlanRandomForestExec$:244 â Best plan: Clustering[KMeans]->Imputation[BaggingRegressor]	Missing rate: 10.0	Selection reduction: 10.0	Error: 0.0%
+2020-04-16 13:31:12 ERROR ImputationPlanRandomForestExec$:255 â ------------------ Wall stop time: 16/04/2020 13:22:23 --- Total wall time: 528 seconds, 8 minutes, 0 hours.

@@ -1,0 +1,15 @@
+2020-04-22 15:55:01 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 22/04/2020 15:54:59
+2020-04-22 15:55:01 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-22 15:55:05 ERROR ImputationPlanRandomForestExec$:265 â org.apache.spark.sql.AnalysisException: Path does not exist: file:/opt/spark-data/appraisal/appraisal/diabetes_normalized.csv;
+2020-04-22 15:55:26 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 22/04/2020 15:55:25
+2020-04-22 15:55:26 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-22 15:55:32 ERROR ImputationPlanRandomForestExec$:117 â Data count: 336
+2020-04-22 15:55:49 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 22/04/2020 15:55:47
+2020-04-22 15:55:49 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-22 15:55:56 ERROR ImputationPlanRandomForestExec$:117 â Data count: 336
+2020-04-22 15:59:57 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 22/04/2020 15:59:55
+2020-04-22 15:59:57 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-22 16:00:04 ERROR ImputationPlanRandomForestExec$:117 â Data count: 336
+2020-04-22 16:00:30 ERROR ImputationPlanRandomForestExec$:62 â Appraisal Spark - Wall start time: 22/04/2020 16:00:29
+2020-04-22 16:00:30 ERROR ImputationPlanRandomForestExec$:63 â Parallel execution: false
+2020-04-22 16:00:36 ERROR ImputationPlanRandomForestExec$:117 â Data count: 336

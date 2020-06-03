@@ -20,9 +20,10 @@ object ImputationPlanStackGenExec extends Serializable {
 
   def main(args: Array[String]) {
 
-    var parallelExecution = true
-    var breastCancer = true
+    var parallelExecution = false
+    var breastCancer = false
     var aidsOccurrence = false
+    var diabetes = true
 
     if (args != null && args.length > 0) {
 
@@ -48,7 +49,11 @@ object ImputationPlanStackGenExec extends Serializable {
         else if ("aidsoccurrence".equalsIgnoreCase(args(1)))
           aidsOccurrence = true
 
+        else if ("diabetes".equalsIgnoreCase(args(1)))
+
+          diabetes = true
       }
+
     }
 
     parallelExecution = false
@@ -98,6 +103,13 @@ object ImputationPlanStackGenExec extends Serializable {
         //odf = Util.loadAidsOccurenceAndDeath(spark).withColumn("lineId", monotonically_increasing_id)
         //features = Util.aidsocurrence_features
 
+      } else if (diabetes) {
+
+        odf = Util.loadData(spark, "file:///opt/spark-data/appraisal/appraisal/diabetes_normalized.csv").withColumn("lineId", monotonically_increasing_id)
+
+        //odf = Util.loadDiabetes(spark).withColumn("lineId", monotonically_increasing_id)
+        features = Util.diabetes
+
       }
 
       Logger.getLogger(getClass.getName).error("Data count: " + odf.count())
@@ -111,7 +123,7 @@ object ImputationPlanStackGenExec extends Serializable {
       val missingRate = Seq(10d, 20d, 30d)
 
       //val selectionReduction = Seq(10d, 20d, 30d)
-      val selectionReduction = Seq(30d)
+      val selectionReduction = Seq(10d)
 
       val T = 3;
 
@@ -137,12 +149,12 @@ object ImputationPlanStackGenExec extends Serializable {
               "percentReduction" -> sr)
 
             var clusteringParams: HashMap[String, Any] = HashMap(
-              "k" -> 4,
+              "k" -> 3,
               "maxIter" -> 1000,
               "kLimit" -> 10)
 
             var imputationParams: HashMap[String, Any] = HashMap(
-              "k" -> 5,
+              "k" -> 3,
               "kLimit" -> 10,
               "varianceComplete" -> varianceBefore.get,
               "learningRate" -> 0.1,
@@ -153,27 +165,27 @@ object ImputationPlanStackGenExec extends Serializable {
 
             // regression
 
-            impPlan.addStrategy(new ImputationStrategy(imputationParams, new StackedGeneralization()))
-
-            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
-
-            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
-
-            // clustering -> regression
-
-            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
-
             //impPlan.addStrategy(new ImputationStrategy(imputationParams, new StackedGeneralization()))
 
             //impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
 
             //imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
 
+            // clustering -> regression
+
+            impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeansPlus()))
+
+            impPlan.addStrategy(new ImputationStrategy(imputationParams, new StackedGeneralization()))
+
+            impPlan.addEnsembleStrategy(new EnsembleStrategy(adaboostParams, new Boost()))
+
+            imputationPlans = imputationPlans :+ (feature, mr, sr, T, impPlan)
+
             // selection reduction -> clustering -> regression
 
             //impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
 
-            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
+            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeansPlus()))
 
             //impPlan.addStrategy(new ImputationStrategy(imputationParams, new StackedGeneralization()))
 
@@ -183,7 +195,7 @@ object ImputationPlanStackGenExec extends Serializable {
 
             // clustering -> selection reduction -> regression
 
-            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeans))
+            //impPlan.addStrategy(new ClusteringStrategy(clusteringParams, new KMeansPlus()))
 
             //impPlan.addStrategy(new SelectionStrategy(selectionParams, new Pca()))
 

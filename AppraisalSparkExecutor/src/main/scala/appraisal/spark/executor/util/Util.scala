@@ -4,18 +4,18 @@ import org.apache.spark.sql._
 
 object Util {
 
-  //  val breastcancer_features = Array[String](
-  //    //"code_number",
-  //    "clump_thickness",
-  //    "uniformity_of_cell_size",
-  //    "uniformity_of_cell_shape",
-  //    "marginal_adhesion",
-  //    "single_epithelial_cell_size",
-  //    "bare_nuclei",
-  //    "bland_chromatin",
-  //    "normal_nucleoli",
-  //    "mitoses")
-  //  //"class")
+  val diabetes = Array[String](    
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "DiabetesPedigreeFunction",
+    "BMI",
+    "Age")
+  //"Outcome")
+
+  //"class")
 
   val breastcancer_features = Array[String](
     //"code_number",
@@ -93,6 +93,13 @@ object Util {
 
   }
 
+  def loadDiabetes(spark: SparkSession): DataFrame = {
+
+    spark.read.option("header", true).csv("file:///home/oem/Workspace/mestrado/appraisalAdaboost-spark/data/diabetes_normalized.csv")
+
+  }
+  
+  
   def loadData(spark: SparkSession, filePath: String): DataFrame = {
 
     spark.read.option("header", true).csv(filePath)

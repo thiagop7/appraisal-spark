@@ -1,7 +1,7 @@
-[0m[[0m[0minfo[0m] [0m[0m:: delivering :: com.appraisal.spark.executor#appraisalsparkexecutor_2.11;1.0 :: 1.0 :: release :: Sat Mar 28 09:22:15 BRT 2020[0m
-[0m[[0m[0mdebug[0m] [0m[0m	options = status=release pubdate=Sat Mar 28 09:22:15 BRT 2020 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
+[0m[[0m[0minfo[0m] [0m[0m:: delivering :: com.appraisal.spark.executor#appraisalsparkexecutor_2.11;1.0 :: 1.0 :: release :: Fri May 29 21:35:38 BRT 2020[0m
+[0m[[0m[0mdebug[0m] [0m[0m	options = status=release pubdate=Fri May 29 21:35:38 BRT 2020 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
 [0m[[0m[0minfo[0m] [0m[0m	delivering ivy file to /home/oem/Workspace/mestrado/appraisalAdaboost-spark/AppraisalSparkExecutor/target/scala-2.11/ivy-1.0.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0m	deliver done (74ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deliver done (47ms)[0m
 [0m[[0m[0mdebug[0m] [0m[0mlocal do not support transaction. ivy pattern does not use revision as a directory[0m
 [0m[[0m[0mdebug[0m] [0m[0m/home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom already exists, nothing done[0m
 [0m[[0m[33mwarn[0m] [0m[0mAttempting to overwrite /home/oem/.ivy2/local/com.appraisal.spark.executor/appraisalsparkexecutor_2.11/1.0/poms/appraisalsparkexecutor_2.11.pom (non-SNAPSHOT)[0m
