@@ -6,25 +6,27 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="log4j" key="selection"/>
+		<item value="setTol" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="setTol"/>
+			<item value="diabe"/>
+			<item value="diabetes"/>
+			<item value="varianceBefore"/>
+			<item value="bdf"/>
+			<item value="execB"/>
+			<item value="eras"/>
+			<item value="mean"/>
+			<item value="average"/>
+			<item value="avg"/>
+			<item value="fit"/>
 			<item value="log4j"/>
 			<item value="adab"/>
 			<item value="adabostr2"/>
 			<item value="adabost"/>
-			<item value="adabo"/>
-			<item value="features"/>
-			<item value="  val breastcancer_features = Array[String]("/>
-			<item value="adaboost"/>
-			<item value="sampleRatio"/>
-			<item value="monotonically_increasing_id"/>
-			<item value="Params"/>
-			<item value="params"/>
-			<item value="val originalValues = nvDf.join(fidf, &quot;lineId&quot;).select(&quot;originalValue&quot;, &quot;lineId&quot;)"/>
 		</list>
 		<list key="replacehistory">
 			<item value="gradientboostParams"/>
